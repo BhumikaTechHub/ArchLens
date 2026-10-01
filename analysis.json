@@ -114,26 +114,5 @@
         "called_from": "save_order"
       }
     ]
-  },
-  {
-    "file": "tests/sample_repo/services/payment_copy.py",
-    "imports": [],
-    "classes": [],
-    "functions": [
-      {
-        "name": "process_payment",
-        "line": 1,
-        "arguments": [
-          "customer"
-        ],
-        "class": null
-      }
-    ],
-    "calls": [
-      {
-        "name": "print",
-        "called_from": "process_payment"
-      }
-    ]
   }
 ]
