@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "file:tests/sample_repo/order_service.py",
+      "type": "file",
+      "label": "order_service.py"
+    },
+    {
+      "id": "module:notification",
+      "type": "module",
+      "label": "notification"
+    },
+    {
+      "id": "module:payment",
+      "type": "module",
+      "label": "payment"
+    },
+    {
+      "id": "module:database",
+      "type": "module",
+      "label": "database"
+    },
+    {
+      "id": "class:tests/sample_repo/order_service.py:OrderService",
+      "type": "class",
+      "label": "OrderService"
+    },
+    {
+      "id": "function:tests/sample_repo/order_service.py:create_order",
+      "type": "function",
+      "label": "create_order"
+    },
+    {
+      "id": "function:tests/sample_repo/order_service.py:cancel_order",
+      "type": "function",
+      "label": "cancel_order"
+    },
+    {
+      "id": "call:save_order",
+      "type": "function_reference",
+      "label": "save_order"
+    },
+    {
+      "id": "call:process_payment",
+      "type": "function_reference",
+      "label": "process_payment"
+    },
+    {
+      "id": "call:send_notification",
+      "type": "function_reference",
+      "label": "send_notification"
+    },
+    {
+      "id": "call:print",
+      "type": "function_reference",
+      "label": "print"
+    },
+    {
+      "id": "file:tests/sample_repo/notification.py",
+      "type": "file",
+      "label": "notification.py"
+    },
+    {
+      "id": "function:tests/sample_repo/notification.py:send_notification",
+      "type": "function",
+      "label": "send_notification"
+    },
+    {
+      "id": "file:tests/sample_repo/payment.py",
+      "type": "file",
+      "label": "payment.py"
+    },
+    {
+      "id": "function:tests/sample_repo/payment.py:process_payment",
+      "type": "function",
+      "label": "process_payment"
+    },
+    {
+      "id": "file:tests/sample_repo/database.py",
+      "type": "file",
+      "label": "database.py"
+    },
+    {
+      "id": "function:tests/sample_repo/database.py:save_order",
+      "type": "function",
+      "label": "save_order"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/sample_repo/order_service.py",
+      "target": "module:notification",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:tests/sample_repo/order_service.py",
+      "target": "module:payment",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:tests/sample_repo/order_service.py",
+      "target": "module:database",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:tests/sample_repo/order_service.py",
+      "target": "class:tests/sample_repo/order_service.py:OrderService",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:tests/sample_repo/order_service.py:OrderService",
+      "target": "function:tests/sample_repo/order_service.py:create_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:tests/sample_repo/order_service.py",
+      "target": "function:tests/sample_repo/order_service.py:cancel_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "call:save_order",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "call:process_payment",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "call:send_notification",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:cancel_order",
+      "target": "call:print",
+      "relationship": "calls"
+    },
+    {
+      "source": "file:tests/sample_repo/notification.py",
+      "target": "function:tests/sample_repo/notification.py:send_notification",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:tests/sample_repo/notification.py:send_notification",
+      "target": "call:print",
+      "relationship": "calls"
+    },
+    {
+      "source": "file:tests/sample_repo/payment.py",
+      "target": "function:tests/sample_repo/payment.py:process_payment",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:tests/sample_repo/payment.py:process_payment",
+      "target": "call:print",
+      "relationship": "calls"
+    },
+    {
+      "source": "file:tests/sample_repo/database.py",
+      "target": "function:tests/sample_repo/database.py:save_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:tests/sample_repo/database.py:save_order",
+      "target": "call:print",
+      "relationship": "calls"
+    }
+  ]
+}

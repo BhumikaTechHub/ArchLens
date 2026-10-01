@@ -1,0 +1,139 @@
+[
+  {
+    "file": "tests/sample_repo/order_service.py",
+    "imports": [
+      "notification",
+      "payment",
+      "database"
+    ],
+    "classes": [
+      {
+        "name": "OrderService",
+        "line": 6
+      }
+    ],
+    "functions": [
+      {
+        "name": "create_order",
+        "line": 8,
+        "arguments": [
+          "self",
+          "customer",
+          "product"
+        ],
+        "class": "OrderService"
+      },
+      {
+        "name": "cancel_order",
+        "line": 14,
+        "arguments": [
+          "order_id"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "save_order",
+        "called_from": "create_order"
+      },
+      {
+        "name": "process_payment",
+        "called_from": "create_order"
+      },
+      {
+        "name": "send_notification",
+        "called_from": "create_order"
+      },
+      {
+        "name": "print",
+        "called_from": "cancel_order"
+      }
+    ]
+  },
+  {
+    "file": "tests/sample_repo/notification.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "send_notification",
+        "line": 1,
+        "arguments": [
+          "customer"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "send_notification"
+      }
+    ]
+  },
+  {
+    "file": "tests/sample_repo/payment.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "process_payment",
+        "line": 1,
+        "arguments": [
+          "customer"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "process_payment"
+      }
+    ]
+  },
+  {
+    "file": "tests/sample_repo/database.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "save_order",
+        "line": 1,
+        "arguments": [
+          "customer",
+          "product"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "save_order"
+      }
+    ]
+  },
+  {
+    "file": "tests/sample_repo/services/payment_copy.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "process_payment",
+        "line": 1,
+        "arguments": [
+          "customer"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "process_payment"
+      }
+    ]
+  }
+]
