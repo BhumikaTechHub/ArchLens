@@ -3,7 +3,8 @@
     {
       "id": "file:tests/sample_repo/order_service.py",
       "type": "file",
-      "label": "order_service.py"
+      "label": "order_service.py",
+      "file": "tests/sample_repo/order_service.py"
     },
     {
       "id": "module:notification",
@@ -23,67 +24,61 @@
     {
       "id": "class:tests/sample_repo/order_service.py:OrderService",
       "type": "class",
-      "label": "OrderService"
+      "label": "OrderService",
+      "file": "tests/sample_repo/order_service.py"
     },
     {
       "id": "function:tests/sample_repo/order_service.py:create_order",
       "type": "function",
-      "label": "create_order"
+      "label": "create_order",
+      "file": "tests/sample_repo/order_service.py"
     },
     {
       "id": "function:tests/sample_repo/order_service.py:cancel_order",
       "type": "function",
-      "label": "cancel_order"
+      "label": "cancel_order",
+      "file": "tests/sample_repo/order_service.py"
     },
     {
-      "id": "call:save_order",
-      "type": "function_reference",
-      "label": "save_order"
-    },
-    {
-      "id": "call:process_payment",
-      "type": "function_reference",
-      "label": "process_payment"
-    },
-    {
-      "id": "call:send_notification",
-      "type": "function_reference",
-      "label": "send_notification"
-    },
-    {
-      "id": "call:print",
+      "id": "reference:print",
       "type": "function_reference",
       "label": "print"
     },
     {
       "id": "file:tests/sample_repo/notification.py",
       "type": "file",
-      "label": "notification.py"
+      "label": "notification.py",
+      "file": "tests/sample_repo/notification.py"
     },
     {
       "id": "function:tests/sample_repo/notification.py:send_notification",
       "type": "function",
-      "label": "send_notification"
+      "label": "send_notification",
+      "file": "tests/sample_repo/notification.py"
     },
     {
       "id": "file:tests/sample_repo/payment.py",
       "type": "file",
-      "label": "payment.py"
+      "label": "payment.py",
+      "file": "tests/sample_repo/payment.py"
     },
     {
       "id": "function:tests/sample_repo/payment.py:process_payment",
       "type": "function",
-      "label": "process_payment"
+      "label": "process_payment",
+      "file": "tests/sample_repo/payment.py"
     },
     {
       "id": "file:tests/sample_repo/database.py",
       "type": "file",
-      "label": "database.py"
+      "label": "database.py",
+      "file": "tests/sample_repo/database.py"
     },
     {
       "id": "function:tests/sample_repo/database.py:save_order",
       "type": "function",
-      "label": "save_order"
+      "label": "save_order",
+      "file": "tests/sample_repo/database.py"
     }
   ],
   "edges": [
@@ -113,28 +108,28 @@
       "relationship": "contains"
     },
     {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "function:tests/sample_repo/database.py:save_order",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "function:tests/sample_repo/payment.py:process_payment",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:tests/sample_repo/order_service.py:create_order",
+      "target": "function:tests/sample_repo/notification.py:send_notification",
+      "relationship": "calls"
+    },
+    {
       "source": "file:tests/sample_repo/order_service.py",
       "target": "function:tests/sample_repo/order_service.py:cancel_order",
       "relationship": "contains"
     },
     {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "call:save_order",
-      "relationship": "calls"
-    },
-    {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "call:process_payment",
-      "relationship": "calls"
-    },
-    {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "call:send_notification",
-      "relationship": "calls"
-    },
-    {
       "source": "function:tests/sample_repo/order_service.py:cancel_order",
-      "target": "call:print",
+      "target": "reference:print",
       "relationship": "calls"
     },
     {
@@ -144,7 +139,7 @@
     },
     {
       "source": "function:tests/sample_repo/notification.py:send_notification",
-      "target": "call:print",
+      "target": "reference:print",
       "relationship": "calls"
     },
     {
@@ -154,7 +149,7 @@
     },
     {
       "source": "function:tests/sample_repo/payment.py:process_payment",
-      "target": "call:print",
+      "target": "reference:print",
       "relationship": "calls"
     },
     {
@@ -164,7 +159,7 @@
     },
     {
       "source": "function:tests/sample_repo/database.py:save_order",
-      "target": "call:print",
+      "target": "reference:print",
       "relationship": "calls"
     }
   ]

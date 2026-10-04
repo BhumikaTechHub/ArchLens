@@ -2,24 +2,37 @@ import json
 import os
 
 
-INPUT_FILE = "analysis.json"
+ANALYSIS_FILE = "analysis.json"
 OUTPUT_FILE = "architecture_graph.json"
 
 
-def build_graph(analysis):
+def load_analysis():
+    with open(ANALYSIS_FILE, "r") as f:
+        return json.load(f)
 
+
+def build_graph(analysis):
     nodes = []
     edges = []
 
     node_ids = set()
 
-    def add_node(node_id, node_type, label):
+    # -----------------------------------------
+    # Helper functions
+    # -----------------------------------------
+
+    def add_node(node_id, node_type, label, file=None):
         if node_id not in node_ids:
-            nodes.append({
+            node = {
                 "id": node_id,
                 "type": node_type,
                 "label": label
-            })
+            }
+
+            if file:
+                node["file"] = file
+
+            nodes.append(node)
             node_ids.add(node_id)
 
     def add_edge(source, target, relationship):
@@ -29,28 +42,53 @@ def build_graph(analysis):
             "relationship": relationship
         })
 
-    for file_data in analysis:
+    # -----------------------------------------
+    # Build lookup tables
+    # -----------------------------------------
 
-        file_path = file_data["file"]
+    function_lookup = {}
 
-        # File node
+    for file_info in analysis:
+
+        file_path = file_info["file"]
+
+        for function in file_info.get("functions", []):
+
+            function_name = function["name"]
+
+            function_id = f"function:{file_path}:{function_name}"
+
+            function_lookup[function_name] = function_id
+
+    # -----------------------------------------
+    # Process files
+    # -----------------------------------------
+
+    for file_info in analysis:
+
+        file_path = file_info["file"]
+
         file_id = f"file:{file_path}"
 
         add_node(
             file_id,
             "file",
-            os.path.basename(file_path)
+            os.path.basename(file_path),
+            file_path
         )
 
-        # Imported modules
-        for imported_module in file_data.get("imports", []):
+        # -------------------------------------
+        # Imports
+        # -------------------------------------
 
-            module_id = f"module:{imported_module}"
+        for imported in file_info.get("imports", []):
+
+            module_id = f"module:{imported}"
 
             add_node(
                 module_id,
                 "module",
-                imported_module
+                imported
             )
 
             add_edge(
@@ -59,16 +97,21 @@ def build_graph(analysis):
                 "imports"
             )
 
+        # -------------------------------------
         # Classes
-        for class_data in file_data.get("classes", []):
+        # -------------------------------------
 
-            class_name = class_data["name"]
+        for class_info in file_info.get("classes", []):
+
+            class_name = class_info["name"]
+
             class_id = f"class:{file_path}:{class_name}"
 
             add_node(
                 class_id,
                 "class",
-                class_name
+                class_name,
+                file_path
             )
 
             add_edge(
@@ -77,23 +120,32 @@ def build_graph(analysis):
                 "contains"
             )
 
+        # -------------------------------------
         # Functions
-        for function_data in file_data.get("functions", []):
+        # -------------------------------------
 
-            function_name = function_data["name"]
-            function_id = f"function:{file_path}:{function_name}"
+        for function in file_info.get("functions", []):
+
+            function_name = function["name"]
+
+            function_id = (
+                f"function:{file_path}:{function_name}"
+            )
 
             add_node(
                 function_id,
                 "function",
-                function_name
+                function_name,
+                file_path
             )
 
-            class_name = function_data.get("class")
+            class_name = function.get("class")
 
             if class_name:
 
-                class_id = f"class:{file_path}:{class_name}"
+                class_id = (
+                    f"class:{file_path}:{class_name}"
+                )
 
                 add_edge(
                     class_id,
@@ -109,32 +161,45 @@ def build_graph(analysis):
                     "contains"
                 )
 
-        # Function calls
-        for call in file_data.get("calls", []):
+            # ---------------------------------
+            # Function calls
+            # ---------------------------------
 
-            called_name = call["name"]
-            called_from = call.get("called_from")
+            for call in file_info.get("calls", []):
 
-            if not called_from:
-                continue
+                if call.get("called_from") != function_name:
+                    continue
 
-            source_id = f"function:{file_path}:{called_from}"
+                called_name = call["name"]
 
-            # We don't yet know which file contains the
-            # called function, so create a reference node.
-            target_id = f"call:{called_name}"
+                # Resolve function if known
+                if called_name in function_lookup:
 
-            add_node(
-                target_id,
-                "function_reference",
-                called_name
-            )
+                    target_id = function_lookup[called_name]
 
-            add_edge(
-                source_id,
-                target_id,
-                "calls"
-            )
+                    add_edge(
+                        function_id,
+                        target_id,
+                        "calls"
+                    )
+
+                else:
+
+                    reference_id = (
+                        f"reference:{called_name}"
+                    )
+
+                    add_node(
+                        reference_id,
+                        "function_reference",
+                        called_name
+                    )
+
+                    add_edge(
+                        function_id,
+                        reference_id,
+                        "calls"
+                    )
 
     return {
         "nodes": nodes,
@@ -144,27 +209,30 @@ def build_graph(analysis):
 
 def main():
 
-    with open(INPUT_FILE, "r", encoding="utf-8") as file:
-        analysis = json.load(file)
+    analysis = load_analysis()
 
     graph = build_graph(analysis)
 
-    with open(
-        OUTPUT_FILE,
-        "w",
-        encoding="utf-8"
-    ) as file:
-
+    with open(OUTPUT_FILE, "w") as f:
         json.dump(
             graph,
-            file,
+            f,
             indent=2
         )
 
-    print("Architecture graph created successfully.")
-    print(f"Nodes: {len(graph['nodes'])}")
-    print(f"Edges: {len(graph['edges'])}")
-    print(f"Saved to: {OUTPUT_FILE}")
+    print("Architecture graph created.")
+
+    print(
+        f"Nodes: {len(graph['nodes'])}"
+    )
+
+    print(
+        f"Edges: {len(graph['edges'])}"
+    )
+
+    print(
+        f"Saved to: {OUTPUT_FILE}"
+    )
 
 
 if __name__ == "__main__":
