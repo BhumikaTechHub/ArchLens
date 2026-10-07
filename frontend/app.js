@@ -3,6 +3,36 @@ const API_BASE_URL = "http://127.0.0.1:8000";
 
 let architectureData = null;
 
+async function checkBackend() {
+
+    const status =
+        document.querySelector(".status");
+
+    try {
+
+        const response = await fetch(
+            `${API_BASE_URL}/`
+        );
+
+        if (!response.ok) {
+            throw new Error("Backend unavailable");
+        }
+
+        status.innerHTML = `
+            <span class="status-dot"></span>
+            Backend Connected
+        `;
+
+    } catch (error) {
+
+        status.innerHTML = `
+            <span class="status-dot"
+                  style="background:#ef4444">
+            </span>
+            Backend Offline
+        `;
+    }
+}
 
 /* =========================================
    LOAD ARCHITECTURE
@@ -593,3 +623,4 @@ document
 ========================================= */
 
 loadArchitecture();
+checkBackend();
