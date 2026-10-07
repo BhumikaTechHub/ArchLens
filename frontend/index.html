@@ -1,10 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>ArchLens</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
 <body>
-    <h1>ArchLens</h1>
-    <p>AI-Powered Software Architecture & Knowledge Explorer</p>
+
+    <!-- ========================================= -->
+    <!-- HEADER -->
+    <!-- ========================================= -->
+
+    <header class="header">
+
+        <div>
+            <h1>ArchLens</h1>
+
+            <p>
+                AI-Powered Software Architecture
+                & Knowledge Explorer
+            </p>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Backend Connected
+        </div>
+
+    </header>
+
+
+    <!-- ========================================= -->
+    <!-- MAIN -->
+    <!-- ========================================= -->
+
+    <main class="container">
+
+
+        <!-- ===================================== -->
+        <!-- ARCHITECTURE SECTION -->
+        <!-- ===================================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Architecture Explorer</h2>
+
+                    <p>
+                        Explore files, classes,
+                        functions and relationships.
+                    </p>
+                </div>
+
+                <button
+                    id="refreshArchitecture"
+                    class="button"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <!-- Architecture summary -->
+
+            <div
+                id="architectureSummary"
+                class="summary"
+            >
+                Loading architecture...
+            </div>
+
+
+            <!-- Architecture graph -->
+
+            <div
+                id="architectureGraph"
+                class="architecture-graph"
+            >
+                Loading components...
+            </div>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- COMPONENT DETAILS -->
+        <!-- ===================================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Component Details</h2>
+
+                    <p>
+                        Select a component to inspect
+                        its relationships.
+                    </p>
+                </div>
+
+            </div>
+
+            <div
+                id="componentDetails"
+                class="component-details"
+            >
+                <p class="empty">
+                    Select a component above.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- ===================================== -->
+        <!-- AI ASSISTANT -->
+        <!-- ===================================== -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <h2>Ask ArchLens</h2>
+
+                    <p>
+                        Ask questions about the
+                        analyzed repository.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="question-box">
+
+                <textarea
+                    id="question"
+                    placeholder="Example: What happens when an order is created?"
+                    rows="4"
+                ></textarea>
+
+
+                <button
+                    id="askButton"
+                    class="ask-button"
+                >
+                    Ask ArchLens
+                </button>
+
+            </div>
+
+
+            <!-- AI answer -->
+
+            <div
+                id="answerSection"
+                class="answer-section hidden"
+            >
+
+                <h3>AI Answer</h3>
+
+                <div
+                    id="answer"
+                    class="answer"
+                ></div>
+
+
+                <h3>Sources</h3>
+
+                <div
+                    id="sources"
+                    class="sources"
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
 </body>
+
 </html>

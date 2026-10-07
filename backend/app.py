@@ -1,12 +1,32 @@
+import json
+import os
+
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from backend.rag_service import ask
-import json
+
+
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+    )
+)
+
 
 app = FastAPI(
     title="ArchLens API",
     description="AI-powered software architecture and knowledge explorer"
+)
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -16,7 +36,6 @@ class QuestionRequest(BaseModel):
 
 @app.get("/")
 def root():
-
     return {
         "project": "ArchLens",
         "status": "running"
@@ -25,22 +44,30 @@ def root():
 
 @app.post("/ask")
 def ask_question(request: QuestionRequest):
-
     return ask(request.question)
+
 
 @app.get("/architecture")
 def architecture():
 
-    with open("architecture_graph.json", "r") as f:
-        graph = json.load(f)
+    graph_path = os.path.join(
+        BASE_DIR,
+        "architecture_graph.json"
+    )
 
-    return graph
+    with open(graph_path, "r") as f:
+        return json.load(f)
 
 
 @app.get("/dependencies")
 def dependencies():
 
-    with open("analysis.json", "r") as f:
+    analysis_path = os.path.join(
+        BASE_DIR,
+        "analysis.json"
+    )
+
+    with open(analysis_path, "r") as f:
         analysis = json.load(f)
 
     result = {}

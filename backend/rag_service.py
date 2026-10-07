@@ -49,7 +49,7 @@ def get_embedding(text):
             "model": EMBEDDING_MODEL,
             "input": [text]
         },
-        timeout=120
+        timeout=240
     )
 
     response.raise_for_status()
@@ -750,7 +750,7 @@ ANSWER
                 "num_predict": 200
             }
         },
-        timeout=240
+        timeout=600
     )
 
     response.raise_for_status()
