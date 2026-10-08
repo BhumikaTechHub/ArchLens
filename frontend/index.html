@@ -2,202 +2,1311 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>ArchLens</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <!-- Cytoscape -->
+    <script src="https://unpkg.com/cytoscape@3.30.3/dist/cytoscape.min.js"></script>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #172033;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 25px 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 7px;
+            color: #cbd5e1;
+        }
+
+        .container {
+            width: 94%;
+            max-width: 1500px;
+            margin: 25px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 280px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+        }
+
+        button {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #16a34a;
+        }
+
+        .error {
+            color: #dc2626;
+        }
+
+        .architecture-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #cy {
+            width: 100%;
+            height: 650px;
+            margin-top: 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            background: #f8fafc;
+        }
+
+        .stats {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        .details {
+            margin-top: 20px;
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            resize: vertical;
+            font-size: 15px;
+        }
+
+        #askButton {
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        #answer {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .source {
+            display: inline-block;
+            margin: 5px;
+            padding: 7px 10px;
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        @media(max-width:700px) {
+
+            .container {
+                width: 96%;
+            }
+
+            select {
+                width: 100%;
+            }
+
+            #cy {
+                height: 500px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- ========================================= -->
-    <!-- HEADER -->
-    <!-- ========================================= -->
 
-    <header class="header">
+<header>
 
-        <div>
-            <h1>ArchLens</h1>
+    <h1>ArchLens</h1>
+
+    <p>
+        AI-Powered Software Architecture & Knowledge Explorer
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- ========================= -->
+    <!-- REPOSITORY SECTION -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h2>Repository</h2>
+
+        <div class="controls">
+
+            <label for="repository">
+                Select Repository:
+            </label>
+
+            <select id="repository">
+
+                <option value="">
+                    Loading repositories...
+                </option>
+
+            </select>
+
+
+            <!-- IMPORTANT: type="button" -->
+            <button
+                type="button"
+                id="loadArchitecture">
+
+                Load Architecture
+
+            </button>
+
+        </div>
+
+
+        <div id="status">
+            Connecting to backend...
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- ARCHITECTURE -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <div class="architecture-title">
+
+            <div>
+
+                <h2>
+                    Architecture Explorer
+                </h2>
+
+                <p>
+                    Explore files, modules, classes,
+                    functions and relationships.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="fitGraph">
+
+                Fit Graph
+
+            </button>
+
+        </div>
+
+
+        <div class="stats">
+
+            Components:
+            <strong id="nodeCount">0</strong>
+
+            &nbsp;&nbsp;&nbsp;
+
+            Relationships:
+            <strong id="edgeCount">0</strong>
+
+        </div>
+
+
+        <!-- REAL GRAPH -->
+
+        <div id="cy"></div>
+
+
+        <!-- NODE DETAILS -->
+
+        <div
+            id="details"
+            class="details">
+
+            <strong>
+                Component Details
+            </strong>
 
             <p>
-                AI-Powered Software Architecture
-                & Knowledge Explorer
+                Click a node in the graph.
             </p>
+
         </div>
 
-        <div class="status">
-            <span class="status-dot"></span>
-            Backend Connected
+    </div>
+
+
+
+    <!-- ========================= -->
+    <!-- AI Q&A -->
+    <!-- ========================= -->
+
+    <div class="card">
+
+        <h2>
+            Ask ArchLens
+        </h2>
+
+        <p>
+            Ask questions about the selected repository.
+        </p>
+
+
+        <textarea
+            id="question"
+            placeholder="Example: What functions are called when an order is created?">
+        </textarea>
+
+
+        <button
+            type="button"
+            id="askButton">
+
+            Ask ArchLens
+
+        </button>
+
+
+        <h3>
+            AI Answer
+        </h3>
+
+
+        <div id="answer">
+
+            Ask a question to analyze the repository.
+
         </div>
 
-    </header>
+
+        <h3>
+            Sources
+        </h3>
 
 
-    <!-- ========================================= -->
-    <!-- MAIN -->
-    <!-- ========================================= -->
+        <div id="sources">
 
-    <main class="container">
+            No sources yet.
 
+        </div>
 
-        <!-- ===================================== -->
-        <!-- ARCHITECTURE SECTION -->
-        <!-- ===================================== -->
-
-        <section class="panel">
-
-            <div class="panel-header">
-
-                <div>
-                    <h2>Architecture Explorer</h2>
-
-                    <p>
-                        Explore files, classes,
-                        functions and relationships.
-                    </p>
-                </div>
-
-                <button
-                    id="refreshArchitecture"
-                    class="button"
-                >
-                    Refresh
-                </button>
-
-            </div>
+    </div>
 
 
-            <!-- Architecture summary -->
-
-            <div
-                id="architectureSummary"
-                class="summary"
-            >
-                Loading architecture...
-            </div>
+</div>
 
 
-            <!-- Architecture graph -->
 
-            <div
-                id="architectureGraph"
-                class="architecture-graph"
-            >
-                Loading components...
-            </div>
-
-        </section>
+<script>
 
 
-        <!-- ===================================== -->
-        <!-- COMPONENT DETAILS -->
-        <!-- ===================================== -->
+/* =====================================================
+   CONFIGURATION
+   ===================================================== */
 
-        <section class="panel">
+const API_BASE = "http://127.0.0.1:8000";
 
-            <div class="panel-header">
 
-                <div>
-                    <h2>Component Details</h2>
+let cy = null;
 
-                    <p>
-                        Select a component to inspect
-                        its relationships.
-                    </p>
-                </div>
 
-            </div>
 
-            <div
-                id="componentDetails"
-                class="component-details"
-            >
-                <p class="empty">
-                    Select a component above.
+/* =====================================================
+   ELEMENTS
+   ===================================================== */
+
+const repositorySelect =
+    document.getElementById("repository");
+
+const loadArchitectureButton =
+    document.getElementById("loadArchitecture");
+
+const fitGraphButton =
+    document.getElementById("fitGraph");
+
+const statusElement =
+    document.getElementById("status");
+
+const nodeCountElement =
+    document.getElementById("nodeCount");
+
+const edgeCountElement =
+    document.getElementById("edgeCount");
+
+const detailsElement =
+    document.getElementById("details");
+
+const questionElement =
+    document.getElementById("question");
+
+const askButton =
+    document.getElementById("askButton");
+
+const answerElement =
+    document.getElementById("answer");
+
+const sourcesElement =
+    document.getElementById("sources");
+
+
+
+/* =====================================================
+   BACKEND CHECK
+   ===================================================== */
+
+async function checkBackend() {
+
+    try {
+
+        const response =
+            await fetch(API_BASE + "/");
+
+        if (!response.ok) {
+            throw new Error("Backend unavailable");
+        }
+
+        const data =
+            await response.json();
+
+        console.log(
+            "Backend:",
+            data
+        );
+
+        statusElement.textContent =
+            "Backend Connected";
+
+        statusElement.className =
+            "success";
+
+        return true;
+
+    }
+
+    catch(error) {
+
+        console.error(error);
+
+        statusElement.textContent =
+            "Backend connection failed.";
+
+        statusElement.className =
+            "error";
+
+        return false;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOAD REPOSITORIES
+   ===================================================== */
+
+async function loadRepositories() {
+
+    try {
+
+        const response =
+            await fetch(
+                API_BASE + "/repositories"
+            );
+
+        if (!response.ok) {
+            throw new Error(
+                "Could not load repositories"
+            );
+        }
+
+        const data =
+            await response.json();
+
+        console.log(
+            "Repositories:",
+            data
+        );
+
+
+        repositorySelect.innerHTML = "";
+
+
+        data.repositories.forEach(
+            function(repository) {
+
+                const option =
+                    document.createElement("option");
+
+                option.value =
+                    repository;
+
+                option.textContent =
+                    repository;
+
+                repositorySelect.appendChild(
+                    option
+                );
+
+            }
+        );
+
+
+        if (data.repositories.length > 0) {
+
+            repositorySelect.value =
+                data.repositories[0];
+
+        }
+
+
+    }
+
+    catch(error) {
+
+        console.error(error);
+
+        repositorySelect.innerHTML = `
+            <option value="">
+                Failed to load repositories
+            </option>
+        `;
+
+        statusElement.textContent =
+            "Failed to load repositories.";
+
+        statusElement.className =
+            "error";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   LOAD ARCHITECTURE
+   ===================================================== */
+
+async function loadArchitecture() {
+
+    const repository =
+        repositorySelect.value;
+
+
+    console.log(
+        "Selected repository:",
+        repository
+    );
+
+
+    if (!repository) {
+
+        alert(
+            "Please select a repository first."
+        );
+
+        return;
+
+    }
+
+
+    statusElement.textContent =
+        "Loading architecture...";
+
+    statusElement.className =
+        "";
+
+
+    try {
+
+        const url =
+            API_BASE +
+            "/architecture/" +
+            encodeURIComponent(repository);
+
+
+        console.log(
+            "Architecture URL:",
+            url
+        );
+
+
+        const response =
+            await fetch(url);
+
+
+        console.log(
+            "HTTP status:",
+            response.status
+        );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " + response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "Architecture data:",
+            data
+        );
+
+
+        if (!data.graph) {
+
+            throw new Error(
+                "Graph data missing from response"
+            );
+
+        }
+
+
+        renderGraph(
+            data.graph
+        );
+
+
+        statusElement.textContent =
+            "Architecture loaded: " +
+            repository;
+
+        statusElement.className =
+            "success";
+
+    }
+
+
+    catch(error) {
+
+        console.error(
+            "Architecture error:",
+            error
+        );
+
+
+        statusElement.textContent =
+            "Architecture loading failed: " +
+            error.message;
+
+        statusElement.className =
+            "error";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   NODE COLOR
+   ===================================================== */
+
+function nodeColor(type) {
+
+    if (type === "file") {
+        return "#2563eb";
+    }
+
+    if (type === "module") {
+        return "#7c3aed";
+    }
+
+    if (type === "class") {
+        return "#059669";
+    }
+
+    if (type === "function") {
+        return "#ea580c";
+    }
+
+    if (type === "function_reference") {
+        return "#64748b";
+    }
+
+    return "#475569";
+
+}
+
+
+
+/* =====================================================
+   RENDER GRAPH
+   ===================================================== */
+
+function renderGraph(graph) {
+
+
+    console.log(
+        "Nodes:",
+        graph.nodes
+    );
+
+    console.log(
+        "Edges:",
+        graph.edges
+    );
+
+
+    if (cy !== null) {
+
+        cy.destroy();
+
+        cy = null;
+
+    }
+
+
+    const elements = [];
+
+
+    /* ---------- NODES ---------- */
+
+    graph.nodes.forEach(
+        function(node) {
+
+            elements.push({
+
+                data: {
+
+                    id:
+                        node.id,
+
+                    label:
+                        node.label,
+
+                    type:
+                        node.type
+
+                }
+
+            });
+
+        }
+    );
+
+
+    /* ---------- EDGES ---------- */
+
+    graph.edges.forEach(
+        function(edge, index) {
+
+            elements.push({
+
+                data: {
+
+                    id:
+                        "edge-" +
+                        index,
+
+                    source:
+                        edge.source,
+
+                    target:
+                        edge.target,
+
+                    relationship:
+                        edge.relationship
+
+                }
+
+            });
+
+        }
+    );
+
+
+    /* ---------- COUNTS ---------- */
+
+    nodeCountElement.textContent =
+        graph.nodes.length;
+
+    edgeCountElement.textContent =
+        graph.edges.length;
+
+
+
+    /* ---------- CYTOSCAPE ---------- */
+
+    cy = cytoscape({
+
+        container:
+            document.getElementById("cy"),
+
+        elements:
+            elements,
+
+
+        style: [
+
+            {
+                selector: "node",
+
+                style: {
+
+                    "background-color":
+                        function(element) {
+
+                            return nodeColor(
+                                element.data("type")
+                            );
+
+                        },
+
+                    "label":
+                        "data(label)",
+
+                    "color":
+                        "#111827",
+
+                    "font-size":
+                        "12px",
+
+                    "font-weight":
+                        "bold",
+
+                    "text-valign":
+                        "bottom",
+
+                    "text-halign":
+                        "center",
+
+                    "text-margin-y":
+                        "8px",
+
+                    "width":
+                        "45px",
+
+                    "height":
+                        "45px",
+
+                    "border-width":
+                        2,
+
+                    "border-color":
+                        "#ffffff"
+
+                }
+
+            },
+
+
+            {
+                selector: "edge",
+
+                style: {
+
+                    "width":
+                        2,
+
+                    "line-color":
+                        "#94a3b8",
+
+                    "target-arrow-color":
+                        "#64748b",
+
+                    "target-arrow-shape":
+                        "triangle",
+
+                    "curve-style":
+                        "bezier",
+
+                    "label":
+                        "data(relationship)",
+
+                    "font-size":
+                        "10px",
+
+                    "color":
+                        "#334155",
+
+                    "text-background-color":
+                        "#ffffff",
+
+                    "text-background-opacity":
+                        1,
+
+                    "text-background-padding":
+                        "3px"
+
+                }
+
+            },
+
+
+            {
+                selector: "node:selected",
+
+                style: {
+
+                    "background-color":
+                        "#facc15",
+
+                    "border-color":
+                        "#f59e0b",
+
+                    "border-width":
+                        4
+
+                }
+
+            },
+
+
+            {
+                selector: "edge:selected",
+
+                style: {
+
+                    "line-color":
+                        "#2563eb",
+
+                    "target-arrow-color":
+                        "#2563eb",
+
+                    "width":
+                        4
+
+                }
+
+            }
+        ],
+
+
+        layout: {
+
+            name:
+                "breadthfirst",
+
+            animate:
+                true,
+
+            fit:
+                true,
+            spacingFactor:
+                1.5,
+
+            padding:
+                80,
+
+            nodeRepulsion:
+                8000,
+
+            idealEdgeLength:
+                150
+
+        }
+
+    });
+
+
+
+    /* ---------- NODE CLICK ---------- */
+
+    cy.on(
+        "tap",
+        "node",
+        function(event) {
+
+            const node =
+                event.target;
+
+            const data =
+                node.data();
+
+
+            detailsElement.innerHTML = `
+
+                <strong>
+                    Component Details
+                </strong>
+
+                <p>
+                    <b>Name:</b>
+                    ${data.label}
                 </p>
-            </div>
 
-        </section>
+                <p>
+                    <b>Type:</b>
+                    ${data.type}
+                </p>
 
+                <p>
+                    <b>ID:</b>
+                    ${data.id}
+                </p>
 
-        <!-- ===================================== -->
-        <!-- AI ASSISTANT -->
-        <!-- ===================================== -->
+            `;
 
-        <section class="panel">
-
-            <div class="panel-header">
-
-                <div>
-                    <h2>Ask ArchLens</h2>
-
-                    <p>
-                        Ask questions about the
-                        analyzed repository.
-                    </p>
-                </div>
-
-            </div>
+        }
+    );
 
 
-            <div class="question-box">
 
-                <textarea
-                    id="question"
-                    placeholder="Example: What happens when an order is created?"
-                    rows="4"
-                ></textarea>
+    /* ---------- EDGE CLICK ---------- */
 
+    cy.on(
+        "tap",
+        "edge",
+        function(event) {
 
-                <button
-                    id="askButton"
-                    class="ask-button"
-                >
-                    Ask ArchLens
-                </button>
+            const edge =
+                event.target;
 
-            </div>
+            const data =
+                edge.data();
 
 
-            <!-- AI answer -->
+            detailsElement.innerHTML = `
 
-            <div
-                id="answerSection"
-                class="answer-section hidden"
-            >
+                <strong>
+                    Relationship
+                </strong>
 
-                <h3>AI Answer</h3>
+                <p>
+                    <b>Relationship:</b>
+                    ${data.relationship}
+                </p>
 
-                <div
-                    id="answer"
-                    class="answer"
-                ></div>
+                <p>
+                    <b>Source:</b>
+                    ${data.source}
+                </p>
+
+                <p>
+                    <b>Target:</b>
+                    ${data.target}
+                </p>
+
+            `;
+
+        }
+    );
+
+}
 
 
-                <h3>Sources</h3>
 
-                <div
-                    id="sources"
-                    class="sources"
-                ></div>
+/* =====================================================
+   FIT GRAPH
+   ===================================================== */
 
-            </div>
+function fitGraph() {
 
-        </section>
+    if (cy !== null) {
 
-    </main>
+        cy.fit(
+            undefined,
+            60
+        );
+
+    }
+
+}
 
 
-    <script src="app.js"></script>
+
+/* =====================================================
+   ASK ARCHLENS
+   ===================================================== */
+
+async function askArchLens() {
+
+    const repository =
+        repositorySelect.value;
+
+    const question =
+        questionElement.value.trim();
+
+
+    if (!repository) {
+
+        alert(
+            "Please select a repository."
+        );
+
+        return;
+
+    }
+
+
+    if (!question) {
+
+        alert(
+            "Please enter a question."
+        );
+
+        return;
+
+    }
+
+
+    answerElement.textContent =
+        "ArchLens is analyzing the repository...";
+
+
+    sourcesElement.textContent =
+        "Loading...";
+
+
+    try {
+
+        const response =
+            await fetch(
+                API_BASE + "/ask",
+                {
+
+                    method:
+                        "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            question:
+                                question,
+
+                            repository:
+                                repository
+
+                        })
+
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "HTTP " +
+                response.status
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "AI response:",
+            data
+        );
+
+
+        answerElement.textContent =
+            data.answer ||
+            "No answer returned.";
+
+
+        sourcesElement.innerHTML =
+            "";
+
+
+        if (
+            data.sources &&
+            data.sources.length > 0
+        ) {
+
+            data.sources.forEach(
+                function(source) {
+
+                    const span =
+                        document.createElement(
+                            "span"
+                        );
+
+                    span.className =
+                        "source";
+
+                    span.textContent =
+                        source;
+
+                    sourcesElement.appendChild(
+                        span
+                    );
+
+                }
+            );
+
+        }
+
+        else {
+
+            sourcesElement.textContent =
+                "No sources returned.";
+
+        }
+
+    }
+
+
+    catch(error) {
+
+        console.error(
+            "Ask error:",
+            error
+        );
+
+
+        answerElement.textContent =
+            "Could not connect to the backend.";
+
+        sourcesElement.textContent =
+            "No sources.";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   BUTTON EVENTS
+   ===================================================== */
+
+/*
+ * IMPORTANT:
+ * These are normal click handlers.
+ */
+
+loadArchitectureButton.onclick =
+    loadArchitecture;
+
+
+fitGraphButton.onclick =
+    fitGraph;
+
+
+askButton.onclick =
+    askArchLens;
+
+
+
+/* =====================================================
+   START APPLICATION
+   ===================================================== */
+
+async function startApp() {
+
+    const connected =
+        await checkBackend();
+
+
+    if (connected) {
+
+        await loadRepositories();
+
+    }
+
+}
+
+
+startApp();
+
+</script>
+
 
 </body>
 
