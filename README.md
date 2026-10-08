@@ -47,7 +47,7 @@ Ollama LLM
 FastAPI
         ↓
 ArchLens Frontend
-
+```
 
 Technologies
 - Python
@@ -123,3 +123,16 @@ python3 -m http.server 5500
 - Interactive architecture visualization
 - Repository selection in frontend
 
+## Evaluation
+
+The current system will be evaluated on representative questions across multiple demo repositories.
+
+The evaluation will measure:
+
+- Architecture relationship accuracy
+- Retrieval quality
+- Hallucination rate
+- Response latency
+- Cross-repository isolation
+
+These metrics will be used to assess the accuracy, reliability, and performance of ArchLens.
