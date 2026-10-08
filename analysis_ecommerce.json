@@ -1,10 +1,10 @@
 [
   {
-    "file": "tests/sample_repo/order_service.py",
+    "file": "evaluation/demo_repos/ecommerce/order_service.py",
     "imports": [
-      "notification",
       "payment",
-      "database"
+      "database",
+      "notification"
     ],
     "classes": [
       {
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "file": "tests/sample_repo/notification.py",
+    "file": "evaluation/demo_repos/ecommerce/notification.py",
     "imports": [],
     "classes": [],
     "functions": [
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "file": "tests/sample_repo/payment.py",
+    "file": "evaluation/demo_repos/ecommerce/payment.py",
     "imports": [],
     "classes": [],
     "functions": [
@@ -94,7 +94,7 @@
     ]
   },
   {
-    "file": "tests/sample_repo/database.py",
+    "file": "evaluation/demo_repos/ecommerce/database.py",
     "imports": [],
     "classes": [],
     "functions": [

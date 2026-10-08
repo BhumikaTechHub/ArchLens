@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "type": "file",
+      "label": "order_service.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/ecommerce/notification.py",
+      "type": "file",
+      "label": "notification.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/ecommerce/payment.py",
+      "type": "file",
+      "label": "payment.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/ecommerce/database.py",
+      "type": "file",
+      "label": "database.py"
+    },
+    {
+      "id": "module:payment",
+      "type": "module",
+      "label": "payment"
+    },
+    {
+      "id": "module:database",
+      "type": "module",
+      "label": "database"
+    },
+    {
+      "id": "module:notification",
+      "type": "module",
+      "label": "notification"
+    },
+    {
+      "id": "class:evaluation/demo_repos/ecommerce/order_service.py:OrderService",
+      "type": "class",
+      "label": "OrderService"
+    },
+    {
+      "id": "function:evaluation/demo_repos/ecommerce/order_service.py:create_order",
+      "type": "function",
+      "label": "create_order"
+    },
+    {
+      "id": "function:evaluation/demo_repos/ecommerce/order_service.py:cancel_order",
+      "type": "function",
+      "label": "cancel_order"
+    },
+    {
+      "id": "function:evaluation/demo_repos/ecommerce/notification.py:send_notification",
+      "type": "function",
+      "label": "send_notification"
+    },
+    {
+      "id": "function:evaluation/demo_repos/ecommerce/payment.py:process_payment",
+      "type": "function",
+      "label": "process_payment"
+    },
+    {
+      "id": "function:evaluation/demo_repos/ecommerce/database.py:save_order",
+      "type": "function",
+      "label": "save_order"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "target": "module:payment",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "target": "module:database",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "target": "module:notification",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "target": "class:evaluation/demo_repos/ecommerce/order_service.py:OrderService",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:evaluation/demo_repos/ecommerce/order_service.py:OrderService",
+      "target": "function:evaluation/demo_repos/ecommerce/order_service.py:create_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/order_service.py",
+      "target": "function:evaluation/demo_repos/ecommerce/order_service.py:cancel_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/notification.py",
+      "target": "function:evaluation/demo_repos/ecommerce/notification.py:send_notification",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/payment.py",
+      "target": "function:evaluation/demo_repos/ecommerce/payment.py:process_payment",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/ecommerce/database.py",
+      "target": "function:evaluation/demo_repos/ecommerce/database.py:save_order",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:evaluation/demo_repos/ecommerce/order_service.py:create_order",
+      "target": "function:evaluation/demo_repos/ecommerce/database.py:save_order",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/ecommerce/order_service.py:create_order",
+      "target": "function:evaluation/demo_repos/ecommerce/payment.py:process_payment",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/ecommerce/order_service.py:create_order",
+      "target": "function:evaluation/demo_repos/ecommerce/notification.py:send_notification",
+      "relationship": "calls"
+    }
+  ]
+}

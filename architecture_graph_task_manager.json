@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "id": "file:evaluation/demo_repos/task_manager/notification.py",
+      "type": "file",
+      "label": "notification.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "type": "file",
+      "label": "task_service.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/task_manager/database.py",
+      "type": "file",
+      "label": "database.py"
+    },
+    {
+      "id": "module:database",
+      "type": "module",
+      "label": "database"
+    },
+    {
+      "id": "module:notification",
+      "type": "module",
+      "label": "notification"
+    },
+    {
+      "id": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "type": "function",
+      "label": "notify_user"
+    },
+    {
+      "id": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "type": "function",
+      "label": "create_task"
+    },
+    {
+      "id": "function:evaluation/demo_repos/task_manager/task_service.py:delete_task",
+      "type": "function",
+      "label": "delete_task"
+    },
+    {
+      "id": "function:evaluation/demo_repos/task_manager/database.py:save_task",
+      "type": "function",
+      "label": "save_task"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "module:database",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "module:notification",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/notification.py",
+      "target": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "function:evaluation/demo_repos/task_manager/task_service.py:delete_task",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/database.py",
+      "target": "function:evaluation/demo_repos/task_manager/database.py:save_task",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "target": "function:evaluation/demo_repos/task_manager/database.py:save_task",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "target": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "relationship": "calls"
+    }
+  ]
+}

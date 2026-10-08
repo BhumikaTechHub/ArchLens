@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "file:evaluation/demo_repos/auth_system/auth_service.py",
+      "type": "file",
+      "label": "auth_service.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/auth_system/user_service.py",
+      "type": "file",
+      "label": "user_service.py"
+    },
+    {
+      "id": "file:evaluation/demo_repos/auth_system/database.py",
+      "type": "file",
+      "label": "database.py"
+    },
+    {
+      "id": "module:user_service",
+      "type": "module",
+      "label": "user_service"
+    },
+    {
+      "id": "module:database",
+      "type": "module",
+      "label": "database"
+    },
+    {
+      "id": "function:evaluation/demo_repos/auth_system/auth_service.py:authenticate_user",
+      "type": "function",
+      "label": "authenticate_user"
+    },
+    {
+      "id": "function:evaluation/demo_repos/auth_system/user_service.py:get_user",
+      "type": "function",
+      "label": "get_user"
+    },
+    {
+      "id": "function:evaluation/demo_repos/auth_system/database.py:find_user",
+      "type": "function",
+      "label": "find_user"
+    },
+    {
+      "id": "function:evaluation/demo_repos/auth_system/database.py:save_login",
+      "type": "function",
+      "label": "save_login"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:evaluation/demo_repos/auth_system/auth_service.py",
+      "target": "module:user_service",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/auth_service.py",
+      "target": "module:database",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/user_service.py",
+      "target": "module:database",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/auth_service.py",
+      "target": "function:evaluation/demo_repos/auth_system/auth_service.py:authenticate_user",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/user_service.py",
+      "target": "function:evaluation/demo_repos/auth_system/user_service.py:get_user",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/database.py",
+      "target": "function:evaluation/demo_repos/auth_system/database.py:find_user",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:evaluation/demo_repos/auth_system/database.py",
+      "target": "function:evaluation/demo_repos/auth_system/database.py:save_login",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:evaluation/demo_repos/auth_system/auth_service.py:authenticate_user",
+      "target": "function:evaluation/demo_repos/auth_system/user_service.py:get_user",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/auth_system/auth_service.py:authenticate_user",
+      "target": "function:evaluation/demo_repos/auth_system/database.py:save_login",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/auth_system/user_service.py:get_user",
+      "target": "function:evaluation/demo_repos/auth_system/database.py:find_user",
+      "relationship": "calls"
+    }
+  ]
+}

@@ -1,27 +1,45 @@
 import ast
-import os
 import json
+import os
 import sys
 
 
-OUTPUT_FILE = "code_chunks.json"
+IGNORE_DIRS = {
+    ".git",
+    "__pycache__",
+    "venv",
+    ".venv",
+    "node_modules"
+}
+
+
+def get_source_segment(source, node):
+    """
+    Get the exact source code for an AST node.
+    """
+    try:
+        segment = ast.get_source_segment(source, node)
+        return segment if segment else ""
+    except Exception:
+        return ""
 
 
 def create_chunks(repository_path):
+    """
+    Create code-aware chunks from a Python repository.
+    """
+
+    repository_path = os.path.abspath(repository_path)
+    repo_name = os.path.basename(repository_path)
 
     chunks = []
 
     for root, dirs, files in os.walk(repository_path):
 
+        # Ignore unnecessary directories
         dirs[:] = [
             d for d in dirs
-            if d not in {
-                ".git",
-                "__pycache__",
-                "venv",
-                ".venv",
-                "node_modules"
-            }
+            if d not in IGNORE_DIRS
         ]
 
         for filename in files:
@@ -31,99 +49,171 @@ def create_chunks(repository_path):
 
             file_path = os.path.join(root, filename)
 
+            # Relative path inside repository
+            relative_path = os.path.relpath(
+                file_path,
+                repository_path
+            )
+
             try:
                 with open(
                     file_path,
                     "r",
                     encoding="utf-8"
-                ) as file:
-                    source = file.read()
+                ) as f:
+                    source = f.read()
 
                 tree = ast.parse(source)
 
-                # File-level chunk
+            except Exception as e:
+                print(
+                    f"Could not analyze {file_path}: {e}"
+                )
+                continue
+
+            # -------------------------------------------------
+            # FILE CHUNK
+            # -------------------------------------------------
+
+            if source.strip():
+
                 chunks.append({
-                    "id": f"{file_path}:file",
-                    "text": source,
+                    "document": source,
                     "metadata": {
-                        "file": file_path,
+                        "repository": repo_name,
+                        "file": relative_path,
                         "type": "file",
-                        "name": filename
+                        "name": filename,
+                        "line": 1
                     }
                 })
 
-                # Function/class chunks
-                for node in ast.walk(tree):
+            # -------------------------------------------------
+            # CLASS + FUNCTION CHUNKS
+            # -------------------------------------------------
 
-                    if isinstance(
-                        node,
-                        (
-                            ast.FunctionDef,
-                            ast.AsyncFunctionDef,
-                            ast.ClassDef
-                        )
-                    ):
+            for node in ast.walk(tree):
 
-                        segment = ast.get_source_segment(
-                            source,
-                            node
-                        )
+                # -----------------------------
+                # CLASS
+                # -----------------------------
 
-                        if not segment:
-                            continue
+                if isinstance(node, ast.ClassDef):
 
-                        if isinstance(node, ast.ClassDef):
-                            node_type = "class"
-                        else:
-                            node_type = "function"
+                    class_code = get_source_segment(
+                        source,
+                        node
+                    )
+
+                    if class_code.strip():
 
                         chunks.append({
-                            "id": f"{file_path}:{node_type}:{node.name}:{node.lineno}",
-                            "text": segment,
+                            "document": class_code,
                             "metadata": {
-                                "file": file_path,
-                                "type": node_type,
+                                "repository": repo_name,
+                                "file": relative_path,
+                                "type": "class",
                                 "name": node.name,
                                 "line": node.lineno
                             }
-                       })
+                        })
 
-            except Exception as error:
+                # -----------------------------
+                # FUNCTION
+                # -----------------------------
 
-                print(
-                    f"Could not analyze {file_path}: {error}"
-                )
+                elif isinstance(
+                    node,
+                    (ast.FunctionDef, ast.AsyncFunctionDef)
+                ):
+
+                    function_code = get_source_segment(
+                        source,
+                        node
+                    )
+
+                    if function_code.strip():
+
+                        chunks.append({
+                            "document": function_code,
+                            "metadata": {
+                                "repository": repo_name,
+                                "file": relative_path,
+                                "type": "function",
+                                "name": node.name,
+                                "line": node.lineno
+                            }
+                        })
 
     return chunks
 
 
 def main():
 
-    if len(sys.argv) != 2:
+    # ---------------------------------------------------------
+    # COMMAND-LINE ARGUMENT
+    # ---------------------------------------------------------
+
+    if len(sys.argv) < 2:
+
         print(
-            "Usage: python create_code_chunks.py <repository_path>"
+            "Usage: python3 analyzer/create_code_chunks.py "
+            "<repository_path>"
         )
+
         sys.exit(1)
 
     repository_path = sys.argv[1]
 
+    # ---------------------------------------------------------
+    # VALIDATE REPOSITORY
+    # ---------------------------------------------------------
+
+    if not os.path.isdir(repository_path):
+
+        print(
+            f"Repository not found: {repository_path}"
+        )
+
+        sys.exit(1)
+
+    # Repository name
+    repo_name = os.path.basename(
+        os.path.abspath(repository_path)
+    )
+
+    # ---------------------------------------------------------
+    # CREATE CHUNKS
+    # ---------------------------------------------------------
+
     chunks = create_chunks(repository_path)
 
+    # ---------------------------------------------------------
+    # OUTPUT FILE
+    # ---------------------------------------------------------
+
+    output_file = f"code_chunks_{repo_name}.json"
+
     with open(
-        OUTPUT_FILE,
+        output_file,
         "w",
         encoding="utf-8"
-    ) as file:
+    ) as f:
 
         json.dump(
             chunks,
-            file,
+            f,
             indent=2
         )
 
+    # ---------------------------------------------------------
+    # SUMMARY
+    # ---------------------------------------------------------
+
     print("Code chunking completed.")
+    print(f"Repository: {repo_name}")
     print(f"Total chunks: {len(chunks)}")
-    print(f"Saved to: {OUTPUT_FILE}")
+    print(f"Saved to: {output_file}")
 
 
 if __name__ == "__main__":

@@ -1,43 +1,16 @@
 {
   "nodes": [
     {
-      "id": "file:tests/sample_repo/order_service.py",
+      "id": "file:evaluation/demo_repos/task_manager/notification.py",
       "type": "file",
-      "label": "order_service.py",
-      "file": "tests/sample_repo/order_service.py"
+      "label": "notification.py",
+      "file": "evaluation/demo_repos/task_manager/notification.py"
     },
     {
-      "id": "module:notification",
-      "type": "module",
-      "label": "notification"
-    },
-    {
-      "id": "module:payment",
-      "type": "module",
-      "label": "payment"
-    },
-    {
-      "id": "module:database",
-      "type": "module",
-      "label": "database"
-    },
-    {
-      "id": "class:tests/sample_repo/order_service.py:OrderService",
-      "type": "class",
-      "label": "OrderService",
-      "file": "tests/sample_repo/order_service.py"
-    },
-    {
-      "id": "function:tests/sample_repo/order_service.py:create_order",
+      "id": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
       "type": "function",
-      "label": "create_order",
-      "file": "tests/sample_repo/order_service.py"
-    },
-    {
-      "id": "function:tests/sample_repo/order_service.py:cancel_order",
-      "type": "function",
-      "label": "cancel_order",
-      "file": "tests/sample_repo/order_service.py"
+      "label": "notify_user",
+      "file": "evaluation/demo_repos/task_manager/notification.py"
     },
     {
       "id": "reference:print",
@@ -45,120 +18,99 @@
       "label": "print"
     },
     {
-      "id": "file:tests/sample_repo/notification.py",
+      "id": "file:evaluation/demo_repos/task_manager/task_service.py",
       "type": "file",
-      "label": "notification.py",
-      "file": "tests/sample_repo/notification.py"
+      "label": "task_service.py",
+      "file": "evaluation/demo_repos/task_manager/task_service.py"
     },
     {
-      "id": "function:tests/sample_repo/notification.py:send_notification",
+      "id": "module:database",
+      "type": "module",
+      "label": "database"
+    },
+    {
+      "id": "module:notification",
+      "type": "module",
+      "label": "notification"
+    },
+    {
+      "id": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
       "type": "function",
-      "label": "send_notification",
-      "file": "tests/sample_repo/notification.py"
+      "label": "create_task",
+      "file": "evaluation/demo_repos/task_manager/task_service.py"
     },
     {
-      "id": "file:tests/sample_repo/payment.py",
-      "type": "file",
-      "label": "payment.py",
-      "file": "tests/sample_repo/payment.py"
-    },
-    {
-      "id": "function:tests/sample_repo/payment.py:process_payment",
+      "id": "function:evaluation/demo_repos/task_manager/task_service.py:delete_task",
       "type": "function",
-      "label": "process_payment",
-      "file": "tests/sample_repo/payment.py"
+      "label": "delete_task",
+      "file": "evaluation/demo_repos/task_manager/task_service.py"
     },
     {
-      "id": "file:tests/sample_repo/database.py",
+      "id": "file:evaluation/demo_repos/task_manager/database.py",
       "type": "file",
       "label": "database.py",
-      "file": "tests/sample_repo/database.py"
+      "file": "evaluation/demo_repos/task_manager/database.py"
     },
     {
-      "id": "function:tests/sample_repo/database.py:save_order",
+      "id": "function:evaluation/demo_repos/task_manager/database.py:save_task",
       "type": "function",
-      "label": "save_order",
-      "file": "tests/sample_repo/database.py"
+      "label": "save_task",
+      "file": "evaluation/demo_repos/task_manager/database.py"
     }
   ],
   "edges": [
     {
-      "source": "file:tests/sample_repo/order_service.py",
-      "target": "module:notification",
-      "relationship": "imports"
+      "source": "file:evaluation/demo_repos/task_manager/notification.py",
+      "target": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "relationship": "contains"
     },
     {
-      "source": "file:tests/sample_repo/order_service.py",
-      "target": "module:payment",
-      "relationship": "imports"
+      "source": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "target": "reference:print",
+      "relationship": "calls"
     },
     {
-      "source": "file:tests/sample_repo/order_service.py",
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
       "target": "module:database",
       "relationship": "imports"
     },
     {
-      "source": "file:tests/sample_repo/order_service.py",
-      "target": "class:tests/sample_repo/order_service.py:OrderService",
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "module:notification",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
       "relationship": "contains"
     },
     {
-      "source": "class:tests/sample_repo/order_service.py:OrderService",
-      "target": "function:tests/sample_repo/order_service.py:create_order",
+      "source": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "target": "function:evaluation/demo_repos/task_manager/database.py:save_task",
+      "relationship": "calls"
+    },
+    {
+      "source": "function:evaluation/demo_repos/task_manager/task_service.py:create_task",
+      "target": "function:evaluation/demo_repos/task_manager/notification.py:notify_user",
+      "relationship": "calls"
+    },
+    {
+      "source": "file:evaluation/demo_repos/task_manager/task_service.py",
+      "target": "function:evaluation/demo_repos/task_manager/task_service.py:delete_task",
       "relationship": "contains"
     },
     {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "function:tests/sample_repo/database.py:save_order",
-      "relationship": "calls"
-    },
-    {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "function:tests/sample_repo/payment.py:process_payment",
-      "relationship": "calls"
-    },
-    {
-      "source": "function:tests/sample_repo/order_service.py:create_order",
-      "target": "function:tests/sample_repo/notification.py:send_notification",
-      "relationship": "calls"
-    },
-    {
-      "source": "file:tests/sample_repo/order_service.py",
-      "target": "function:tests/sample_repo/order_service.py:cancel_order",
-      "relationship": "contains"
-    },
-    {
-      "source": "function:tests/sample_repo/order_service.py:cancel_order",
+      "source": "function:evaluation/demo_repos/task_manager/task_service.py:delete_task",
       "target": "reference:print",
       "relationship": "calls"
     },
     {
-      "source": "file:tests/sample_repo/notification.py",
-      "target": "function:tests/sample_repo/notification.py:send_notification",
+      "source": "file:evaluation/demo_repos/task_manager/database.py",
+      "target": "function:evaluation/demo_repos/task_manager/database.py:save_task",
       "relationship": "contains"
     },
     {
-      "source": "function:tests/sample_repo/notification.py:send_notification",
-      "target": "reference:print",
-      "relationship": "calls"
-    },
-    {
-      "source": "file:tests/sample_repo/payment.py",
-      "target": "function:tests/sample_repo/payment.py:process_payment",
-      "relationship": "contains"
-    },
-    {
-      "source": "function:tests/sample_repo/payment.py:process_payment",
-      "target": "reference:print",
-      "relationship": "calls"
-    },
-    {
-      "source": "file:tests/sample_repo/database.py",
-      "target": "function:tests/sample_repo/database.py:save_order",
-      "relationship": "contains"
-    },
-    {
-      "source": "function:tests/sample_repo/database.py:save_order",
+      "source": "function:evaluation/demo_repos/task_manager/database.py:save_task",
       "target": "reference:print",
       "relationship": "calls"
     }

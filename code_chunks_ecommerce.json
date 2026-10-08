@@ -1,0 +1,102 @@
+[
+  {
+    "document": "from notification import send_notification\nfrom payment import process_payment\nfrom database import save_order\n\n\nclass OrderService:\n\n    def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)\n\n\ndef cancel_order(order_id):\n    print(\"Cancelling order\")\n",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "order_service.py",
+      "type": "file",
+      "name": "order_service.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class OrderService:\n\n    def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "order_service.py",
+      "type": "class",
+      "name": "OrderService",
+      "line": 6
+    }
+  },
+  {
+    "document": "def cancel_order(order_id):\n    print(\"Cancelling order\")",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "order_service.py",
+      "type": "function",
+      "name": "cancel_order",
+      "line": 14
+    }
+  },
+  {
+    "document": "def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "order_service.py",
+      "type": "function",
+      "name": "create_order",
+      "line": 8
+    }
+  },
+  {
+    "document": "def send_notification(customer):\n    print(\"Sending notification\")\n",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "notification.py",
+      "type": "file",
+      "name": "notification.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def send_notification(customer):\n    print(\"Sending notification\")",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "notification.py",
+      "type": "function",
+      "name": "send_notification",
+      "line": 1
+    }
+  },
+  {
+    "document": "def process_payment(customer):\n    print(\"Processing payment\")\n",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "payment.py",
+      "type": "file",
+      "name": "payment.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def process_payment(customer):\n    print(\"Processing payment\")",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "payment.py",
+      "type": "function",
+      "name": "process_payment",
+      "line": 1
+    }
+  },
+  {
+    "document": "def save_order(customer, product):\n    print(\"Saving order\")\n",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "database.py",
+      "type": "file",
+      "name": "database.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def save_order(customer, product):\n    print(\"Saving order\")",
+    "metadata": {
+      "repository": "sample_repo",
+      "file": "database.py",
+      "type": "function",
+      "name": "save_order",
+      "line": 1
+    }
+  }
+]

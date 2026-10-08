@@ -1,0 +1,87 @@
+[
+  {
+    "file": "evaluation/demo_repos/auth_system/auth_service.py",
+    "imports": [
+      "user_service",
+      "database"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "authenticate_user",
+        "line": 5,
+        "arguments": [
+          "username",
+          "password"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "get_user",
+        "called_from": "authenticate_user"
+      },
+      {
+        "name": "save_login",
+        "called_from": "authenticate_user"
+      }
+    ]
+  },
+  {
+    "file": "evaluation/demo_repos/auth_system/user_service.py",
+    "imports": [
+      "database"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "get_user",
+        "line": 4,
+        "arguments": [
+          "username"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "find_user",
+        "called_from": "get_user"
+      }
+    ]
+  },
+  {
+    "file": "evaluation/demo_repos/auth_system/database.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "find_user",
+        "line": 1,
+        "arguments": [
+          "username"
+        ],
+        "class": null
+      },
+      {
+        "name": "save_login",
+        "line": 9,
+        "arguments": [
+          "username"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "find_user"
+      },
+      {
+        "name": "print",
+        "called_from": "save_login"
+      }
+    ]
+  }
+]

@@ -1,98 +1,29 @@
 [
   {
-    "id": "tests/sample_repo/order_service.py:file",
-    "text": "from notification import send_notification\nfrom payment import process_payment\nfrom database import save_order\n\n\nclass OrderService:\n\n    def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)\n\n\ndef cancel_order(order_id):\n    print(\"Cancelling order\")\n",
+    "id": "evaluation/demo_repos/auth_system/auth_service.py:file",
+    "text": "from user_service import get_user\nfrom database import save_login\n\n\ndef authenticate_user(username, password):\n    user = get_user(username)\n\n    if user and user[\"password\"] == password:\n        save_login(username)\n        return True\n\n    return False\n",
     "metadata": {
-      "file": "tests/sample_repo/order_service.py",
+      "file": "evaluation/demo_repos/auth_system/auth_service.py",
       "type": "file",
-      "name": "order_service.py"
+      "name": "auth_service.py"
     }
   },
   {
-    "id": "tests/sample_repo/order_service.py:class:OrderService:6",
-    "text": "class OrderService:\n\n    def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)",
+    "id": "evaluation/demo_repos/auth_system/user_service.py:file",
+    "text": "from database import find_user\n\n\ndef get_user(username):\n    return find_user(username)\n",
     "metadata": {
-      "file": "tests/sample_repo/order_service.py",
-      "type": "class",
-      "name": "OrderService",
-      "line": 6
-    }
-  },
-  {
-    "id": "tests/sample_repo/order_service.py:function:cancel_order:14",
-    "text": "def cancel_order(order_id):\n    print(\"Cancelling order\")",
-    "metadata": {
-      "file": "tests/sample_repo/order_service.py",
-      "type": "function",
-      "name": "cancel_order",
-      "line": 14
-    }
-  },
-  {
-    "id": "tests/sample_repo/order_service.py:function:create_order:8",
-    "text": "def create_order(self, customer, product):\n        save_order(customer, product)\n        process_payment(customer)\n        send_notification(customer)",
-    "metadata": {
-      "file": "tests/sample_repo/order_service.py",
-      "type": "function",
-      "name": "create_order",
-      "line": 8
-    }
-  },
-  {
-    "id": "tests/sample_repo/notification.py:file",
-    "text": "def send_notification(customer):\n    print(\"Sending notification\")\n",
-    "metadata": {
-      "file": "tests/sample_repo/notification.py",
+      "file": "evaluation/demo_repos/auth_system/user_service.py",
       "type": "file",
-      "name": "notification.py"
+      "name": "user_service.py"
     }
   },
   {
-    "id": "tests/sample_repo/notification.py:function:send_notification:1",
-    "text": "def send_notification(customer):\n    print(\"Sending notification\")",
+    "id": "evaluation/demo_repos/auth_system/database.py:file",
+    "text": "def find_user(username):\n    print(\"Finding user\")\n    return {\n        \"username\": username,\n        \"password\": \"secret\"\n    }\n\n\ndef save_login(username):\n    print(\"Saving login for\", username)\n",
     "metadata": {
-      "file": "tests/sample_repo/notification.py",
-      "type": "function",
-      "name": "send_notification",
-      "line": 1
-    }
-  },
-  {
-    "id": "tests/sample_repo/payment.py:file",
-    "text": "def process_payment(customer):\n    print(\"Processing payment\")\n",
-    "metadata": {
-      "file": "tests/sample_repo/payment.py",
-      "type": "file",
-      "name": "payment.py"
-    }
-  },
-  {
-    "id": "tests/sample_repo/payment.py:function:process_payment:1",
-    "text": "def process_payment(customer):\n    print(\"Processing payment\")",
-    "metadata": {
-      "file": "tests/sample_repo/payment.py",
-      "type": "function",
-      "name": "process_payment",
-      "line": 1
-    }
-  },
-  {
-    "id": "tests/sample_repo/database.py:file",
-    "text": "def save_order(customer, product):\n    print(\"Saving order\")\n",
-    "metadata": {
-      "file": "tests/sample_repo/database.py",
+      "file": "evaluation/demo_repos/auth_system/database.py",
       "type": "file",
       "name": "database.py"
-    }
-  },
-  {
-    "id": "tests/sample_repo/database.py:function:save_order:1",
-    "text": "def save_order(customer, product):\n    print(\"Saving order\")",
-    "metadata": {
-      "file": "tests/sample_repo/database.py",
-      "type": "function",
-      "name": "save_order",
-      "line": 1
     }
   }
 ]

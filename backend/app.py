@@ -1,25 +1,30 @@
-import json
-import os
-
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend.rag_service import ask
-
-
-BASE_DIR = os.path.dirname(
-    os.path.dirname(
-        os.path.abspath(__file__)
-    )
+from backend.rag_service import (
+    ask,
+    ALLOWED_REPOSITORIES
 )
 
+
+# ============================================================
+# FASTAPI APPLICATION
+# ============================================================
 
 app = FastAPI(
     title="ArchLens API",
-    description="AI-powered software architecture and knowledge explorer"
+    description=(
+        "AI-powered software architecture "
+        "and knowledge explorer"
+    ),
+    version="1.0.0"
 )
 
+
+# ============================================================
+# CORS
+# ============================================================
 
 app.add_middleware(
     CORSMiddleware,
@@ -30,55 +35,73 @@ app.add_middleware(
 )
 
 
+# ============================================================
+# REQUEST MODEL
+# ============================================================
+
 class QuestionRequest(BaseModel):
+
     question: str
 
+    repository: str
+
+
+# ============================================================
+# ROOT
+# ============================================================
 
 @app.get("/")
 def root():
+
     return {
         "project": "ArchLens",
-        "status": "running"
+        "status": "running",
+        "service": "repository-aware RAG API"
     }
 
 
+# ============================================================
+# LIST AVAILABLE REPOSITORIES
+# ============================================================
+
+@app.get("/repositories")
+def repositories():
+
+    return {
+        "repositories": sorted(
+            ALLOWED_REPOSITORIES
+        )
+    }
+
+
+# ============================================================
+# ASK ARCHLENS
+# ============================================================
+
 @app.post("/ask")
-def ask_question(request: QuestionRequest):
-    return ask(request.question)
+def ask_question(
+    request: QuestionRequest
+):
 
+    try:
 
-@app.get("/architecture")
-def architecture():
-
-    graph_path = os.path.join(
-        BASE_DIR,
-        "architecture_graph.json"
-    )
-
-    with open(graph_path, "r") as f:
-        return json.load(f)
-
-
-@app.get("/dependencies")
-def dependencies():
-
-    analysis_path = os.path.join(
-        BASE_DIR,
-        "analysis.json"
-    )
-
-    with open(analysis_path, "r") as f:
-        analysis = json.load(f)
-
-    result = {}
-
-    for file_info in analysis:
-
-        file_path = file_info["file"]
-
-        result[file_path] = file_info.get(
-            "imports",
-            []
+        result = ask(
+            request.question,
+            request.repository
         )
 
-    return result
+        return result
+
+    except ValueError as e:
+
+        raise HTTPException(
+            status_code=400,
+            detail=str(e)
+        )
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )

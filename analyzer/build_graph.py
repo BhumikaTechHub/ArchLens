@@ -1,130 +1,137 @@
 import json
 import os
+import sys
 
 
-ANALYSIS_FILE = "analysis.json"
-OUTPUT_FILE = "architecture_graph.json"
+# ============================================================
+# BUILD REPOSITORY-SPECIFIC ARCHITECTURE GRAPH
+# ============================================================
 
+def build_graph(analysis_file):
 
-def load_analysis():
-    with open(ANALYSIS_FILE, "r") as f:
-        return json.load(f)
+    with open(
+        analysis_file,
+        "r",
+        encoding="utf-8"
+    ) as f:
+        analysis = json.load(f)
 
-
-def build_graph(analysis):
     nodes = []
     edges = []
 
-    node_ids = set()
+    # --------------------------------------------------------
+    # Maps for resolving relationships
+    # --------------------------------------------------------
 
-    # -----------------------------------------
-    # Helper functions
-    # -----------------------------------------
+    function_nodes = {}
+    class_nodes = {}
+    file_nodes = {}
 
-    def add_node(node_id, node_type, label, file=None):
-        if node_id not in node_ids:
-            node = {
-                "id": node_id,
-                "type": node_type,
-                "label": label
-            }
+    # --------------------------------------------------------
+    # FILE NODES
+    # --------------------------------------------------------
 
-            if file:
-                node["file"] = file
+    for item in analysis:
 
-            nodes.append(node)
-            node_ids.add(node_id)
-
-    def add_edge(source, target, relationship):
-        edges.append({
-            "source": source,
-            "target": target,
-            "relationship": relationship
-        })
-
-    # -----------------------------------------
-    # Build lookup tables
-    # -----------------------------------------
-
-    function_lookup = {}
-
-    for file_info in analysis:
-
-        file_path = file_info["file"]
-
-        for function in file_info.get("functions", []):
-
-            function_name = function["name"]
-
-            function_id = f"function:{file_path}:{function_name}"
-
-            function_lookup[function_name] = function_id
-
-    # -----------------------------------------
-    # Process files
-    # -----------------------------------------
-
-    for file_info in analysis:
-
-        file_path = file_info["file"]
+        file_path = item["file"]
 
         file_id = f"file:{file_path}"
 
-        add_node(
-            file_id,
-            "file",
-            os.path.basename(file_path),
-            file_path
-        )
+        file_nodes[file_path] = file_id
 
-        # -------------------------------------
-        # Imports
-        # -------------------------------------
+        nodes.append({
+            "id": file_id,
+            "type": "file",
+            "label": os.path.basename(file_path)
+        })
 
-        for imported in file_info.get("imports", []):
+    # --------------------------------------------------------
+    # IMPORT NODES
+    # --------------------------------------------------------
 
-            module_id = f"module:{imported}"
+    imported_modules = set()
 
-            add_node(
-                module_id,
-                "module",
-                imported
+    for item in analysis:
+
+        file_path = item["file"]
+        source_id = file_nodes[file_path]
+
+        for imported in item.get("imports", []):
+
+            # Example:
+            # from payment import process_payment
+            #
+            # imported may be:
+            # payment
+
+            module_name = imported
+
+            imported_modules.add(module_name)
+
+            module_id = f"module:{module_name}"
+
+            if not any(
+                node["id"] == module_id
+                for node in nodes
+            ):
+                nodes.append({
+                    "id": module_id,
+                    "type": "module",
+                    "label": module_name
+                })
+
+            edges.append({
+                "source": source_id,
+                "target": module_id,
+                "relationship": "imports"
+            })
+
+    # --------------------------------------------------------
+    # CLASS NODES
+    # --------------------------------------------------------
+
+    for item in analysis:
+
+        file_path = item["file"]
+
+        file_id = file_nodes[file_path]
+
+        for cls in item.get("classes", []):
+
+            class_name = cls["name"]
+
+            class_id = (
+                f"class:{file_path}:{class_name}"
             )
 
-            add_edge(
-                file_id,
-                module_id,
-                "imports"
-            )
+            class_nodes[class_name] = class_id
 
-        # -------------------------------------
-        # Classes
-        # -------------------------------------
+            nodes.append({
+                "id": class_id,
+                "type": "class",
+                "label": class_name
+            })
 
-        for class_info in file_info.get("classes", []):
+            edges.append({
+                "source": file_id,
+                "target": class_id,
+                "relationship": "contains"
+            })
 
-            class_name = class_info["name"]
+    # --------------------------------------------------------
+    # FUNCTION NODES
+    # --------------------------------------------------------
 
-            class_id = f"class:{file_path}:{class_name}"
+    for item in analysis:
 
-            add_node(
-                class_id,
-                "class",
-                class_name,
-                file_path
-            )
+        file_path = item["file"]
 
-            add_edge(
-                file_id,
-                class_id,
-                "contains"
-            )
+        file_id = file_nodes[file_path]
 
-        # -------------------------------------
-        # Functions
-        # -------------------------------------
-
-        for function in file_info.get("functions", []):
+        for function in item.get(
+            "functions",
+            []
+        ):
 
             function_name = function["name"]
 
@@ -132,106 +139,206 @@ def build_graph(analysis):
                 f"function:{file_path}:{function_name}"
             )
 
-            add_node(
-                function_id,
-                "function",
+            function_nodes.setdefault(
                 function_name,
-                file_path
-            )
+                []
+            ).append(function_id)
 
-            class_name = function.get("class")
+            nodes.append({
+                "id": function_id,
+                "type": "function",
+                "label": function_name
+            })
+
+            class_name = function.get(
+                "class"
+            )
 
             if class_name:
 
-                class_id = (
-                    f"class:{file_path}:{class_name}"
+                class_id = class_nodes.get(
+                    class_name
                 )
 
-                add_edge(
-                    class_id,
-                    function_id,
-                    "contains"
-                )
+                if class_id:
+
+                    edges.append({
+                        "source": class_id,
+                        "target": function_id,
+                        "relationship": "contains"
+                    })
 
             else:
 
-                add_edge(
-                    file_id,
-                    function_id,
-                    "contains"
-                )
+                edges.append({
+                    "source": file_id,
+                    "target": function_id,
+                    "relationship": "contains"
+                })
 
-            # ---------------------------------
-            # Function calls
-            # ---------------------------------
+    # --------------------------------------------------------
+    # CALL RELATIONSHIPS
+    # --------------------------------------------------------
 
-            for call in file_info.get("calls", []):
+    for item in analysis:
 
-                if call.get("called_from") != function_name:
-                    continue
+        file_path = item["file"]
 
-                called_name = call["name"]
+        for call in item.get(
+            "calls",
+            []
+        ):
 
-                # Resolve function if known
-                if called_name in function_lookup:
+            called_name = call["name"]
 
-                    target_id = function_lookup[called_name]
+            called_from = call.get(
+                "called_from"
+            )
 
-                    add_edge(
-                        function_id,
-                        target_id,
-                        "calls"
+            # Find source function
+            source_candidates = []
+
+            for function_name, function_ids in function_nodes.items():
+
+                if function_name == called_from:
+
+                    source_candidates.extend(
+                        function_ids
                     )
 
-                else:
+            if not source_candidates:
+                continue
 
-                    reference_id = (
-                        f"reference:{called_name}"
-                    )
+            source_id = None
 
-                    add_node(
-                        reference_id,
-                        "function_reference",
-                        called_name
-                    )
+            # Prefer a function in the same file
+            for candidate in source_candidates:
 
-                    add_edge(
-                        function_id,
-                        reference_id,
-                        "calls"
-                    )
+                if f"function:{file_path}:" in candidate:
 
-    return {
+                    source_id = candidate
+                    break
+
+            if source_id is None:
+
+                source_id = source_candidates[0]
+
+            # ------------------------------------------------
+            # Resolve target function
+            # ------------------------------------------------
+
+            target_id = None
+
+            candidates = function_nodes.get(
+                called_name,
+                []
+            )
+
+            # Prefer a function from another file
+            # when the call is imported.
+            for candidate in candidates:
+
+                if candidate != source_id:
+                    target_id = candidate
+                    break
+
+            if target_id:
+
+                edges.append({
+                    "source": source_id,
+                    "target": target_id,
+                    "relationship": "calls"
+                })
+
+    # --------------------------------------------------------
+    # REMOVE DUPLICATE EDGES
+    # --------------------------------------------------------
+
+    unique_edges = []
+
+    seen_edges = set()
+
+    for edge in edges:
+
+        key = (
+            edge["source"],
+            edge["target"],
+            edge["relationship"]
+        )
+
+        if key not in seen_edges:
+
+            seen_edges.add(key)
+
+            unique_edges.append(edge)
+
+    edges = unique_edges
+
+    # --------------------------------------------------------
+    # FINAL GRAPH
+    # --------------------------------------------------------
+
+    graph = {
         "nodes": nodes,
         "edges": edges
     }
 
+    return graph
+
+
+# ============================================================
+# MAIN
+# ============================================================
 
 def main():
 
-    analysis = load_analysis()
+    if len(sys.argv) != 3:
 
-    graph = build_graph(analysis)
+        print(
+            "Usage:\n"
+            "python3 analyzer/build_graph.py "
+            "<analysis_file> <output_file>"
+        )
 
-    with open(OUTPUT_FILE, "w") as f:
+        sys.exit(1)
+
+    analysis_file = sys.argv[1]
+    output_file = sys.argv[2]
+
+    graph = build_graph(
+        analysis_file
+    )
+
+    with open(
+        output_file,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
         json.dump(
             graph,
             f,
             indent=2
         )
 
-    print("Architecture graph created.")
-
     print(
-        f"Nodes: {len(graph['nodes'])}"
+        "Architecture graph created."
     )
 
     print(
-        f"Edges: {len(graph['edges'])}"
+        f"Input : {analysis_file}"
     )
 
     print(
-        f"Saved to: {OUTPUT_FILE}"
+        f"Output: {output_file}"
+    )
+
+    print(
+        f"Nodes : {len(graph['nodes'])}"
+    )
+
+    print(
+        f"Edges : {len(graph['edges'])}"
     )
 
 
