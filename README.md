@@ -102,3 +102,24 @@ Running the Frontend
 cd ~/ArchLens/frontend
 python3 -m http.server 5500
 
+
+## Current Progress
+
+### Completed
+
+- Repository analysis using Python AST
+- File, class and function extraction
+- Import and function-call analysis
+- Architecture graph generation
+- Repository-specific indexing
+- Code-aware chunking
+- ChromaDB vector search
+- Ollama embeddings
+- Repository-aware RAG
+- Architecture-aware Q&A
+- Multiple demo repositories
+- Cross-repository isolation
+- FastAPI backend
+- Interactive architecture visualization
+- Repository selection in frontend
+
