@@ -1,4 +1,4 @@
-index.html - <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -186,6 +186,80 @@ index.html - <!DOCTYPE html>
             }
 
         }
+        .impact-summary {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+               gap: 12px;
+               margin: 16px 0;
+        }
+
+        .impact-card {
+              padding: 14px;
+              border-radius: 8px;
+              background: #f1f5f9;
+              border: 1px solid #e2e8f0;
+        }
+
+       .impact-card strong {
+             display: block;
+             font-size: 23px;
+             margin-bottom: 5px;
+       }
+       .impact-list {
+            list-style: none;
+            padding: 0;
+       }
+
+       .impact-item {
+           padding: 12px;
+           margin: 8px 0;
+           border: 1px solid #e2e8f0;
+           border-radius: 8px;
+           background: white;
+           overflow-wrap: anywhere;
+       }
+
+       .risk-high {
+           color: #dc2626;
+           font-weight: bold;
+       }
+  
+       .risk-medium {
+          color: #d97706;
+          font-weight: bold;
+       }
+
+       .risk-low {
+          color: #16a34a;
+          font-weight: bold;
+       }
+
+       #impactReport button {
+          margin-top: 10px;
+       }
+
+       @media (max-width: 700px) {
+           .impact-summary {
+               grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+       }
+       {
+            selector: "node.impact-selected",
+            style: {
+                   "border-color": "#facc15",
+                   "border-width": 6,
+                   "overlay-opacity": 0
+            }
+       },
+
+       {
+           selector: "node.impact-affected",
+           style: {
+                 "border-color": "#ef4444",
+                 "border-width": 5,
+                 "overlay-opacity": 0
+           }
+       }
 
     </style>
 
@@ -274,13 +348,21 @@ index.html - <!DOCTYPE html>
             </div>
 
 
-            <button
-                type="button"
-                id="fitGraph">
+           
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+               <button type="button" id="fitGraph">
+                     Fit Graph
+               </button>
 
-                Fit Graph
-
-            </button>
+               <button
+                    type="button"
+                    id="impactButton"
+                    disabled
+                    style="background: #7c3aed;"
+              >
+                    Analyze Change Impact
+              </button>
+           </div>
 
         </div>
 
@@ -318,6 +400,18 @@ index.html - <!DOCTYPE html>
             </p>
 
         </div>
+        <div
+               id="impactReport"
+               class="details"
+               style="margin-top: 16px;"
+        >
+               <strong>What-If Change Impact Simulator</strong>
+               <p>
+                     Select a component in the architecture graph, then click
+                     "Analyze Change Impact" to identify potentially affected
+                     components.
+               </p>
+       </div>
 
     </div>
 
@@ -394,7 +488,8 @@ const API_BASE = "http://127.0.0.1:8000";
 
 
 let cy = null;
-
+let selectedComponent = null;
+let impactRequestInProgress = false;
 
 
 /* =====================================================
@@ -434,7 +529,11 @@ const answerElement =
 const sourcesElement =
     document.getElementById("sources");
 
+const impactButton =
+    document.getElementById("impactButton");
 
+const impactReport =
+    document.getElementById("impactReport");
 
 /* =====================================================
    BACKEND CHECK
@@ -764,13 +863,15 @@ function renderGraph(graph) {
                 data: {
 
                     id:
-                        node.id,
+                        String(node.id),
 
                     label:
-                        node.label,
+                        node.label || String(node.id),
 
                     type:
-                        node.type
+                        node.type || "unknown",
+                    file:
+                        node.file || node.path || ""   
 
                 }
 
@@ -996,44 +1097,64 @@ function renderGraph(graph) {
 
 
     /* ---------- NODE CLICK ---------- */
+    cy.on("tap", "node", function(event) {
+          const node = event.target;
+          const data = node.data();
+ 
+          selectedComponent = {
+              id: data.id,
+              label: data.label,
+              type: data.type,
+              file: data.file || ""
+          };
 
-    cy.on(
-        "tap",
-        "node",
-        function(event) {
+          impactButton.disabled = false;
 
-            const node =
-                event.target;
+          // Remove previous impact highlighting.
+          cy.elements().removeClass("impact-selected impact-affected");
 
-            const data =
-                node.data();
+          node.addClass("impact-selected");
 
+          detailsElement.replaceChildren();
 
-            detailsElement.innerHTML = `
+          const title = document.createElement("strong");
+          title.textContent = "Component Details";
+          detailsElement.appendChild(title);
 
-                <strong>
-                    Component Details
-                </strong>
+          const fields = [
+              ["Name", data.label],
+              ["Type", data.type],
+              ["ID", data.id],
+              ["File", data.file || "Not available"]
+          ];
 
-                <p>
-                    <b>Name:</b>
-                    ${data.label}
-                </p>
+          fields.forEach(([label, value]) => {
+          const paragraph = document.createElement("p");
+          const strong = document.createElement("strong");
 
-                <p>
-                    <b>Type:</b>
-                    ${data.type}
-                </p>
+          strong.textContent = `${label}: `;
+          paragraph.appendChild(strong);
+          paragraph.appendChild(
+              document.createTextNode(String(value))
+          );
 
-                <p>
-                    <b>ID:</b>
-                    ${data.id}
-                </p>
+          detailsElement.appendChild(paragraph);
+        });
 
-            `;
+       impactReport.replaceChildren();
 
-        }
-    );
+       const reportTitle = document.createElement("strong");
+       reportTitle.textContent = "What-If Change Impact Simulator";
+       impactReport.appendChild(reportTitle);
+
+       const reportText = document.createElement("p");
+       reportText.textContent =
+          `Selected component: ${data.label}. ` +
+          "Click Analyze Change Impact to inspect dependencies.";
+  
+       impactReport.appendChild(reportText);
+    });
+    
 
 
 
@@ -1080,9 +1201,439 @@ function renderGraph(graph) {
 }
 
 
+/* =====================================================
+   WHAT-IF CHANGE IMPACT SIMULATOR
+===================================================== */
+
+async function analyzeChangeImpact() {
+    if (!selectedComponent || !repositorySelect.value) {
+        alert("Select a repository and a component first.");
+        return;
+    }
+
+    if (impactRequestInProgress) {
+        return;
+    }
+
+    impactRequestInProgress = true;
+    impactButton.disabled = true;
+    impactButton.textContent = "Analyzing Impact...";
+
+    impactReport.replaceChildren();
+
+    const loading = document.createElement("p");
+    loading.textContent =
+        "Analyzing dependencies and potentially affected components...";
+
+    impactReport.appendChild(loading);
+
+    try {
+        const response = await fetch(
+            `${API_BASE}/impact-analysis`,
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    repository: repositorySelect.value,
+
+                    // Prefer the graph ID because labels and
+                    // filenames might not be unique.
+                    component: selectedComponent.id,
+
+                    max_depth: 10
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(
+                data.detail || `HTTP ${response.status}`
+            );
+        }
+
+        renderImpactReport(data);
+
+    } catch (error) {
+        console.error("Impact analysis error:", error);
+
+        impactReport.replaceChildren();
+
+        const title = document.createElement("strong");
+        title.textContent = "Impact Analysis Failed";
+        impactReport.appendChild(title);
+
+        const message = document.createElement("p");
+        message.textContent = error.message;
+        impactReport.appendChild(message);
+
+    } finally {
+        impactRequestInProgress = false;
+        impactButton.disabled = !selectedComponent;
+        impactButton.textContent = "Analyze Change Impact";
+    }
+}
+
 
 /* =====================================================
-   FIT GRAPH
+   RENDER IMPACT REPORT
+===================================================== */
+
+
+/* =====================================================
+   RENDER CHANGE IMPACT REPORT
+===================================================== */
+
+function renderImpactReport(data) {
+    impactReport.replaceChildren();
+
+    const summary = data.summary || {};
+    const impacted = Array.isArray(data.impacted_components)
+        ? data.impacted_components
+        : [];
+    const tests = Array.isArray(data.related_tests)
+        ? data.related_tests
+        : [];
+
+    // -------------------------------------------------
+    // HELPER: CREATE ELEMENTS SAFELY
+    // -------------------------------------------------
+
+    function createElement(tag, text, className = "") {
+        const element = document.createElement(tag);
+
+        if (text !== undefined && text !== null) {
+            element.textContent = String(text);
+        }
+
+        if (className) {
+            element.className = className;
+        }
+
+        return element;
+    }
+
+    // -------------------------------------------------
+    // REPORT TITLE
+    // -------------------------------------------------
+
+    impactReport.appendChild(
+        createElement("h3", "Change Impact Report")
+    );
+
+    const selected = data.selected_component || {};
+
+    impactReport.appendChild(
+        createElement(
+            "p",
+            `Analyzed component: ${
+                selected.label || selected.id || "Unknown"
+            }`
+        )
+    );
+
+    // -------------------------------------------------
+    // SUMMARY CARDS
+    // -------------------------------------------------
+
+    const summaryGrid = createElement("div", undefined, "impact-summary");
+
+    const cards = [
+        [
+            "Overall Risk",
+            String(summary.overall_risk || "unknown").toUpperCase()
+        ],
+        [
+            "Impact Score",
+            `${summary.impact_score ?? 0}/100`
+        ],
+        [
+            "Direct",
+            summary.direct_dependencies ?? 0
+        ],
+        [
+            "Indirect",
+            summary.indirect_dependencies ?? 0
+        ],
+
+    ];
+
+    cards.forEach(([label, value]) => {
+        const card = createElement("div", undefined, "impact-card");
+
+        card.appendChild(
+            createElement("strong", value)
+        );
+
+        card.appendChild(
+            createElement("span", label)
+        );
+
+        summaryGrid.appendChild(card);
+    });
+
+    impactReport.appendChild(summaryGrid);
+
+    impactReport.appendChild(
+        createElement(
+            "p",
+            "The impact score is a heuristic based on detected graph " +
+            "relationships. It is not a probability of failure."
+        )
+    );
+
+    // -------------------------------------------------
+    // RESET GRAPH HIGHLIGHTING
+    // -------------------------------------------------
+
+    if (cy) {
+        cy.elements().removeClass(
+            "impact-selected impact-affected"
+        );
+
+        if (selected.id !== undefined) {
+            const selectedNode = cy.getElementById(
+                String(selected.id)
+            );
+
+            if (selectedNode.length > 0) {
+                selectedNode.addClass("impact-selected");
+            }
+        }
+    }
+
+    // -------------------------------------------------
+    // AFFECTED COMPONENTS
+    // -------------------------------------------------
+
+    impactReport.appendChild(
+        createElement(
+            "h3",
+            `Potentially Affected Components (${impacted.length})`
+        )
+    );
+
+    if (impacted.length === 0) {
+        impactReport.appendChild(
+            createElement(
+                "p",
+                "No other connected components were found in the current graph."
+            )
+        );
+    }
+
+    impacted.forEach(component => {
+        const item = createElement("div", undefined, "impact-item");
+
+        const componentId = String(component.id ?? "");
+        const componentLabel =
+            component.label || component.id || "Unknown component";
+
+        // Component name.
+        item.appendChild(
+            createElement("strong", componentLabel)
+        );
+
+        // Risk.
+        const riskValue = String(
+            component.risk || "unknown"
+        ).toLowerCase();
+
+        const risk = createElement(
+            "span",
+            ` — ${riskValue.toUpperCase()}`,
+            ["high", "medium", "low"].includes(riskValue)
+                ? `risk-${riskValue}`
+                : ""
+        );
+
+        item.appendChild(risk);
+
+        // Component metadata.
+        item.appendChild(
+            createElement(
+                "p",
+                `Type: ${component.type || "unknown"} | ` +
+                `Direction: ${component.direction || "unknown"} | ` +
+                `Dependency distance: ${component.depth ?? "unknown"}`
+            )
+        );
+
+        if (component.file) {
+            item.appendChild(
+                createElement("p", `File: ${component.file}`)
+            );
+        }
+
+        item.appendChild(
+            createElement(
+                "p",
+                `Relationship: ${component.relationship || "not specified"}`
+            )
+        );
+
+        // -------------------------------------------------
+        // DEPENDENCY PATH
+        // Supports both array and object response formats.
+        // -------------------------------------------------
+
+        item.appendChild(
+            createElement("p", "Dependency Path:", "")
+        );
+
+        const dependencyPath = component.dependency_path;
+
+        const path = Array.isArray(dependencyPath)
+            ? dependencyPath
+            : Array.isArray(dependencyPath?.nodes)
+                ? dependencyPath.nodes
+                : [];
+
+        if (path.length > 0) {
+            const pathContainer = createElement("div");
+
+            pathContainer.style.padding = "10px";
+            pathContainer.style.marginTop = "6px";
+            pathContainer.style.background = "#f8fafc";
+            pathContainer.style.border = "1px solid #e2e8f0";
+            pathContainer.style.borderRadius = "6px";
+            pathContainer.style.overflowWrap = "anywhere";
+
+            const pathText = createElement("p");
+            pathText.style.margin = "0";
+            pathText.style.lineHeight = "1.8";
+
+            const segments = [];
+
+            path.forEach((pathNode, index) => {
+                segments.push(
+                    String(
+                        pathNode.label ||
+                        pathNode.id ||
+                        "Unknown component"
+                    )
+                );
+
+                if (index < path.length - 1) {
+                    const relationship =
+                        pathNode.relationship_to_next || "depends on";
+
+                    segments.push(
+                        ` --[${relationship}]--> `
+                    );
+                }
+            });
+
+            pathText.textContent = segments.join("");
+
+            pathContainer.appendChild(pathText);
+            item.appendChild(pathContainer);
+
+            // Show traversal direction when available.
+            if (dependencyPath && !Array.isArray(dependencyPath)) {
+                if (dependencyPath.direction) {
+                    item.appendChild(
+                        createElement(
+                            "small",
+                            `Path direction: ${dependencyPath.direction}`
+                        )
+                    );
+                }
+            }
+        } else {
+            item.appendChild(
+                createElement(
+                    "p",
+                    "No dependency path is available for this component."
+                )
+            );
+        }
+
+        // -------------------------------------------------
+        // CLICK COMPONENT TO ZOOM AND HIGHLIGHT
+        // -------------------------------------------------
+
+        item.style.cursor = "pointer";
+        item.title = "Click to locate this component in the graph";
+
+        item.addEventListener("click", () => {
+            if (!cy) {
+                console.warn("Cytoscape graph is not initialized.");
+                return;
+            }
+
+            if (!componentId) {
+                console.warn("Component has no graph ID.");
+                return;
+            }
+
+            const targetNode = cy.getElementById(componentId);
+
+            if (targetNode.length === 0) {
+                console.warn(
+                    "Component not found in Cytoscape graph:",
+                    componentId
+                );
+
+                return;
+            }
+
+            // Clear previous impact highlighting.
+            cy.elements().removeClass(
+                "impact-selected impact-affected"
+            );
+
+            cy.elements().unselect();
+
+            // Highlight the affected node.
+            targetNode.addClass("impact-affected");
+            targetNode.select();
+
+            // Zoom to the node.
+            cy.animate(
+                {
+                    fit: {
+                        eles: targetNode,
+                        padding: 120
+                    },
+                    duration: 500
+                },
+                {
+                    complete: () => {
+                        console.log(
+                            "Focused affected component:",
+                            componentLabel
+                        );
+                    }
+                }
+            );
+        });
+
+        impactReport.appendChild(item);
+
+        // Highlight the affected node in the graph.
+        if (cy && componentId) {
+            const graphNode = cy.getElementById(componentId);
+
+            if (graphNode.length > 0) {
+                graphNode.addClass("impact-affected");
+            }
+        }
+    });
+
+
+}
+
+
+
+
+
+/*  FIT GRAPH
    ===================================================== */
 
 function fitGraph() {
@@ -1282,7 +1833,10 @@ fitGraphButton.onclick =
 askButton.onclick =
     askArchLens;
 
-
+impactButton.addEventListener(
+    "click",
+    analyzeChangeImpact
+);
 
 /* =====================================================
    START APPLICATION
@@ -1301,6 +1855,7 @@ async function startApp() {
     }
 
 }
+
 
 
 startApp();
