@@ -1,0 +1,87 @@
+[
+  {
+    "file": "evaluation/demo_repos/task_manager/notification.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "notify_user",
+        "line": 1,
+        "arguments": [
+          "user",
+          "task"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "notify_user"
+      }
+    ]
+  },
+  {
+    "file": "evaluation/demo_repos/task_manager/task_service.py",
+    "imports": [
+      "database",
+      "notification"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "create_task",
+        "line": 5,
+        "arguments": [
+          "user",
+          "task"
+        ],
+        "class": null
+      },
+      {
+        "name": "delete_task",
+        "line": 10,
+        "arguments": [
+          "task_id"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "save_task",
+        "called_from": "create_task"
+      },
+      {
+        "name": "notify_user",
+        "called_from": "create_task"
+      },
+      {
+        "name": "print",
+        "called_from": "delete_task"
+      }
+    ]
+  },
+  {
+    "file": "evaluation/demo_repos/task_manager/database.py",
+    "imports": [],
+    "classes": [],
+    "functions": [
+      {
+        "name": "save_task",
+        "line": 1,
+        "arguments": [
+          "user",
+          "task"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "save_task"
+      }
+    ]
+  }
+]

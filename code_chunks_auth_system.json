@@ -1,0 +1,72 @@
+[
+  {
+    "document": "from user_service import get_user\nfrom database import save_login\n\n\ndef authenticate_user(username, password):\n    user = get_user(username)\n\n    if user and user[\"password\"] == password:\n        save_login(username)\n        return True\n\n    return False\n",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "auth_service.py",
+      "type": "file",
+      "name": "auth_service.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def authenticate_user(username, password):\n    user = get_user(username)\n\n    if user and user[\"password\"] == password:\n        save_login(username)\n        return True\n\n    return False",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "auth_service.py",
+      "type": "function",
+      "name": "authenticate_user",
+      "line": 5
+    }
+  },
+  {
+    "document": "from database import find_user\n\n\ndef get_user(username):\n    return find_user(username)\n",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "user_service.py",
+      "type": "file",
+      "name": "user_service.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def get_user(username):\n    return find_user(username)",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "user_service.py",
+      "type": "function",
+      "name": "get_user",
+      "line": 4
+    }
+  },
+  {
+    "document": "def find_user(username):\n    print(\"Finding user\")\n    return {\n        \"username\": username,\n        \"password\": \"secret\"\n    }\n\n\ndef save_login(username):\n    print(\"Saving login for\", username)\n",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "database.py",
+      "type": "file",
+      "name": "database.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def find_user(username):\n    print(\"Finding user\")\n    return {\n        \"username\": username,\n        \"password\": \"secret\"\n    }",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "database.py",
+      "type": "function",
+      "name": "find_user",
+      "line": 1
+    }
+  },
+  {
+    "document": "def save_login(username):\n    print(\"Saving login for\", username)",
+    "metadata": {
+      "repository": "auth_system",
+      "file": "database.py",
+      "type": "function",
+      "name": "save_login",
+      "line": 9
+    }
+  }
+]

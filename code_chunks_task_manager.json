@@ -1,0 +1,72 @@
+[
+  {
+    "document": "def notify_user(user, task):\n    print(\"Sending task notification to\", user)\n\n",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "notification.py",
+      "type": "file",
+      "name": "notification.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def notify_user(user, task):\n    print(\"Sending task notification to\", user)",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "notification.py",
+      "type": "function",
+      "name": "notify_user",
+      "line": 1
+    }
+  },
+  {
+    "document": "from database import save_task\nfrom notification import notify_user\n\n\ndef create_task(user, task):\n    save_task(user, task)\n    notify_user(user, task)\n\n\ndef delete_task(task_id):\n    print(\"Deleting task\", task_id)\n",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "task_service.py",
+      "type": "file",
+      "name": "task_service.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def create_task(user, task):\n    save_task(user, task)\n    notify_user(user, task)",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "task_service.py",
+      "type": "function",
+      "name": "create_task",
+      "line": 5
+    }
+  },
+  {
+    "document": "def delete_task(task_id):\n    print(\"Deleting task\", task_id)",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "task_service.py",
+      "type": "function",
+      "name": "delete_task",
+      "line": 10
+    }
+  },
+  {
+    "document": "def save_task(user, task):\n    print(\"Saving task for\", user)\n",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "database.py",
+      "type": "file",
+      "name": "database.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def save_task(user, task):\n    print(\"Saving task for\", user)",
+    "metadata": {
+      "repository": "task_manager",
+      "file": "database.py",
+      "type": "function",
+      "name": "save_task",
+      "line": 1
+    }
+  }
+]

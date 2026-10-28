@@ -1,0 +1,42 @@
+{
+  "total": 5,
+  "successful": 5,
+  "retrieval_quality": 100.0,
+  "results": [
+    {
+      "question": "How is payment processed?",
+      "file_hit": true,
+      "name_hit": true,
+      "passed": true,
+      "latency_seconds": 65.778
+    },
+    {
+      "question": "Where is the order saved?",
+      "file_hit": true,
+      "name_hit": true,
+      "passed": true,
+      "latency_seconds": 70.697
+    },
+    {
+      "question": "When is the customer notified?",
+      "file_hit": true,
+      "name_hit": true,
+      "passed": true,
+      "latency_seconds": 74.753
+    },
+    {
+      "question": "What happens when an order is created?",
+      "file_hit": true,
+      "name_hit": true,
+      "passed": true,
+      "latency_seconds": 97.274
+    },
+    {
+      "question": "How is an order cancelled?",
+      "file_hit": true,
+      "name_hit": true,
+      "passed": true,
+      "latency_seconds": 80.11
+    }
+  ]
+}
