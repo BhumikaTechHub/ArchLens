@@ -1,9 +1,10 @@
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from backend.rag_service import ask
-
+from backend.change_impact import analyze_change_impact
 
 app = FastAPI(
     title="ArchLens API",
@@ -33,6 +34,10 @@ class QuestionRequest(BaseModel):
     question: str
     repository: str
 
+class ChangeImpactRequest(BaseModel):
+    repository: str
+    component: str
+    max_depth: int = 10
 
 # ---------------------------------------------------------
 # Root endpoint
@@ -140,4 +145,84 @@ def ask_question(request: QuestionRequest):
         raise HTTPException(
             status_code=500,
             detail=str(e)
+        )
+
+
+@app.post("/impact-analysis")
+def change_impact(request: ChangeImpactRequest):
+    import json
+
+    repository = request.repository.strip()
+    component = request.component.strip()
+
+    if not repository:
+        raise HTTPException(
+            status_code=400,
+            detail="Repository must be specified.",
+        )
+
+    if not component:
+        raise HTTPException(
+            status_code=400,
+            detail="Component must be specified.",
+        )
+
+    # Validate repository identifier before constructing a path.
+    if (
+        "/" in repository
+        or "\\" in repository
+        or ".." in repository
+    ):
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid repository name.",
+        )
+
+    if not 1 <= request.max_depth <= 25:
+        raise HTTPException(
+            status_code=400,
+            detail="max_depth must be between 1 and 25.",
+        )
+
+    graph_file = BASE_DIR / (
+        f"architecture_graph_{repository}.json"
+    )
+
+    if not graph_file.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail="Architecture graph not found for this repository.",
+        )
+
+    try:
+        with graph_file.open("r", encoding="utf-8") as file:
+            graph = json.load(file)
+
+        result = analyze_change_impact(
+            graph=graph,
+            component=component,
+            max_depth=request.max_depth,
+        )
+
+        result["repository"] = repository
+
+        return result
+
+    except ValueError as error:
+        raise HTTPException(
+            status_code=404,
+            detail=str(error),
+        )
+
+    except json.JSONDecodeError:
+        raise HTTPException(
+            status_code=500,
+            detail="The architecture graph contains invalid JSON.",
+        )
+
+    except Exception:
+        # Avoid exposing internal paths or implementation details.
+        raise HTTPException(
+            status_code=500,
+            detail="Change impact analysis failed.",
         )
