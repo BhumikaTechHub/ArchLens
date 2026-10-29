@@ -9,9 +9,13 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>ArchLens</title>
+    <link rel="stylesheet" href="style.css">
+
 
     <!-- Cytoscape -->
-    <script src="https://unpkg.com/cytoscape@3.30.3/dist/cytoscape.min.js"></script>
+    <script defer src="https://unpkg.com/cytoscape@3.30.3/dist/cytoscape.min.js"></script>
+    <script defer src="app.js"></script> 
+
 
     <style>
 
@@ -323,7 +327,242 @@
         </div>
 
     </div>
+    <!-- =========================================
+     ARCHITECTURE INTELLIGENCE CENTER
+    ========================================== -->
 
+    <section id="architectureDashboard" class="intelligence-dashboard">
+ 
+       <div class="intelligence-header">
+           <div>
+               <span class="intelligence-eyebrow">
+                   ARCHLENS ANALYTICS
+               </span>
+
+               <h2>Architecture Intelligence Center</h2>
+
+               <p id="dashboardSubtitle">
+                   Architecture metrics, structural risks, and recommendations.
+               </p>
+          </div>
+
+           <button
+               type="button"
+               id="refreshDashboard"
+               class="dashboard-refresh-btn"
+           >
+               ↻ Refresh Analysis
+           </button>
+      </div>
+
+      <div
+          id="dashboardStatus"
+          class="dashboard-status"
+          role="status"
+          aria-live="polite"
+     >
+          Select a repository and load its architecture analysis.
+     </div>
+
+    <!-- Health and metric cards -->
+
+     <div class="dashboard-overview">
+
+         <article class="dashboard-card health-card">
+             <span class="dashboard-card-label">
+                 Architecture Health
+             </span>
+
+             <div class="health-score-row">
+                 <strong id="healthScore">--</strong>
+                 <span>/ 100</span>
+             </div>
+
+             <div class="health-progress-track">
+                 <div
+                     id="healthProgress"
+                     class="health-progress"
+                     style="width: 0%"
+                >
+                </div>
+            </div>
+
+            <p id="healthLabel">Awaiting analysis</p>
+         </article>
+
+         <article class="dashboard-card">
+             <span class="dashboard-card-label">
+                 Components
+             </span>
+
+             <strong
+                class="dashboard-metric"
+                id="totalComponents"
+             >--</strong>
+
+             <p>Files, classes, functions, and other graph nodes</p>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="dashboard-card-label">
+                Relationships
+            </span>
+
+            <strong
+                class="dashboard-metric"
+                id="totalRelationships"
+            >--</strong>
+
+            <p>Distinct graph relationships</p>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="dashboard-card-label">
+                Circular Dependencies
+            </span>
+
+            <strong
+                class="dashboard-metric"
+                id="circularDependencies"
+            >--</strong>
+
+            <p>Detected dependency cycles</p>
+        </article>
+
+        <article class="dashboard-card">
+            <span class="dashboard-card-label">
+                Architecture Findings
+            </span>
+
+            <strong
+                class="dashboard-metric"
+                id="totalFindings"
+            >--</strong>
+
+            <p>Potential issues requiring review</p>
+        </article>
+
+    </div>
+
+    <!-- Detailed analysis -->
+
+    <div class="dashboard-detail-grid">
+
+        <article class="dashboard-panel">
+            <div class="dashboard-panel-header">
+                <div>
+                    <h3>Technology Distribution</h3>
+                    <p>Languages identified from component paths</p>
+                </div>
+            </div>
+
+            <div id="languageDistribution" class="language-list">
+                <p class="dashboard-empty">
+                    No analysis loaded yet.
+                </p>
+            </div>
+        </article>
+
+        <article class="dashboard-panel">
+            <div class="dashboard-panel-header">
+                <div>
+                    <h3>Finding Summary</h3>
+                    <p>Rule-based architecture review</p>
+                </div>
+            </div>
+
+            <div class="severity-summary">
+                <div class="severity-item severity-critical">
+                    <span>Critical</span>
+                    <strong id="criticalCount">0</strong>
+                </div>
+
+                <div class="severity-item severity-high">
+                    <span>High</span>
+                    <strong id="highCount">0</strong>
+                </div>
+
+                <div class="severity-item severity-medium">
+                    <span>Medium</span>
+                    <strong id="mediumCount">0</strong>
+                </div>
+
+                <div class="severity-item severity-low">
+                    <span>Low</span>
+                    <strong id="lowCount">0</strong>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Architecture findings -->
+
+    <article class="dashboard-panel findings-panel">
+
+        <div class="dashboard-panel-header">
+            <div>
+                <h3>Architecture Risk Register</h3>
+                <p>
+                    Detected structural patterns, affected components,
+                    and suggested actions.
+                </p>
+            </div>
+        </div>
+
+        <div id="architectureFindings">
+            <p class="dashboard-empty">
+                Load a repository to inspect architecture findings.
+            </p>
+        </div>
+
+    </article>
+
+    <!-- Most connected components -->
+
+    <article class="dashboard-panel">
+
+        <div class="dashboard-panel-header">
+            <div>
+                <h3>Most Connected Components</h3>
+                <p>
+                    Components with the highest number of graph connections.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-table-wrapper">
+
+            <table class="dashboard-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Type</th>
+                        <th>Incoming</th>
+                        <th>Outgoing</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+
+                <tbody id="connectedComponentsTable">
+                    <tr>
+                        <td colspan="5">
+                            No analysis loaded yet.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </article>
+
+    <p class="dashboard-disclaimer">
+        Architecture health is a heuristic indicator based on detected rules,
+        not a validated measure of software quality or production reliability.
+    </p>
+
+</section>
 
 
     <!-- ========================= -->
@@ -476,1391 +715,6 @@
 </div>
 
 
-
-<script>
-
-
-/* =====================================================
-   CONFIGURATION
-   ===================================================== */
-
-const API_BASE = "http://127.0.0.1:8000";
-
-
-let cy = null;
-let selectedComponent = null;
-let impactRequestInProgress = false;
-
-
-/* =====================================================
-   ELEMENTS
-   ===================================================== */
-
-const repositorySelect =
-    document.getElementById("repository");
-
-const loadArchitectureButton =
-    document.getElementById("loadArchitecture");
-
-const fitGraphButton =
-    document.getElementById("fitGraph");
-
-const statusElement =
-    document.getElementById("status");
-
-const nodeCountElement =
-    document.getElementById("nodeCount");
-
-const edgeCountElement =
-    document.getElementById("edgeCount");
-
-const detailsElement =
-    document.getElementById("details");
-
-const questionElement =
-    document.getElementById("question");
-
-const askButton =
-    document.getElementById("askButton");
-
-const answerElement =
-    document.getElementById("answer");
-
-const sourcesElement =
-    document.getElementById("sources");
-
-const impactButton =
-    document.getElementById("impactButton");
-
-const impactReport =
-    document.getElementById("impactReport");
-
-/* =====================================================
-   BACKEND CHECK
-   ===================================================== */
-
-async function checkBackend() {
-
-    try {
-
-        const response =
-            await fetch(API_BASE + "/");
-
-        if (!response.ok) {
-            throw new Error("Backend unavailable");
-        }
-
-        const data =
-            await response.json();
-
-        console.log(
-            "Backend:",
-            data
-        );
-
-        statusElement.textContent =
-            "Backend Connected";
-
-        statusElement.className =
-            "success";
-
-        return true;
-
-    }
-
-    catch(error) {
-
-        console.error(error);
-
-        statusElement.textContent =
-            "Backend connection failed.";
-
-        statusElement.className =
-            "error";
-
-        return false;
-
-    }
-
-}
-
-
-
-/* =====================================================
-   LOAD REPOSITORIES
-   ===================================================== */
-
-async function loadRepositories() {
-
-    try {
-
-        const response =
-            await fetch(
-                API_BASE + "/repositories"
-            );
-
-        if (!response.ok) {
-            throw new Error(
-                "Could not load repositories"
-            );
-        }
-
-        const data =
-            await response.json();
-
-        console.log(
-            "Repositories:",
-            data
-        );
-
-
-        repositorySelect.innerHTML = "";
-
-
-        data.repositories.forEach(
-            function(repository) {
-
-                const option =
-                    document.createElement("option");
-
-                option.value =
-                    repository;
-
-                option.textContent =
-                    repository;
-
-                repositorySelect.appendChild(
-                    option
-                );
-
-            }
-        );
-
-
-        if (data.repositories.length > 0) {
-
-            repositorySelect.value =
-                data.repositories[0];
-
-        }
-
-
-    }
-
-    catch(error) {
-
-        console.error(error);
-
-        repositorySelect.innerHTML = `
-            <option value="">
-                Failed to load repositories
-            </option>
-        `;
-
-        statusElement.textContent =
-            "Failed to load repositories.";
-
-        statusElement.className =
-            "error";
-
-    }
-
-}
-
-
-
-/* =====================================================
-   LOAD ARCHITECTURE
-   ===================================================== */
-
-async function loadArchitecture() {
-
-    const repository =
-        repositorySelect.value;
-
-
-    console.log(
-        "Selected repository:",
-        repository
-    );
-
-
-    if (!repository) {
-
-        alert(
-            "Please select a repository first."
-        );
-
-        return;
-
-    }
-
-
-    statusElement.textContent =
-        "Loading architecture...";
-
-    statusElement.className =
-        "";
-
-
-    try {
-
-        const url =
-            API_BASE +
-            "/architecture/" +
-            encodeURIComponent(repository);
-
-
-        console.log(
-            "Architecture URL:",
-            url
-        );
-
-
-        const response =
-            await fetch(url);
-
-
-        console.log(
-            "HTTP status:",
-            response.status
-        );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "HTTP " + response.status
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        console.log(
-            "Architecture data:",
-            data
-        );
-
-
-        if (!data.graph) {
-
-            throw new Error(
-                "Graph data missing from response"
-            );
-
-        }
-
-
-        renderGraph(
-            data.graph
-        );
-
-
-        statusElement.textContent =
-            "Architecture loaded: " +
-            repository;
-
-        statusElement.className =
-            "success";
-
-    }
-
-
-    catch(error) {
-
-        console.error(
-            "Architecture error:",
-            error
-        );
-
-
-        statusElement.textContent =
-            "Architecture loading failed: " +
-            error.message;
-
-        statusElement.className =
-            "error";
-
-    }
-
-}
-
-
-
-/* =====================================================
-   NODE COLOR
-   ===================================================== */
-
-function nodeColor(type) {
-
-    if (type === "file") {
-        return "#2563eb";
-    }
-
-    if (type === "module") {
-        return "#7c3aed";
-    }
-
-    if (type === "class") {
-        return "#059669";
-    }
-
-    if (type === "function") {
-        return "#ea580c";
-    }
-
-    if (type === "function_reference") {
-        return "#64748b";
-    }
-
-    return "#475569";
-
-}
-
-
-
-/* =====================================================
-   RENDER GRAPH
-   ===================================================== */
-
-function renderGraph(graph) {
-
-
-    console.log(
-        "Nodes:",
-        graph.nodes
-    );
-
-    console.log(
-        "Edges:",
-        graph.edges
-    );
-
-
-    if (cy !== null) {
-
-        cy.destroy();
-
-        cy = null;
-
-    }
-
-
-    const elements = [];
-
-
-    /* ---------- NODES ---------- */
-
-    graph.nodes.forEach(
-        function(node) {
-
-            elements.push({
-
-                data: {
-
-                    id:
-                        String(node.id),
-
-                    label:
-                        node.label || String(node.id),
-
-                    type:
-                        node.type || "unknown",
-                    file:
-                        node.file || node.path || ""   
-
-                }
-
-            });
-
-        }
-    );
-
-
-    /* ---------- EDGES ---------- */
-
-    graph.edges.forEach(
-        function(edge, index) {
-
-            elements.push({
-
-                data: {
-
-                    id:
-                        "edge-" +
-                        index,
-
-                    source:
-                        edge.source,
-
-                    target:
-                        edge.target,
-
-                    relationship:
-                        edge.relationship
-
-                }
-
-            });
-
-        }
-    );
-
-
-    /* ---------- COUNTS ---------- */
-
-    nodeCountElement.textContent =
-        graph.nodes.length;
-
-    edgeCountElement.textContent =
-        graph.edges.length;
-
-
-
-    /* ---------- CYTOSCAPE ---------- */
-
-    cy = cytoscape({
-
-        container:
-            document.getElementById("cy"),
-
-        elements:
-            elements,
-
-
-        style: [
-
-            {
-                selector: "node",
-
-                style: {
-
-                    "background-color":
-                        function(element) {
-
-                            return nodeColor(
-                                element.data("type")
-                            );
-
-                        },
-
-                    "label":
-                        "data(label)",
-
-                    "color":
-                        "#111827",
-
-                    "font-size":
-                        "12px",
-
-                    "font-weight":
-                        "bold",
-
-                    "text-valign":
-                        "bottom",
-
-                    "text-halign":
-                        "center",
-
-                    "text-margin-y":
-                        "8px",
-
-                    "width":
-                        "45px",
-
-                    "height":
-                        "45px",
-
-                    "border-width":
-                        2,
-
-                    "border-color":
-                        "#ffffff"
-
-                }
-
-            },
-
-
-            {
-                selector: "edge",
-
-                style: {
-
-                    "width":
-                        2,
-
-                    "line-color":
-                        "#94a3b8",
-
-                    "target-arrow-color":
-                        "#64748b",
-
-                    "target-arrow-shape":
-                        "triangle",
-
-                    "curve-style":
-                        "bezier",
-
-                    "label":
-                        "data(relationship)",
-
-                    "font-size":
-                        "10px",
-
-                    "color":
-                        "#334155",
-
-                    "text-background-color":
-                        "#ffffff",
-
-                    "text-background-opacity":
-                        1,
-
-                    "text-background-padding":
-                        "3px"
-
-                }
-
-            },
-
-
-            {
-                selector: "node:selected",
-
-                style: {
-
-                    "background-color":
-                        "#facc15",
-
-                    "border-color":
-                        "#f59e0b",
-
-                    "border-width":
-                        4
-
-                }
-
-            },
-
-
-            {
-                selector: "edge:selected",
-
-                style: {
-
-                    "line-color":
-                        "#2563eb",
-
-                    "target-arrow-color":
-                        "#2563eb",
-
-                    "width":
-                        4
-
-                }
-
-            }
-        ],
-
-
-        layout: {
-
-            name:
-                "breadthfirst",
-
-            animate:
-                true,
-
-            fit:
-                true,
-            spacingFactor:
-                1.5,
-
-            padding:
-                80,
-
-            nodeRepulsion:
-                8000,
-
-            idealEdgeLength:
-                150
-
-        }
-
-    });
-
-
-
-    /* ---------- NODE CLICK ---------- */
-    cy.on("tap", "node", function(event) {
-          const node = event.target;
-          const data = node.data();
- 
-          selectedComponent = {
-              id: data.id,
-              label: data.label,
-              type: data.type,
-              file: data.file || ""
-          };
-
-          impactButton.disabled = false;
-
-          // Remove previous impact highlighting.
-          cy.elements().removeClass("impact-selected impact-affected");
-
-          node.addClass("impact-selected");
-
-          detailsElement.replaceChildren();
-
-          const title = document.createElement("strong");
-          title.textContent = "Component Details";
-          detailsElement.appendChild(title);
-
-          const fields = [
-              ["Name", data.label],
-              ["Type", data.type],
-              ["ID", data.id],
-              ["File", data.file || "Not available"]
-          ];
-
-          fields.forEach(([label, value]) => {
-          const paragraph = document.createElement("p");
-          const strong = document.createElement("strong");
-
-          strong.textContent = `${label}: `;
-          paragraph.appendChild(strong);
-          paragraph.appendChild(
-              document.createTextNode(String(value))
-          );
-
-          detailsElement.appendChild(paragraph);
-        });
-
-       impactReport.replaceChildren();
-
-       const reportTitle = document.createElement("strong");
-       reportTitle.textContent = "What-If Change Impact Simulator";
-       impactReport.appendChild(reportTitle);
-
-       const reportText = document.createElement("p");
-       reportText.textContent =
-          `Selected component: ${data.label}. ` +
-          "Click Analyze Change Impact to inspect dependencies.";
-  
-       impactReport.appendChild(reportText);
-    });
-    
-
-
-
-    /* ---------- EDGE CLICK ---------- */
-
-    cy.on(
-        "tap",
-        "edge",
-        function(event) {
-
-            const edge =
-                event.target;
-
-            const data =
-                edge.data();
-
-
-            detailsElement.innerHTML = `
-
-                <strong>
-                    Relationship
-                </strong>
-
-                <p>
-                    <b>Relationship:</b>
-                    ${data.relationship}
-                </p>
-
-                <p>
-                    <b>Source:</b>
-                    ${data.source}
-                </p>
-
-                <p>
-                    <b>Target:</b>
-                    ${data.target}
-                </p>
-
-            `;
-
-        }
-    );
-
-}
-
-
-/* =====================================================
-   WHAT-IF CHANGE IMPACT SIMULATOR
-===================================================== */
-
-async function analyzeChangeImpact() {
-    if (!selectedComponent || !repositorySelect.value) {
-        alert("Select a repository and a component first.");
-        return;
-    }
-
-    if (impactRequestInProgress) {
-        return;
-    }
-
-    impactRequestInProgress = true;
-    impactButton.disabled = true;
-    impactButton.textContent = "Analyzing Impact...";
-
-    impactReport.replaceChildren();
-
-    const loading = document.createElement("p");
-    loading.textContent =
-        "Analyzing dependencies and potentially affected components...";
-
-    impactReport.appendChild(loading);
-
-    try {
-        const response = await fetch(
-            `${API_BASE}/impact-analysis`,
-            {
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-                    repository: repositorySelect.value,
-
-                    // Prefer the graph ID because labels and
-                    // filenames might not be unique.
-                    component: selectedComponent.id,
-
-                    max_depth: 10
-                })
-            }
-        );
-
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(
-                data.detail || `HTTP ${response.status}`
-            );
-        }
-
-        renderImpactReport(data);
-
-    } catch (error) {
-        console.error("Impact analysis error:", error);
-
-        impactReport.replaceChildren();
-
-        const title = document.createElement("strong");
-        title.textContent = "Impact Analysis Failed";
-        impactReport.appendChild(title);
-
-        const message = document.createElement("p");
-        message.textContent = error.message;
-        impactReport.appendChild(message);
-
-    } finally {
-        impactRequestInProgress = false;
-        impactButton.disabled = !selectedComponent;
-        impactButton.textContent = "Analyze Change Impact";
-    }
-}
-
-
-/* =====================================================
-   RENDER IMPACT REPORT
-===================================================== */
-
-
-/* =====================================================
-   RENDER CHANGE IMPACT REPORT
-===================================================== */
-
-function renderImpactReport(data) {
-    impactReport.replaceChildren();
-
-    const summary = data.summary || {};
-    const impacted = Array.isArray(data.impacted_components)
-        ? data.impacted_components
-        : [];
-    const tests = Array.isArray(data.related_tests)
-        ? data.related_tests
-        : [];
-
-    // -------------------------------------------------
-    // HELPER: CREATE ELEMENTS SAFELY
-    // -------------------------------------------------
-
-    function createElement(tag, text, className = "") {
-        const element = document.createElement(tag);
-
-        if (text !== undefined && text !== null) {
-            element.textContent = String(text);
-        }
-
-        if (className) {
-            element.className = className;
-        }
-
-        return element;
-    }
-
-    // -------------------------------------------------
-    // REPORT TITLE
-    // -------------------------------------------------
-
-    impactReport.appendChild(
-        createElement("h3", "Change Impact Report")
-    );
-
-    const selected = data.selected_component || {};
-
-    impactReport.appendChild(
-        createElement(
-            "p",
-            `Analyzed component: ${
-                selected.label || selected.id || "Unknown"
-            }`
-        )
-    );
-
-    // -------------------------------------------------
-    // SUMMARY CARDS
-    // -------------------------------------------------
-
-    const summaryGrid = createElement("div", undefined, "impact-summary");
-
-    const cards = [
-        [
-            "Overall Risk",
-            String(summary.overall_risk || "unknown").toUpperCase()
-        ],
-        [
-            "Impact Score",
-            `${summary.impact_score ?? 0}/100`
-        ],
-        [
-            "Direct",
-            summary.direct_dependencies ?? 0
-        ],
-        [
-            "Indirect",
-            summary.indirect_dependencies ?? 0
-        ],
-
-    ];
-
-    cards.forEach(([label, value]) => {
-        const card = createElement("div", undefined, "impact-card");
-
-        card.appendChild(
-            createElement("strong", value)
-        );
-
-        card.appendChild(
-            createElement("span", label)
-        );
-
-        summaryGrid.appendChild(card);
-    });
-
-    impactReport.appendChild(summaryGrid);
-
-    impactReport.appendChild(
-        createElement(
-            "p",
-            "The impact score is a heuristic based on detected graph " +
-            "relationships. It is not a probability of failure."
-        )
-    );
-
-    // -------------------------------------------------
-    // RESET GRAPH HIGHLIGHTING
-    // -------------------------------------------------
-
-    if (cy) {
-        cy.elements().removeClass(
-            "impact-selected impact-affected"
-        );
-
-        if (selected.id !== undefined) {
-            const selectedNode = cy.getElementById(
-                String(selected.id)
-            );
-
-            if (selectedNode.length > 0) {
-                selectedNode.addClass("impact-selected");
-            }
-        }
-    }
-
-    // -------------------------------------------------
-    // AFFECTED COMPONENTS
-    // -------------------------------------------------
-
-    impactReport.appendChild(
-        createElement(
-            "h3",
-            `Potentially Affected Components (${impacted.length})`
-        )
-    );
-
-    if (impacted.length === 0) {
-        impactReport.appendChild(
-            createElement(
-                "p",
-                "No other connected components were found in the current graph."
-            )
-        );
-    }
-
-    impacted.forEach(component => {
-        const item = createElement("div", undefined, "impact-item");
-
-        const componentId = String(component.id ?? "");
-        const componentLabel =
-            component.label || component.id || "Unknown component";
-
-        // Component name.
-        item.appendChild(
-            createElement("strong", componentLabel)
-        );
-
-        // Risk.
-        const riskValue = String(
-            component.risk || "unknown"
-        ).toLowerCase();
-
-        const risk = createElement(
-            "span",
-            ` — ${riskValue.toUpperCase()}`,
-            ["high", "medium", "low"].includes(riskValue)
-                ? `risk-${riskValue}`
-                : ""
-        );
-
-        item.appendChild(risk);
-
-        // Component metadata.
-        item.appendChild(
-            createElement(
-                "p",
-                `Type: ${component.type || "unknown"} | ` +
-                `Direction: ${component.direction || "unknown"} | ` +
-                `Dependency distance: ${component.depth ?? "unknown"}`
-            )
-        );
-
-        if (component.file) {
-            item.appendChild(
-                createElement("p", `File: ${component.file}`)
-            );
-        }
-
-        item.appendChild(
-            createElement(
-                "p",
-                `Relationship: ${component.relationship || "not specified"}`
-            )
-        );
-
-        // -------------------------------------------------
-        // DEPENDENCY PATH
-        // Supports both array and object response formats.
-        // -------------------------------------------------
-
-        item.appendChild(
-            createElement("p", "Dependency Path:", "")
-        );
-
-        const dependencyPath = component.dependency_path;
-
-        const path = Array.isArray(dependencyPath)
-            ? dependencyPath
-            : Array.isArray(dependencyPath?.nodes)
-                ? dependencyPath.nodes
-                : [];
-
-        if (path.length > 0) {
-            const pathContainer = createElement("div");
-
-            pathContainer.style.padding = "10px";
-            pathContainer.style.marginTop = "6px";
-            pathContainer.style.background = "#f8fafc";
-            pathContainer.style.border = "1px solid #e2e8f0";
-            pathContainer.style.borderRadius = "6px";
-            pathContainer.style.overflowWrap = "anywhere";
-
-            const pathText = createElement("p");
-            pathText.style.margin = "0";
-            pathText.style.lineHeight = "1.8";
-
-            const segments = [];
-
-            path.forEach((pathNode, index) => {
-                segments.push(
-                    String(
-                        pathNode.label ||
-                        pathNode.id ||
-                        "Unknown component"
-                    )
-                );
-
-                if (index < path.length - 1) {
-                    const relationship =
-                        pathNode.relationship_to_next || "depends on";
-
-                    segments.push(
-                        ` --[${relationship}]--> `
-                    );
-                }
-            });
-
-            pathText.textContent = segments.join("");
-
-            pathContainer.appendChild(pathText);
-            item.appendChild(pathContainer);
-
-            // Show traversal direction when available.
-            if (dependencyPath && !Array.isArray(dependencyPath)) {
-                if (dependencyPath.direction) {
-                    item.appendChild(
-                        createElement(
-                            "small",
-                            `Path direction: ${dependencyPath.direction}`
-                        )
-                    );
-                }
-            }
-        } else {
-            item.appendChild(
-                createElement(
-                    "p",
-                    "No dependency path is available for this component."
-                )
-            );
-        }
-
-        // -------------------------------------------------
-        // CLICK COMPONENT TO ZOOM AND HIGHLIGHT
-        // -------------------------------------------------
-
-        item.style.cursor = "pointer";
-        item.title = "Click to locate this component in the graph";
-
-        item.addEventListener("click", () => {
-            if (!cy) {
-                console.warn("Cytoscape graph is not initialized.");
-                return;
-            }
-
-            if (!componentId) {
-                console.warn("Component has no graph ID.");
-                return;
-            }
-
-            const targetNode = cy.getElementById(componentId);
-
-            if (targetNode.length === 0) {
-                console.warn(
-                    "Component not found in Cytoscape graph:",
-                    componentId
-                );
-
-                return;
-            }
-
-            // Clear previous impact highlighting.
-            cy.elements().removeClass(
-                "impact-selected impact-affected"
-            );
-
-            cy.elements().unselect();
-
-            // Highlight the affected node.
-            targetNode.addClass("impact-affected");
-            targetNode.select();
-
-            // Zoom to the node.
-            cy.animate(
-                {
-                    fit: {
-                        eles: targetNode,
-                        padding: 120
-                    },
-                    duration: 500
-                },
-                {
-                    complete: () => {
-                        console.log(
-                            "Focused affected component:",
-                            componentLabel
-                        );
-                    }
-                }
-            );
-        });
-
-        impactReport.appendChild(item);
-
-        // Highlight the affected node in the graph.
-        if (cy && componentId) {
-            const graphNode = cy.getElementById(componentId);
-
-            if (graphNode.length > 0) {
-                graphNode.addClass("impact-affected");
-            }
-        }
-    });
-
-
-}
-
-
-
-
-
-/*  FIT GRAPH
-   ===================================================== */
-
-function fitGraph() {
-
-    if (cy !== null) {
-
-        cy.fit(
-            undefined,
-            60
-        );
-
-    }
-
-}
-
-
-
-/* =====================================================
-   ASK ARCHLENS
-   ===================================================== */
-
-async function askArchLens() {
-
-    const repository =
-        repositorySelect.value;
-
-    const question =
-        questionElement.value.trim();
-
-
-    if (!repository) {
-
-        alert(
-            "Please select a repository."
-        );
-
-        return;
-
-    }
-
-
-    if (!question) {
-
-        alert(
-            "Please enter a question."
-        );
-
-        return;
-
-    }
-
-
-    answerElement.textContent =
-        "ArchLens is analyzing the repository...";
-
-
-    sourcesElement.textContent =
-        "Loading...";
-
-
-    try {
-
-        const response =
-            await fetch(
-                API_BASE + "/ask",
-                {
-
-                    method:
-                        "POST",
-
-                    headers: {
-
-                        "Content-Type":
-                            "application/json"
-
-                    },
-
-                    body:
-                        JSON.stringify({
-
-                            question:
-                                question,
-
-                            repository:
-                                repository
-
-                        })
-
-                }
-            );
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "HTTP " +
-                response.status
-            );
-
-        }
-
-
-        const data =
-            await response.json();
-
-
-        console.log(
-            "AI response:",
-            data
-        );
-
-
-        answerElement.textContent =
-            data.answer ||
-            "No answer returned.";
-
-
-        sourcesElement.innerHTML =
-            "";
-
-
-        if (
-            data.sources &&
-            data.sources.length > 0
-        ) {
-
-            data.sources.forEach(
-                function(source) {
-
-                    const span =
-                        document.createElement(
-                            "span"
-                        );
-
-                    span.className =
-                        "source";
-
-                    span.textContent =
-                        source;
-
-                    sourcesElement.appendChild(
-                        span
-                    );
-
-                }
-            );
-
-        }
-
-        else {
-
-            sourcesElement.textContent =
-                "No sources returned.";
-
-        }
-
-    }
-
-
-    catch(error) {
-
-        console.error(
-            "Ask error:",
-            error
-        );
-
-
-        answerElement.textContent =
-            "Could not connect to the backend.";
-
-        sourcesElement.textContent =
-            "No sources.";
-
-    }
-
-}
-
-
-
-/* =====================================================
-   BUTTON EVENTS
-   ===================================================== */
-
-/*
- * IMPORTANT:
- * These are normal click handlers.
- */
-
-loadArchitectureButton.onclick =
-    loadArchitecture;
-
-
-fitGraphButton.onclick =
-    fitGraph;
-
-
-askButton.onclick =
-    askArchLens;
-
-impactButton.addEventListener(
-    "click",
-    analyzeChangeImpact
-);
-
-/* =====================================================
-   START APPLICATION
-   ===================================================== */
-
-async function startApp() {
-
-    const connected =
-        await checkBackend();
-
-
-    if (connected) {
-
-        await loadRepositories();
-
-    }
-
-}
-
-
-
-startApp();
-
-</script>
 
 
 </body>

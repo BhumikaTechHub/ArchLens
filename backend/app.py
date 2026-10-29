@@ -5,7 +5,17 @@ from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from backend.rag_service import ask
 from backend.change_impact import analyze_change_impact
+import re
+import json 
 
+
+from analyzer.architecture_metrics import (
+    calculate_architecture_metrics,
+)
+
+from analyzer.architecture_rules import (
+    analyze_architecture_rules,
+)
 app = FastAPI(
     title="ArchLens API",
     description="AI-powered software architecture and knowledge explorer",
@@ -226,3 +236,81 @@ def change_impact(request: ChangeImpactRequest):
             status_code=500,
             detail="Change impact analysis failed.",
         )
+
+
+
+
+@app.get("/dashboard/{repository}")
+def get_architecture_dashboard(repository: str):
+    """
+    Return architecture metrics and rule-based findings
+    for a previously analyzed repository.
+    """
+
+    # Prevent repository names from escaping the project directory.
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+", repository):
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid repository name.",
+        )
+
+    if repository in {".", ".."}:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid repository name.",
+        )
+
+    graph_file = BASE_DIR / f"architecture_graph_{repository}.json"
+
+    if not graph_file.is_file():
+        raise HTTPException(
+            status_code=404,
+            detail=(
+                f"Architecture graph not found for '{repository}'. "
+                "Analyze the repository first."
+            ),
+        )
+
+    try:
+        with graph_file.open("r", encoding="utf-8") as file:
+            graph = json.load(file)
+
+        if not isinstance(graph, dict):
+            raise ValueError("The graph JSON must contain an object.")
+
+        metrics_report = calculate_architecture_metrics(graph)
+
+        rules_report = analyze_architecture_rules(graph)
+
+        return {
+            "repository": repository,
+            "metrics": metrics_report["metrics"],
+            "component_types": metrics_report["component_types"],
+            "language_distribution": metrics_report[
+                "language_distribution"
+            ],
+            "top_connected_components": metrics_report[
+                "top_connected_components"
+            ],
+            "highly_connected_components": metrics_report[
+                "highly_connected_components"
+            ],
+            "isolated_components": metrics_report[
+                "isolated_components"
+            ],
+            "health": rules_report["health"],
+            "summary": rules_report["summary"],
+            "findings": rules_report["findings"],
+        }
+
+    except json.JSONDecodeError as exc:
+        raise HTTPException(
+            status_code=500,
+            detail="The architecture graph contains invalid JSON.",
+        ) from exc
+
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Unable to analyze architecture graph: {exc}",
+        ) from exc
