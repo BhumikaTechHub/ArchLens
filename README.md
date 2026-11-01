@@ -75,7 +75,7 @@ send_notification()
 
 
 Project Structure
-
+```
 ArchLens/
 ├── analyzer/
 ├── backend/
@@ -90,18 +90,18 @@ ArchLens/
 ├── Dockerfile
 └── docker-compose.yml
 
-
+```
 Running the Backend
-
+```
 cd ~/ArchLens
 source venv/bin/activate
 uvicorn backend.app:app --reload
-
+```
 Running the Frontend
-
+```
 cd ~/ArchLens/frontend
 python3 -m http.server 5500
-
+```
 
 ## Current Progress
 
