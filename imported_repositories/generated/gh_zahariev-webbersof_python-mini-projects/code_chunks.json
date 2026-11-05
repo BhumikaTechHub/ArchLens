@@ -1,0 +1,706 @@
+[
+  {
+    "document": "import requests\nfrom bs4 import BeautifulSoup as bs\n\nURL = 'https://coinmarketcap.com/currencies/bitcoin/'\nreq = requests.get(URL)\n\nsoup = bs(req.content, 'html.parser')\n\nprice = soup.find('div', {'class': 'priceValue'})\nextract = price.select_one('span')\n\nprint(f'Bitcoin price today is {extract.text} per (BTC / USD)') \n",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "bitcoin_price.py",
+      "language": "python",
+      "type": "file",
+      "name": "bitcoin_price.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class Car:\n    def __init__(self, make, model, year, speed):\n        self.make = make\n        self.model = model\n        self.year = year\n        self.speed = speed\n\n    def honk(self):\n        print(\"Beep beep!\")\n\n    def accelerate(self, rate):\n        self.speed += rate\n\n    def get_speed(self):\n        return self.speed\n\n\nmy_car = Car(\"Toyota\", \"Camry\", 2020, 0)\nmy_car.honk()  # Output: \"Beep beep!\"\nmy_car.accelerate(30)\nprint(my_car.get_speed())  # Output: 30\n",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "file",
+      "name": "class_example.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class Car:\n    def __init__(self, make, model, year, speed):\n        self.make = make\n        self.model = model\n        self.year = year\n        self.speed = speed\n\n    def honk(self):\n        print(\"Beep beep!\")\n\n    def accelerate(self, rate):\n        self.speed += rate\n\n    def get_speed(self):\n        return self.speed",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "class",
+      "name": "Car",
+      "line": 1,
+      "end_line": 15
+    }
+  },
+  {
+    "document": "def __init__(self, make, model, year, speed):\n        self.make = make\n        self.model = model\n        self.year = year\n        self.speed = speed",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "function",
+      "name": "__init__",
+      "class_name": "Car",
+      "qualified_name": "Car.__init__",
+      "line": 2,
+      "end_line": 6
+    }
+  },
+  {
+    "document": "def honk(self):\n        print(\"Beep beep!\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "function",
+      "name": "honk",
+      "class_name": "Car",
+      "qualified_name": "Car.honk",
+      "line": 8,
+      "end_line": 9
+    }
+  },
+  {
+    "document": "def accelerate(self, rate):\n        self.speed += rate",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "function",
+      "name": "accelerate",
+      "class_name": "Car",
+      "qualified_name": "Car.accelerate",
+      "line": 11,
+      "end_line": 12
+    }
+  },
+  {
+    "document": "def get_speed(self):\n        return self.speed",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "class_example.py",
+      "language": "python",
+      "type": "function",
+      "name": "get_speed",
+      "class_name": "Car",
+      "qualified_name": "Car.get_speed",
+      "line": 14,
+      "end_line": 15
+    }
+  },
+  {
+    "document": "import tkinter as tk\nfrom tkinter.filedialog import *\nimport pyautogui\n\nroot = tk.Tk()\n\ncanvas = tk.Canvas(root, width=300, height=300)\ncanvas.pack()\n\n\ndef take_screenshot():\n    my_screenshot = pyautogui.screenshot()\n    save_path = asksaveasfilename()\n    my_screenshot.save(save_path + \"screenshot.png\")\n\n\nbutton_pattern = tk.Button(text=\"Take Screenshot\", command=take_screenshot, font=10)\ncanvas.create_window(150, 150, window=button_pattern)\n\nroot.mainloop()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "take_a_screenshot.py",
+      "language": "python",
+      "type": "file",
+      "name": "take_a_screenshot.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def take_screenshot():\n    my_screenshot = pyautogui.screenshot()\n    save_path = asksaveasfilename()\n    my_screenshot.save(save_path + \"screenshot.png\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "take_a_screenshot.py",
+      "language": "python",
+      "type": "function",
+      "name": "take_screenshot",
+      "class_name": null,
+      "qualified_name": "take_screenshot",
+      "line": 11,
+      "end_line": 14
+    }
+  },
+  {
+    "document": "from colorama import init\nfrom colorama import Fore, Back, Style  # Fore- font color | Back- Background\n\ninit()\n\nprint(Fore.GREEN, \"Hello Python Dev Society\")\n\nprint(Back.RED, \"Hello Python Dev Society\")\n\n'''\nAll Variaton on Colors:\n\nFore: BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE RESET\nBack: BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE RESET\nStyle: DIM NORMAL BRIGHT RESET_ALL\n'''",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "color_text.py",
+      "language": "python",
+      "type": "file",
+      "name": "color_text.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "import pyttsx3\n\ndef text_to_speech_function(text, lang='english'):\n    engine = pyttsx3.init()\n    rate = engine.getProperty('rate')\n    engine.setProperty('rate', rate - 40)\n    engine.setProperty('voice', lang)\n    engine.say(text)\n    engine.runAndWait()\n\n\ntext_to_speech_function('I love Python')",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "text_to_speech.py",
+      "language": "python",
+      "type": "file",
+      "name": "text_to_speech.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def text_to_speech_function(text, lang='english'):\n    engine = pyttsx3.init()\n    rate = engine.getProperty('rate')\n    engine.setProperty('rate', rate - 40)\n    engine.setProperty('voice', lang)\n    engine.say(text)\n    engine.runAndWait()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "text_to_speech.py",
+      "language": "python",
+      "type": "function",
+      "name": "text_to_speech_function",
+      "class_name": null,
+      "qualified_name": "text_to_speech_function",
+      "line": 3,
+      "end_line": 9
+    }
+  },
+  {
+    "document": "import json\nimport requests\n\n# api key/request url\nkey = \"https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT\"\n\n# requests data from url\ndata = requests.get(key)\ndata = data.json()\nprint(f\"{data['symbol']} price is {data['price']}\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "bitcoin_price_with_api_key.py",
+      "language": "python",
+      "type": "file",
+      "name": "bitcoin_price_with_api_key.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "from kivy.app import App\nfrom kivy.uix.screenmanager import Screen, ScreenManager\nfrom kivy.uix.gridlayout import GridLayout\nfrom kivy.uix.popup import Popup\nfrom kivy.lang import Builder\nfrom kivy.uix.label import Label\n\nBuilder.load_string(\"\"\"\n<HomeScreen>:\n    GridLayout:\n        pos: self.pos\n        rows: 8\n        padding: 70\n        spacing: 10, 10\n        Label:\n            text: \"SOFTUNI Fundamentals TIMETABLE\" \n        Button:\n            text: \"WELCOME\"\n            size_hint: None, None\n            size: 100, 40\n            # on_release: root.welcome()\n\n        Button:\n            text: \"MONDAY\"\n            on_release:root.manager.current='monday'\n        Button:\n            text: \"TUESDAY\"\n            on_release: root.manager.current='tuesday'\n        Button:\n            text: \"WEDNESDAY\"\n            on_release: root.manager.current='wednesday'\n        Button:\n            text: \"THURSDAY\"\n            on_release: root.manager.current='thursday'\n        Button:\n            text: \"FRIDAY\"\n            on_release: root.manager.current='friday'\n        Button:\n            text: \"Quit\"\n            on_release: quit()\n\n<MainScreen>:\n    BoxLayout:\n        Widget:\n            Label:\n                text: \"World\"\n<Monday>:\n    GridLayout:\n        cols:4\n        rows:5\n        Label:\n            text: \"Course\"\n        Label:\n            text: \"Time\"\n        Label:\n            text: \"Lecture hall\"\n        Label:\n            text: \"Lecturer\"\n        Label:\n            text: \"Basic Syntax\"\n        Label:\n            text: \"10:00-11:00\"\n        Label:\n            text: \"Knowledge\"\n        Label:\n            text: \"Angel Georgiev\"\n        Label:\n            text: \"Basic Syntax Exercise\"\n        Label:\n            text: \"12:00-2:00\"\n        Label:\n            text: \"Experience\"\n        Label:\n            text: \"Mario Zahariev\"\n        Label:\n            text: \"Practical\"\n        Label:\n            text: \"2:00PM\"\n        Label:\n            text: \"LAB\"\n        Label:\n            text: \"Ivaylo Kenov\"\n        Button:\n            text: \"Main Menu\"\n            on_release: root.manager.current='home'\n<Tuesday>:\n    GridLayout:\n        cols:4\n        rows:5\n        Label:\n            text: \"Course\"\n        Label:\n            text: \"Time\"\n        Label:\n            text: \"Lecture hall\"\n        Label:\n            text: \"Lecturer\"\n        Label:\n            text: \"Data Types\"\n        Label:\n            text: \"9:00-10:00\"\n        Label:\n            text: \"Code Ground\"\n        Label:\n            text: \"Angel Georgiev\"\n        Label:\n            text: \"Data Types Exercise\"\n        Label:\n            text: \"10:00-12:00\"\n        Label:\n            text: \"Tech\"\n        Label:\n            text: \"Mario Zahariev\"\n        Label:\n            text: \"HTTP Basics\"\n        Label:\n            text: \"2:00\"\n        Label:\n            text: \"Knowledge\"\n        Label:\n            text:\"Ivaylo Kenov\"\n        Button:\n            text: \"Main Menu\"\n            on_release: root.manager.current='home'\n\n<Wednesday>:\n    GridLayout:\n        cols:4\n        rows:5\n        Label:\n            text: \"Course\"\n        Label:\n            text: \"Time\"\n        Label:\n            text: \"Lecture hall\"\n        Label:\n            text: \"Lecturer\"\n        Label:\n            text: \"Lists Basics\"\n        Label:\n            text: \"8:00-10:00\"\n        Label:\n            text: \"Tech Lab\"\n        Label:\n            text: \"Angel Georgiev\"\n        Label:\n            text: \"Lists Basics Exercise\"\n        Label:\n            text: \"11:00-1:00\"\n        Label:\n            text: \"Lists Basics\"\n        Label:\n            text: \"Mario Zahariev\"\n        Label:\n            text: \"HTML & CSS Basics\"\n        Label:\n            text: \"1:00-2:00\"\n        Label: \n            text: \"Pixel\"\n        Label: \n            text: \"Ivaylo Kenov\"\n\n        Button:\n            text: \"Main Menu\"\n            on_release: root.manager.current='home'\n<Thursday>:\n    GridLayout:\n        cols:4\n        rows:5\n        Label:\n            text: \"Course\"\n        Label:\n            text: \"Time\"\n        Label:\n            text: \"Lecture hall\"\n        Label:\n            text: \"Lecturer\"\n        Label:\n            text: \"Functions\"\n        Label:\n            text: \"8:00-10:00\"\n        Label:\n            text: \"Tech Lab\"\n        Label:\n            text: \"Angel Georgiev\"\n        Label:\n            text: \"Functions Exercise\"\n        Label:\n            text: \"12:00-2:00\"\n        Label:\n            text: \"Pixel\"\n        Label:\n            text: \"Mario Zahariev\"\n        Label:\n            text: \"Practical\"\n        Label:\n            text: \"2:00 PM\"\n        Label:\n            text: \"LAB\"\n        Label:\n            text: \"Ivaylo Kenov\"\n        Button:\n            text: \"Main Menu\"\n            on_release: root.manager.current='home'\n<Friday>:\n    GridLayout:\n        cols:4\n        rows:4\n        Label:\n            text: \"Course\"\n        Label:\n            text: \"Time\"\n        Label:\n            text: \"Lecture hall\"\n        Label:\n            text: \"Lecturer\"\n        Label:\n            text: \"Objects and Classes\"\n        Label:\n            text: \"10:00-11:00\"\n        Label:\n            text: \"Graphics Room\"\n        Label:\n            text: \"Mario Zahariev\"\n        Label:\n            text: \"Practical\"\n        Label:\n            text: \"2:00 PM\"\n        Label:\n            text: \"LAB\"\n        Label:\n            text: \"Ivaylo Kenov\"\n        Button:\n            text: \"Main Menu\"\n            on_release: root.manager.current='home'\n\"\"\")\n\n\nclass HomeScreen(Screen):\n    def welcome(self):\n        popup = Popup(title=(\"Class '18 2015/2016 Rain Semester Timetable\"), title_align=('centre'), content=Label(\n            text=(\n                \"*ELH - Engineering Lecture Hall\\n*ELT - Engineering Lecture Theatre\\n*LT III - Lecture Theatre III\\n*LT IV - Lecture Theatre IV\")),\n                      size_hint=(.8, .8))\n        popup.open()\n\n\nclass MainScreen(Screen):\n    pass\n\n\nclass Monday(Screen):\n    pass\n\n\nclass Tuesday(Screen):\n    pass\n\n\nclass Wednesday(Screen):\n    pass\n\n\nclass Thursday(Screen):\n    pass\n\n\nclass Friday(Screen):\n    pass\n\n\nsm = ScreenManager()\nsm.add_widget(HomeScreen(name='home'))\nsm.add_widget(MainScreen(name='main'))\nsm.add_widget(Monday(name='monday'))\nsm.add_widget(Tuesday(name='tuesday'))\nsm.add_widget(Wednesday(name='wednesday'))\nsm.add_widget(Thursday(name='thursday'))\nsm.add_widget(Friday(name='friday'))\n\n\nclass TimeTableApp(App):\n    def build(self):\n        return sm\n\nif __name__ == '__main__':\n    TimeTableApp().run()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "file",
+      "name": "softuni_chedule.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class HomeScreen(Screen):\n    def welcome(self):\n        popup = Popup(title=(\"Class '18 2015/2016 Rain Semester Timetable\"), title_align=('centre'), content=Label(\n            text=(\n                \"*ELH - Engineering Lecture Hall\\n*ELT - Engineering Lecture Theatre\\n*LT III - Lecture Theatre III\\n*LT IV - Lecture Theatre IV\")),\n                      size_hint=(.8, .8))\n        popup.open()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "HomeScreen",
+      "line": 239,
+      "end_line": 245
+    }
+  },
+  {
+    "document": "class MainScreen(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "MainScreen",
+      "line": 248,
+      "end_line": 249
+    }
+  },
+  {
+    "document": "class Monday(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "Monday",
+      "line": 252,
+      "end_line": 253
+    }
+  },
+  {
+    "document": "class Tuesday(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "Tuesday",
+      "line": 256,
+      "end_line": 257
+    }
+  },
+  {
+    "document": "class Wednesday(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "Wednesday",
+      "line": 260,
+      "end_line": 261
+    }
+  },
+  {
+    "document": "class Thursday(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "Thursday",
+      "line": 264,
+      "end_line": 265
+    }
+  },
+  {
+    "document": "class Friday(Screen):\n    pass",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "Friday",
+      "line": 268,
+      "end_line": 269
+    }
+  },
+  {
+    "document": "class TimeTableApp(App):\n    def build(self):\n        return sm",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "class",
+      "name": "TimeTableApp",
+      "line": 282,
+      "end_line": 284
+    }
+  },
+  {
+    "document": "def welcome(self):\n        popup = Popup(title=(\"Class '18 2015/2016 Rain Semester Timetable\"), title_align=('centre'), content=Label(\n            text=(\n                \"*ELH - Engineering Lecture Hall\\n*ELT - Engineering Lecture Theatre\\n*LT III - Lecture Theatre III\\n*LT IV - Lecture Theatre IV\")),\n                      size_hint=(.8, .8))\n        popup.open()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "function",
+      "name": "welcome",
+      "class_name": "HomeScreen",
+      "qualified_name": "HomeScreen.welcome",
+      "line": 240,
+      "end_line": 245
+    }
+  },
+  {
+    "document": "def build(self):\n        return sm",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "softuni_chedule.py",
+      "language": "python",
+      "type": "function",
+      "name": "build",
+      "class_name": "TimeTableApp",
+      "qualified_name": "TimeTableApp.build",
+      "line": 283,
+      "end_line": 284
+    }
+  },
+  {
+    "document": "import subprocess\n\ndata = (\n    subprocess.check_output([\"netsh\", \"wlan\", \"show\", \"profiles\"])\n    .decode(\"utf-8\")\n    .split(\"\\n\")\n)\nprofiles = [i.split(\":\")[1][1:-1] for i in data if \"All User Profile\" in i]\n\nfor i in profiles:\n    results = (\n        subprocess\n        .check_output([\"netsh\", \"wlan\", \"show\", \"profile\", i, \"key=clear\"])\n        .decode(\"utf-8\")\n        .split(\"\\n\")\n    )\n    results = [b.split(\":\")[1][1:-1] for b in results if \"Key Content\" in b]\n    try:\n        print(\"{:<30}|  {:<}\".format(i, results[0]))\n    except IndexError:\n        print(\"{:<30}|  {:<}\".format(i, \"\"))",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "WiFi_Scanning.py",
+      "language": "python",
+      "type": "file",
+      "name": "WiFi_Scanning.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "from bitcoinaddress import Wallet\n\nwallet = Wallet()\nprint(wallet)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "bitcoin_address.py",
+      "language": "python",
+      "type": "file",
+      "name": "bitcoin_address.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "import webbrowser as wbb\n\ndef web_automation():\n    chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'\n    urls = ('apple.com', 'github.com', 'google.com', 'youtube.com')\n\n    for url in urls:\n        print('Opening: ' + url)\n        wbb.get(chrome_path).open(url)\n\nweb_automation()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "web_automation.py",
+      "language": "python",
+      "type": "file",
+      "name": "web_automation.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def web_automation():\n    chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'\n    urls = ('apple.com', 'github.com', 'google.com', 'youtube.com')\n\n    for url in urls:\n        print('Opening: ' + url)\n        wbb.get(chrome_path).open(url)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "web_automation.py",
+      "language": "python",
+      "type": "function",
+      "name": "web_automation",
+      "class_name": null,
+      "qualified_name": "web_automation",
+      "line": 3,
+      "end_line": 9
+    }
+  },
+  {
+    "document": "symbols = {\n    \"a\": \".-\", \"b\": \"-...\", \"c\": \"-.-.\", \"d\": \"-..\", \"e\": \".\", \"f\": \"..-.\", \"g\": \".-\", \"h\": \"....\", \"i\": \"..\",\n    \"j\": \".---\", \"k\": \"-.-\", \"l\": \".-..\", \"m\": \"--\", \"n\": \"-.\", \"o\": \"---\", \"p\": \".--.\", \"q\": \"--.-\", \"r\": \".-.\",\n    \"s\": \"...\", \"t\": \"-\", \"u\": \"..-\", \"v\": \"...-\", \"w\": \".--\", \"x\": \"-..-\", \"y\": \"-.--\", \"z\": \"--..\",\n}\n\n# Taking input from a user\ndata = input(\"Enter text: \")\n\nlength = len(data)\n\n# Convert to Morse code in list comprehension\noutput = [symbols.get(data[i]) for i in range(length) if data[i] in symbols.keys()]\n\nprint(' '.join(output))",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "morse_code_script.py",
+      "language": "python",
+      "type": "file",
+      "name": "morse_code_script.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class CreditCard:\n    def __init__(self, card_no):\n        self.card_no = card_no\n\n    @property\n    def company(self):\n        comp = None\n        if str(self.card_no).startswith(\"4\"):\n            comp = \"Visa Card\"\n        elif str(self.card_no).startswith(\"5\"):\n            comp = \"Master Card\"\n        elif str(self.card_no).startswith(\"37\"):\n            comp = \"American Express Card\"\n\n        return \"Company card name: \" + comp\n\n    def first_check(self):\n        if 13 <= len(self.card_no) <= 19:\n            message = \"First check : Valid in terms of length.\"\n\n        else:\n            message = \"First check : Check Card number once again it must be of 13 or 16 digits long.\"\n        return message\n\n    def validate_card_information(self):\n        # double every second digit from right to left\n        sum_ = 0\n        crd_no = self.card_no[::-1]\n        for i in range(len(crd_no)):\n            if i % 2 == 1:\n                double_it = int(crd_no[i]) * 2\n\n                if len(str(double_it)) == 2:\n                    sum_ += sum([eval(i) for i in str(double_it)])\n\n                else:\n                    sum_ += double_it\n\n            else:\n                sum_ += int(crd_no[i])\n\n        if sum_ % 10 == 0:\n            response = \"Valid Card\"\n        else:\n            response = \"Invalid Card\"\n\n        return response\n\n    @property\n    def checksum(self):\n        return \"CHECKSUM : \" + self.card_no[-1]\n\n    @classmethod\n    def set_card(cls, card_to_check):\n        return cls(card_to_check)\n\n\ncard_number = input('Enter a card number: ')\ncard = CreditCard.set_card(card_number)\nprint(card.company)\nprint(\"Card : \", card.card_no)\nprint(card.first_check())\nprint(card.checksum)\nprint(card.validate_card_information())\n",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "file",
+      "name": "validator_credit_cards.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "class CreditCard:\n    def __init__(self, card_no):\n        self.card_no = card_no\n\n    @property\n    def company(self):\n        comp = None\n        if str(self.card_no).startswith(\"4\"):\n            comp = \"Visa Card\"\n        elif str(self.card_no).startswith(\"5\"):\n            comp = \"Master Card\"\n        elif str(self.card_no).startswith(\"37\"):\n            comp = \"American Express Card\"\n\n        return \"Company card name: \" + comp\n\n    def first_check(self):\n        if 13 <= len(self.card_no) <= 19:\n            message = \"First check : Valid in terms of length.\"\n\n        else:\n            message = \"First check : Check Card number once again it must be of 13 or 16 digits long.\"\n        return message\n\n    def validate_card_information(self):\n        # double every second digit from right to left\n        sum_ = 0\n        crd_no = self.card_no[::-1]\n        for i in range(len(crd_no)):\n            if i % 2 == 1:\n                double_it = int(crd_no[i]) * 2\n\n                if len(str(double_it)) == 2:\n                    sum_ += sum([eval(i) for i in str(double_it)])\n\n                else:\n                    sum_ += double_it\n\n            else:\n                sum_ += int(crd_no[i])\n\n        if sum_ % 10 == 0:\n            response = \"Valid Card\"\n        else:\n            response = \"Invalid Card\"\n\n        return response\n\n    @property\n    def checksum(self):\n        return \"CHECKSUM : \" + self.card_no[-1]\n\n    @classmethod\n    def set_card(cls, card_to_check):\n        return cls(card_to_check)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "class",
+      "name": "CreditCard",
+      "line": 1,
+      "end_line": 55
+    }
+  },
+  {
+    "document": "def __init__(self, card_no):\n        self.card_no = card_no",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "__init__",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.__init__",
+      "line": 2,
+      "end_line": 3
+    }
+  },
+  {
+    "document": "def company(self):\n        comp = None\n        if str(self.card_no).startswith(\"4\"):\n            comp = \"Visa Card\"\n        elif str(self.card_no).startswith(\"5\"):\n            comp = \"Master Card\"\n        elif str(self.card_no).startswith(\"37\"):\n            comp = \"American Express Card\"\n\n        return \"Company card name: \" + comp",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "company",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.company",
+      "line": 6,
+      "end_line": 15
+    }
+  },
+  {
+    "document": "def first_check(self):\n        if 13 <= len(self.card_no) <= 19:\n            message = \"First check : Valid in terms of length.\"\n\n        else:\n            message = \"First check : Check Card number once again it must be of 13 or 16 digits long.\"\n        return message",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "first_check",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.first_check",
+      "line": 17,
+      "end_line": 23
+    }
+  },
+  {
+    "document": "def validate_card_information(self):\n        # double every second digit from right to left\n        sum_ = 0\n        crd_no = self.card_no[::-1]\n        for i in range(len(crd_no)):\n            if i % 2 == 1:\n                double_it = int(crd_no[i]) * 2\n\n                if len(str(double_it)) == 2:\n                    sum_ += sum([eval(i) for i in str(double_it)])\n\n                else:\n                    sum_ += double_it\n\n            else:\n                sum_ += int(crd_no[i])\n\n        if sum_ % 10 == 0:\n            response = \"Valid Card\"\n        else:\n            response = \"Invalid Card\"\n\n        return response",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "validate_card_information",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.validate_card_information",
+      "line": 25,
+      "end_line": 47
+    }
+  },
+  {
+    "document": "def checksum(self):\n        return \"CHECKSUM : \" + self.card_no[-1]",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "checksum",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.checksum",
+      "line": 50,
+      "end_line": 51
+    }
+  },
+  {
+    "document": "def set_card(cls, card_to_check):\n        return cls(card_to_check)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "validator_credit_cards.py",
+      "language": "python",
+      "type": "function",
+      "name": "set_card",
+      "class_name": "CreditCard",
+      "qualified_name": "CreditCard.set_card",
+      "line": 54,
+      "end_line": 55
+    }
+  },
+  {
+    "document": "import pygame\nimport sys\n\npygame.init()\n\n# Screen dimensions\nwidth, height = 800, 600\nwindow = pygame.display.set_mode((width, height))\npygame.display.set_caption(\"Pong Game\")\n\n# Colors\nblack = (0, 0, 0)\nwhite = (255, 255, 255)\n\n# Paddle dimensions\npaddle_width, paddle_height = 10, 100\n\n# Ball properties\nball_radius, ball_speed = 7, [4, 4]\n\n# Initial positions\nleft_paddle_pos = [10, height // 2 - paddle_height // 2]\nright_paddle_pos = [width - 20, height // 2 - paddle_height // 2]\nball_pos = [width // 2, height // 2]\n\n# Paddle movement speed\npaddle_speed = 6\n\n# Game loop\nclock = pygame.time.Clock()\n\nwhile True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            pygame.quit()\n            sys.exit()\n\n    keys = pygame.key.get_pressed()\n    if keys[pygame.K_w] and left_paddle_pos[1] > 0:\n        left_paddle_pos[1] -= paddle_speed\n    if keys[pygame.K_s] and left_paddle_pos[1] < height - paddle_height:\n        left_paddle_pos[1] += paddle_speed\n    if keys[pygame.K_UP] and right_paddle_pos[1] > 0:\n        right_paddle_pos[1] -= paddle_speed\n    if keys[pygame.K_DOWN] and right_paddle_pos[1] < height - paddle_height:\n        right_paddle_pos[1] += paddle_speed\n\n    # Move the ball\n    ball_pos[0] += ball_speed[0]\n    ball_pos[1] += ball_speed[1]\n\n    # Ball collision with top and bottom walls\n    if ball_pos[1] - ball_radius < 0 or ball_pos[1] + ball_radius > height:\n        ball_speed[1] = -ball_speed[1]\n\n    # Ball collision with paddles\n    if (ball_pos[0] - ball_radius < left_paddle_pos[0] + paddle_width and\n        left_paddle_pos[1] < ball_pos[1] < left_paddle_pos[1] + paddle_height):\n        ball_speed[0] = -ball_speed[0]\n    if (ball_pos[0] + ball_radius > right_paddle_pos[0] and\n        right_paddle_pos[1] < ball_pos[1] < right_paddle_pos[1] + paddle_height):\n        ball_speed[0] = -ball_speed[0]\n\n    # Clear the screen\n    window.fill(black)\n\n    # Draw the paddles and ball\n    pygame.draw.rect(window, white, (*left_paddle_pos, paddle_width, paddle_height))\n    pygame.draw.rect(window, white, (*right_paddle_pos, paddle_width, paddle_height))\n    pygame.draw.circle(window, white, ball_pos, ball_radius)\n\n    # Update the display\n    pygame.display.flip()\n\n    # Cap the frame rate\n    clock.tick(60)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "pong_game.py",
+      "language": "python",
+      "type": "file",
+      "name": "pong_game.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "import random\nimport time\nimport sys\n\n# \u0421\u0438\u043c\u0432\u043e\u043b\u0438 \u0438 \u043c\u043d\u043e\u0436\u0438\u0442\u0435\u043b\u0438 \u043f\u0440\u0438 3 \u0435\u0434\u043d\u0430\u043a\u0432\u0438\nsymbols = {\n    \"\ud83c\udf52\": 2,\n    \"\ud83c\udf4b\": 3,\n    \"\ud83c\udf49\": 4,\n    \"\ud83c\udf47\": 5,\n    \"\ud83d\udc8e\": 10,\n    \"\ud83d\udd14\": 7,\n    \"\ud83c\udf40\": 8\n}\n\n# \u0418\u0433\u0440\u043e\u0432\u0438 \u043f\u0440\u043e\u043c\u0435\u043d\u043b\u0438\u0432\u0438\nbalance = 0\ntotal_lost = 0\nbet = 1  # \u043c\u0438\u043d\u0438\u043c\u0430\u043b\u0435\u043d \u0437\u0430\u043b\u043e\u0433\ngame_history = []\n\n# \u0421\u043a\u0440\u0438\u0442/\u0441\u043b\u0443\u0447\u0430\u0435\u043d \u0431\u043e\u043d\u0443\u0441 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438\nhidden_bonus_trigger = 1000        # \u043f\u0440\u0430\u0433\u043e\u0432\u0430\u0442\u0430 \u0437\u0430\u0433\u0443\u0431\u0430 \u043f\u0440\u0438 \u043a\u043e\u044f\u0442\u043e \u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430 \u0431\u043e\u043d\u0443\u0441\nhidden_bonus_percentage = 0.10     # 10% \u043e\u0442 \u0437\u0430\u0433\u0443\u0431\u0438\u0442\u0435\nhidden_bonus_chance = 1         # 100% \u0448\u0430\u043d\u0441 \u0434\u0430 \u0441\u0435 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430 (\u043c\u043e\u0436\u0435 \u0434\u0430 \u0441\u0435 \u043f\u0440\u043e\u043c\u0435\u043d\u0438)\n\ndef print_welcome():\n    print(\"=\" * 50)\n    print(\"\ud83c\udfb0 \u0414\u041e\u0411\u0420\u0415 \u0414\u041e\u0428\u042a\u041b \u0412 \u041a\u0410\u0417\u0418\u041d\u041e \u0420\u041e\u0422\u0410\u0422\u0418\u0412\u041a\u0410 \ud83c\udfb0\")\n    print(\"=\" * 50)\n    print(\"\u041f\u0440\u0430\u0432\u0438\u043b\u0430 (\u0432\u0430\u0436\u043d\u0438 \u043d\u0435\u0449\u0430):\")\n    print(\" - \u041c\u0438\u043d\u0438\u043c\u0430\u043b\u0435\u043d \u0437\u0430\u043b\u043e\u0433: 1 \u043b\u0432.\")\n    print(\" - 3 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 = \u0433\u043e\u043b\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \ud83c\udf89\")\n    print(\" - 2 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 \u043e\u0442\u043b\u044f\u0432\u043e = \u0434\u0432\u043e\u0439\u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \u2728\")\n    print(\"=\" * 50)\n\ndef deposit_money():\n    global balance\n    while True:\n        try:\n            amount = int(input(\"\u0412\u044a\u0432\u0435\u0434\u0438 \u043d\u0430\u0447\u0430\u043b\u0435\u043d \u0431\u0430\u043b\u0430\u043d\u0441 (\u043b\u0432): \"))\n            if amount <= 0:\n                print(\"\u274c \u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0438 \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435\u043b\u043d\u043e \u0447\u0438\u0441\u043b\u043e.\")\n                continue\n            balance = amount\n            print(f\"\u2705 \u0411\u0430\u043b\u0430\u043d\u0441\u044a\u0442 \u0435 \u0437\u0430\u0434\u0430\u0434\u0435\u043d \u043d\u0430 {balance} \u043b\u0432.\\n\")\n            break\n        except ValueError:\n            print(\"\u274c \u041d\u0435\u0432\u0430\u043b\u0438\u0434\u043d\u043e \u0447\u0438\u0441\u043b\u043e, \u043e\u043f\u0438\u0442\u0430\u0439 \u043e\u0442\u043d\u043e\u0432\u043e.\")\n\ndef show_menu():\n    print(\"\\n--- \u0413\u041b\u0410\u0412\u041d\u041e \u041c\u0415\u041d\u042e ---\")\n    print(\"1. \u0417\u0430\u0432\u044a\u0440\u0442\u0438 \u0440\u043e\u0442\u0430\u0442\u0438\u0432\u043a\u0430\u0442\u0430 \ud83c\udfb0\")\n    print(\"2. \u041f\u0440\u043e\u043c\u0435\u043d\u0438 \u0437\u0430\u043b\u043e\u0433\u0430 (\u043c\u0438\u043d. 1 \u043b\u0432) \ud83d\udcb5\")\n    print(\"3. \u041f\u043e\u043a\u0430\u0436\u0438 \u0431\u0430\u043b\u0430\u043d\u0441\u0430 \ud83d\udcb0\")\n    print(\"4. \u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043d\u0430 \u0438\u0433\u0440\u0430\u0442\u0430 \ud83d\udcdd\")\n    print(\"5. \u0418\u0437\u0445\u043e\u0434 \ud83d\udeaa\")\n\ndef apply_hidden_bonus():\n    \"\"\"\n    \u041e\u043f\u0438\u0442\u0432\u0430 \u0434\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0438 \u0441\u043a\u0440\u0438\u0442 \u0431\u043e\u043d\u0443\u0441.\n    \u0412\u0440\u044a\u0449\u0430 (triggered: bool, bonus_amount: int)\n    \u0410\u043a\u043e total_lost >= hidden_bonus_trigger \u0438 \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u043e\u0441\u0442\u0442\u0430 \u043f\u0440\u0435\u043c\u0438\u043d\u0435,\n    \u0432\u0440\u044a\u0449\u0430 True \u0438 \u0441\u0443\u043c\u0430\u0442\u0430 \u043d\u0430 \u0431\u043e\u043d\u0443\u0441\u0430 (100% \u043e\u0442 total_lost \u043a\u0430\u0442\u043e \u0446\u044f\u043b\u043e \u0447\u0438\u0441\u043b\u043e).\n    \u0421\u043b\u0435\u0434 \u0442\u043e\u0432\u0430 \u043d\u0443\u043b\u0438\u0440\u0430 total_lost.\n    \"\"\"\n    global total_lost, balance\n\n    if total_lost > hidden_bonus_trigger:\n        # \u0448\u0430\u043d\u0441 \u0437\u0430 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0435 (\u043d\u0430\u043f\u0440. 100%)\n        if random.random() < hidden_bonus_chance:\n            bonus = int(total_lost * hidden_bonus_percentage)\n            if bonus > 0:\n                balance += bonus\n                total_lost = 0  # \u043d\u0443\u043b\u0438\u0440\u0430\u043c\u0435 \u043d\u0430\u0442\u0440\u0443\u043f\u0430\u043d\u0438\u0442\u0435 \u0437\u0430\u0433\u0443\u0431\u0438 \u0441\u043b\u0435\u0434 \u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u043e\u043d\u0443\u0441\n                return True, bonus\n    return False, 0\n\ndef spin_slot():\n    global balance, total_lost, bet\n\n    if balance < bet:\n        print(\"\u26a0\ufe0f \u041d\u044f\u043c\u0430\u0448 \u0434\u043e\u0441\u0442\u0430\u0442\u044a\u0447\u043d\u043e \u043f\u0430\u0440\u0438 \u0437\u0430 \u0437\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435.\")\n        return\n\n    # \u0422\u0430\u043a\u0441\u0443\u0432\u0430\u043c\u0435 \u0437\u0430\u043b\u043e\u0433\u0430\n    balance -= bet\n    total_lost += bet\n\n    # \u0410\u043d\u0438\u043c\u0430\u0446\u0438\u044f \u043d\u0430 \u0437\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435\n    print(\"\\n\u0417\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435...\")\n    time.sleep(0.8)\n\n    reels = [random.choice(list(symbols.keys())) for _ in range(3)]\n    print(\" | \".join(reels))\n\n    win_amount = 0\n\n    # \u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 3 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 (\u0434\u0436\u0430\u043a\u043f\u043e\u0442)\n    if reels[0] == reels[1] == reels[2]:\n        multiplier = symbols[reels[0]]\n        win_amount = bet * multiplier\n        print(f\"\ud83c\udf89 \u0414\u0416\u0410\u041a\u041f\u041e\u0422! \u0421\u043f\u0435\u0447\u0435\u043b\u0438 {win_amount} \u043b\u0432 \u0441 {reels[0]} {reels[1]} {reels[2]}!\")\n        total_lost = 0  # \u043d\u0443\u043b\u0438\u0440\u0430\u043c\u0435 \u0437\u0430\u0433\u0443\u0431\u0438\u0442\u0435 \u043f\u0440\u0438 \u0433\u043e\u043b\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430\n        game_history.append(f\"\u041f\u0415\u0427\u0410\u041b\u0411\u0410: +{win_amount} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    # \u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 2 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u043e\u0442\u043b\u044f\u0432\u043e (\u043f\u043e\u0437\u0438\u0446\u0438\u0438 0 \u0438 1)\n    elif reels[0] == reels[1]:\n        win_amount = bet * 2\n        print(f\"\u2728 \u041f\u0415\u0427\u0410\u041b\u0411\u0410! \u0414\u0432\u0430 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 \u043e\u0442\u043b\u044f\u0432\u043e \u2192 {win_amount} \u043b\u0432!\")\n        game_history.append(f\"\u041f\u0415\u0427\u0410\u041b\u0411\u0410 (2 \u0441\u0438\u043c\u0432\u043e\u043b\u0430): +{win_amount} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    else:\n        print(\"\ud83d\ude22 \u041d\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \u0442\u043e\u0437\u0438 \u043f\u044a\u0442.\")\n        game_history.append(f\"\u0417\u0410\u0413\u0423\u0411\u0410: -{bet} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    # \u0414\u043e\u0431\u0430\u0432\u044f\u043d\u0435 \u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430\u0442\u0430 \u043a\u044a\u043c \u0431\u0430\u043b\u0430\u043d\u0441\u0430\n    balance += win_amount\n\n    # \u041e\u043f\u0438\u0442 \u0437\u0430 \u043f\u0440\u0438\u043b\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0441\u043a\u0440\u0438\u0442\u0438\u044f \u0431\u043e\u043d\u0443\u0441\n    triggered, bonus_amount = apply_hidden_bonus()\n    if triggered:\n        # \u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043c\u0435 \u043d\u0430 \u0438\u0433\u0440\u0430\u0447\u0430, \u0447\u0435 \u0435 \u201e\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u043e \u0441\u043f\u0435\u0447\u0435\u043b\u0438\u043b\u201c \u0438 \u043a\u043e\u043b\u043a\u043e \u0435 \u0431\u043e\u043d\u0443\u0441\u044a\u0442.\n        # \u0422\u043e\u0432\u0430 \u0441\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0435 \u043f\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043d\u043e \u0434\u0430 \u0438\u0437\u0433\u043b\u0435\u0436\u0434\u0430 \u043a\u0430\u0442\u043e \u043d\u0435\u043e\u0447\u0430\u043a\u0432\u0430\u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430/\u043a\u044a\u0441\u043c\u0435\u0442.\n        print()\n        print(\"\ud83c\udf89 \u0418\u0437\u0433\u043b\u0435\u0436\u0434\u0430 \u043a\u044a\u0441\u043c\u0435\u0442\u044a\u0442 \u0442\u0438 \u0441\u0435 \u0443\u0441\u043c\u0438\u0445\u043d\u0430! \ud83c\udf89\")\n        print(f\"\u0411\u043e\u043d\u0443\u0441 \u0438\u0433\u0440\u0430: +{bonus_amount} \u043b\u0432.\")\n        print(\"\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0430\u0432\u0430\u0439 \u0434\u0430 \u0438\u0433\u0440\u0430\u0435\u0448 \u2014 \u043a\u044a\u0441\u043c\u0435\u0442\u0430 \u0435 \u0441 \u0442\u0435\u0431! \ud83d\ude09\")\n        game_history.append(f\"\u0411\u041e\u041d\u0423\u0421 (\u0441\u043b\u0443\u0447\u0430\u0435\u043d): +{bonus_amount} \u043b\u0432\")\n\n    print(f\"\\n\ud83d\udcb0 \u0422\u0435\u043a\u0443\u0449 \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")\n\ndef change_bet():\n    global bet\n    while True:\n        try:\n            new_bet = int(input(\"\u0412\u044a\u0432\u0435\u0434\u0438 \u043d\u043e\u0432 \u0437\u0430\u043b\u043e\u0433 (\u043c\u0438\u043d. 1 \u043b\u0432): \"))\n            if new_bet < 1:\n                print(\"\u26a0\ufe0f \u041c\u0438\u043d\u0438\u043c\u0430\u043b\u043d\u0438\u044f\u0442 \u0437\u0430\u043b\u043e\u0433 \u0435 1 \u043b\u0432.\")\n                continue\n            bet = new_bet\n            print(f\"\u2705 \u041d\u043e\u0432\u0438\u044f\u0442 \u0437\u0430\u043b\u043e\u0433 \u0435 {bet} \u043b\u0432.\")\n            break\n        except ValueError:\n            print(\"\u274c \u041d\u0435\u0432\u0430\u043b\u0438\u0434\u043d\u043e \u0447\u0438\u0441\u043b\u043e, \u043e\u043f\u0438\u0442\u0430\u0439 \u043e\u0442\u043d\u043e\u0432\u043e.\")\n\ndef show_balance():\n    print(f\"\ud83d\udcb0 \u0422\u0435\u043a\u0443\u0449 \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")\n\ndef show_history():\n    if not game_history:\n        print(\"\ud83d\udced \u0412\u0441\u0435 \u043e\u0449\u0435 \u043d\u044f\u043c\u0430 \u0438\u0437\u0438\u0433\u0440\u0430\u043d\u0438 \u0438\u0433\u0440\u0438.\")\n    else:\n        print(\"\\n--- \u0418\u0421\u0422\u041e\u0420\u0418\u042f \u041d\u0410 \u0418\u0413\u0420\u0410\u0422\u0410 ---\")\n        for entry in game_history:\n            print(entry)\n        print(\"-------------------------\")\n\ndef exit_game():\n    print(\"\\n\ud83c\udfb2 \u0411\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u0438\u043c \u0442\u0438, \u0447\u0435 \u0438\u0433\u0440\u0430 \u043d\u0430\u0448\u0430\u0442\u0430 \u0440\u043e\u0442\u0430\u0442\u0438\u0432\u043a\u0430!\")\n    print(f\"\ud83c\udfc1 \u0424\u0438\u043d\u0430\u043b\u0435\u043d \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")\n    sys.exit()\n\n# --- \u0413\u041b\u0410\u0412\u041d\u0410 \u041f\u0420\u041e\u0413\u0420\u0410\u041c\u0410 ---\nprint_welcome()\ndeposit_money()\n\nwhile True:\n    if balance < 1:\n        print(\"\\n\ud83d\udc80 \u041d\u044f\u043c\u0430\u0448 \u0434\u043e\u0441\u0442\u0430\u0442\u044a\u0447\u043d\u043e \u043f\u0430\u0440\u0438, \u0437\u0430 \u0434\u0430 \u043f\u0440\u043e\u0434\u044a\u043b\u0436\u0438\u0448.\")\n        print(\"\u0418\u0433\u0440\u0430\u0442\u0430 \u043f\u0440\u0438\u043a\u043b\u044e\u0447\u0438!\")\n        break\n\n    show_menu()\n    choice = input(\"\u0418\u0437\u0431\u0435\u0440\u0438 \u043e\u043f\u0446\u0438\u044f (1-5): \")\n\n    if choice == \"1\":\n        spin_slot()\n    elif choice == \"2\":\n        change_bet()\n    elif choice == \"3\":\n        show_balance()\n    elif choice == \"4\":\n        show_history()\n    elif choice == \"5\":\n        exit_game()\n    else:\n        print(\"\u274c \u041d\u0435\u0432\u0430\u043b\u0438\u0434\u0435\u043d \u0438\u0437\u0431\u043e\u0440. \u041c\u043e\u043b\u044f, \u0438\u0437\u0431\u0435\u0440\u0438 \u043c\u0435\u0436\u0434\u0443 1 \u0438 5.\")\n",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "file",
+      "name": "slot_machine.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def print_welcome():\n    print(\"=\" * 50)\n    print(\"\ud83c\udfb0 \u0414\u041e\u0411\u0420\u0415 \u0414\u041e\u0428\u042a\u041b \u0412 \u041a\u0410\u0417\u0418\u041d\u041e \u0420\u041e\u0422\u0410\u0422\u0418\u0412\u041a\u0410 \ud83c\udfb0\")\n    print(\"=\" * 50)\n    print(\"\u041f\u0440\u0430\u0432\u0438\u043b\u0430 (\u0432\u0430\u0436\u043d\u0438 \u043d\u0435\u0449\u0430):\")\n    print(\" - \u041c\u0438\u043d\u0438\u043c\u0430\u043b\u0435\u043d \u0437\u0430\u043b\u043e\u0433: 1 \u043b\u0432.\")\n    print(\" - 3 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 = \u0433\u043e\u043b\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \ud83c\udf89\")\n    print(\" - 2 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 \u043e\u0442\u043b\u044f\u0432\u043e = \u0434\u0432\u043e\u0439\u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \u2728\")\n    print(\"=\" * 50)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "print_welcome",
+      "class_name": null,
+      "qualified_name": "print_welcome",
+      "line": 27,
+      "end_line": 35
+    }
+  },
+  {
+    "document": "def deposit_money():\n    global balance\n    while True:\n        try:\n            amount = int(input(\"\u0412\u044a\u0432\u0435\u0434\u0438 \u043d\u0430\u0447\u0430\u043b\u0435\u043d \u0431\u0430\u043b\u0430\u043d\u0441 (\u043b\u0432): \"))\n            if amount <= 0:\n                print(\"\u274c \u041c\u043e\u043b\u044f, \u0432\u044a\u0432\u0435\u0434\u0438 \u043f\u043e\u043b\u043e\u0436\u0438\u0442\u0435\u043b\u043d\u043e \u0447\u0438\u0441\u043b\u043e.\")\n                continue\n            balance = amount\n            print(f\"\u2705 \u0411\u0430\u043b\u0430\u043d\u0441\u044a\u0442 \u0435 \u0437\u0430\u0434\u0430\u0434\u0435\u043d \u043d\u0430 {balance} \u043b\u0432.\\n\")\n            break\n        except ValueError:\n            print(\"\u274c \u041d\u0435\u0432\u0430\u043b\u0438\u0434\u043d\u043e \u0447\u0438\u0441\u043b\u043e, \u043e\u043f\u0438\u0442\u0430\u0439 \u043e\u0442\u043d\u043e\u0432\u043e.\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "deposit_money",
+      "class_name": null,
+      "qualified_name": "deposit_money",
+      "line": 37,
+      "end_line": 49
+    }
+  },
+  {
+    "document": "def show_menu():\n    print(\"\\n--- \u0413\u041b\u0410\u0412\u041d\u041e \u041c\u0415\u041d\u042e ---\")\n    print(\"1. \u0417\u0430\u0432\u044a\u0440\u0442\u0438 \u0440\u043e\u0442\u0430\u0442\u0438\u0432\u043a\u0430\u0442\u0430 \ud83c\udfb0\")\n    print(\"2. \u041f\u0440\u043e\u043c\u0435\u043d\u0438 \u0437\u0430\u043b\u043e\u0433\u0430 (\u043c\u0438\u043d. 1 \u043b\u0432) \ud83d\udcb5\")\n    print(\"3. \u041f\u043e\u043a\u0430\u0436\u0438 \u0431\u0430\u043b\u0430\u043d\u0441\u0430 \ud83d\udcb0\")\n    print(\"4. \u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043d\u0430 \u0438\u0433\u0440\u0430\u0442\u0430 \ud83d\udcdd\")\n    print(\"5. \u0418\u0437\u0445\u043e\u0434 \ud83d\udeaa\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "show_menu",
+      "class_name": null,
+      "qualified_name": "show_menu",
+      "line": 51,
+      "end_line": 57
+    }
+  },
+  {
+    "document": "def apply_hidden_bonus():\n    \"\"\"\n    \u041e\u043f\u0438\u0442\u0432\u0430 \u0434\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0438 \u0441\u043a\u0440\u0438\u0442 \u0431\u043e\u043d\u0443\u0441.\n    \u0412\u0440\u044a\u0449\u0430 (triggered: bool, bonus_amount: int)\n    \u0410\u043a\u043e total_lost >= hidden_bonus_trigger \u0438 \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u043e\u0441\u0442\u0442\u0430 \u043f\u0440\u0435\u043c\u0438\u043d\u0435,\n    \u0432\u0440\u044a\u0449\u0430 True \u0438 \u0441\u0443\u043c\u0430\u0442\u0430 \u043d\u0430 \u0431\u043e\u043d\u0443\u0441\u0430 (100% \u043e\u0442 total_lost \u043a\u0430\u0442\u043e \u0446\u044f\u043b\u043e \u0447\u0438\u0441\u043b\u043e).\n    \u0421\u043b\u0435\u0434 \u0442\u043e\u0432\u0430 \u043d\u0443\u043b\u0438\u0440\u0430 total_lost.\n    \"\"\"\n    global total_lost, balance\n\n    if total_lost > hidden_bonus_trigger:\n        # \u0448\u0430\u043d\u0441 \u0437\u0430 \u0430\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0435 (\u043d\u0430\u043f\u0440. 100%)\n        if random.random() < hidden_bonus_chance:\n            bonus = int(total_lost * hidden_bonus_percentage)\n            if bonus > 0:\n                balance += bonus\n                total_lost = 0  # \u043d\u0443\u043b\u0438\u0440\u0430\u043c\u0435 \u043d\u0430\u0442\u0440\u0443\u043f\u0430\u043d\u0438\u0442\u0435 \u0437\u0430\u0433\u0443\u0431\u0438 \u0441\u043b\u0435\u0434 \u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0431\u043e\u043d\u0443\u0441\n                return True, bonus\n    return False, 0",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "apply_hidden_bonus",
+      "class_name": null,
+      "qualified_name": "apply_hidden_bonus",
+      "line": 59,
+      "end_line": 77
+    }
+  },
+  {
+    "document": "def spin_slot():\n    global balance, total_lost, bet\n\n    if balance < bet:\n        print(\"\u26a0\ufe0f \u041d\u044f\u043c\u0430\u0448 \u0434\u043e\u0441\u0442\u0430\u0442\u044a\u0447\u043d\u043e \u043f\u0430\u0440\u0438 \u0437\u0430 \u0437\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435.\")\n        return\n\n    # \u0422\u0430\u043a\u0441\u0443\u0432\u0430\u043c\u0435 \u0437\u0430\u043b\u043e\u0433\u0430\n    balance -= bet\n    total_lost += bet\n\n    # \u0410\u043d\u0438\u043c\u0430\u0446\u0438\u044f \u043d\u0430 \u0437\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435\n    print(\"\\n\u0417\u0430\u0432\u044a\u0440\u0442\u0430\u043d\u0435...\")\n    time.sleep(0.8)\n\n    reels = [random.choice(list(symbols.keys())) for _ in range(3)]\n    print(\" | \".join(reels))\n\n    win_amount = 0\n\n    # \u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 3 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 (\u0434\u0436\u0430\u043a\u043f\u043e\u0442)\n    if reels[0] == reels[1] == reels[2]:\n        multiplier = symbols[reels[0]]\n        win_amount = bet * multiplier\n        print(f\"\ud83c\udf89 \u0414\u0416\u0410\u041a\u041f\u041e\u0422! \u0421\u043f\u0435\u0447\u0435\u043b\u0438 {win_amount} \u043b\u0432 \u0441 {reels[0]} {reels[1]} {reels[2]}!\")\n        total_lost = 0  # \u043d\u0443\u043b\u0438\u0440\u0430\u043c\u0435 \u0437\u0430\u0433\u0443\u0431\u0438\u0442\u0435 \u043f\u0440\u0438 \u0433\u043e\u043b\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430\n        game_history.append(f\"\u041f\u0415\u0427\u0410\u041b\u0411\u0410: +{win_amount} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    # \u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0437\u0430 2 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u043e\u0442\u043b\u044f\u0432\u043e (\u043f\u043e\u0437\u0438\u0446\u0438\u0438 0 \u0438 1)\n    elif reels[0] == reels[1]:\n        win_amount = bet * 2\n        print(f\"\u2728 \u041f\u0415\u0427\u0410\u041b\u0411\u0410! \u0414\u0432\u0430 \u0435\u0434\u043d\u0430\u043a\u0432\u0438 \u0441\u0438\u043c\u0432\u043e\u043b\u0430 \u043e\u0442\u043b\u044f\u0432\u043e \u2192 {win_amount} \u043b\u0432!\")\n        game_history.append(f\"\u041f\u0415\u0427\u0410\u041b\u0411\u0410 (2 \u0441\u0438\u043c\u0432\u043e\u043b\u0430): +{win_amount} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    else:\n        print(\"\ud83d\ude22 \u041d\u044f\u043c\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430 \u0442\u043e\u0437\u0438 \u043f\u044a\u0442.\")\n        game_history.append(f\"\u0417\u0410\u0413\u0423\u0411\u0410: -{bet} \u043b\u0432 \u0441\u044a\u0441 {reels}\")\n\n    # \u0414\u043e\u0431\u0430\u0432\u044f\u043d\u0435 \u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430\u0442\u0430 \u043a\u044a\u043c \u0431\u0430\u043b\u0430\u043d\u0441\u0430\n    balance += win_amount\n\n    # \u041e\u043f\u0438\u0442 \u0437\u0430 \u043f\u0440\u0438\u043b\u0430\u0433\u0430\u043d\u0435 \u043d\u0430 \u0441\u043a\u0440\u0438\u0442\u0438\u044f \u0431\u043e\u043d\u0443\u0441\n    triggered, bonus_amount = apply_hidden_bonus()\n    if triggered:\n        # \u041f\u043e\u043a\u0430\u0437\u0432\u0430\u043c\u0435 \u043d\u0430 \u0438\u0433\u0440\u0430\u0447\u0430, \u0447\u0435 \u0435 \u201e\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u043e \u0441\u043f\u0435\u0447\u0435\u043b\u0438\u043b\u201c \u0438 \u043a\u043e\u043b\u043a\u043e \u0435 \u0431\u043e\u043d\u0443\u0441\u044a\u0442.\n        # \u0422\u043e\u0432\u0430 \u0441\u044a\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0435 \u043f\u0440\u0435\u0434\u0432\u0438\u0434\u0435\u043d\u043e \u0434\u0430 \u0438\u0437\u0433\u043b\u0435\u0436\u0434\u0430 \u043a\u0430\u0442\u043e \u043d\u0435\u043e\u0447\u0430\u043a\u0432\u0430\u043d\u0430 \u043f\u0435\u0447\u0430\u043b\u0431\u0430/\u043a\u044a\u0441\u043c\u0435\u0442.\n        print()\n        print(\"\ud83c\udf89 \u0418\u0437\u0433\u043b\u0435\u0436\u0434\u0430 \u043a\u044a\u0441\u043c\u0435\u0442\u044a\u0442 \u0442\u0438 \u0441\u0435 \u0443\u0441\u043c\u0438\u0445\u043d\u0430! \ud83c\udf89\")\n        print(f\"\u0411\u043e\u043d\u0443\u0441 \u0438\u0433\u0440\u0430: +{bonus_amount} \u043b\u0432.\")\n        print(\"\u041f\u0440\u043e\u0434\u044a\u043b\u0436\u0430\u0432\u0430\u0439 \u0434\u0430 \u0438\u0433\u0440\u0430\u0435\u0448 \u2014 \u043a\u044a\u0441\u043c\u0435\u0442\u0430 \u0435 \u0441 \u0442\u0435\u0431! \ud83d\ude09\")\n        game_history.append(f\"\u0411\u041e\u041d\u0423\u0421 (\u0441\u043b\u0443\u0447\u0430\u0435\u043d): +{bonus_amount} \u043b\u0432\")\n\n    print(f\"\\n\ud83d\udcb0 \u0422\u0435\u043a\u0443\u0449 \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "spin_slot",
+      "class_name": null,
+      "qualified_name": "spin_slot",
+      "line": 79,
+      "end_line": 131
+    }
+  },
+  {
+    "document": "def change_bet():\n    global bet\n    while True:\n        try:\n            new_bet = int(input(\"\u0412\u044a\u0432\u0435\u0434\u0438 \u043d\u043e\u0432 \u0437\u0430\u043b\u043e\u0433 (\u043c\u0438\u043d. 1 \u043b\u0432): \"))\n            if new_bet < 1:\n                print(\"\u26a0\ufe0f \u041c\u0438\u043d\u0438\u043c\u0430\u043b\u043d\u0438\u044f\u0442 \u0437\u0430\u043b\u043e\u0433 \u0435 1 \u043b\u0432.\")\n                continue\n            bet = new_bet\n            print(f\"\u2705 \u041d\u043e\u0432\u0438\u044f\u0442 \u0437\u0430\u043b\u043e\u0433 \u0435 {bet} \u043b\u0432.\")\n            break\n        except ValueError:\n            print(\"\u274c \u041d\u0435\u0432\u0430\u043b\u0438\u0434\u043d\u043e \u0447\u0438\u0441\u043b\u043e, \u043e\u043f\u0438\u0442\u0430\u0439 \u043e\u0442\u043d\u043e\u0432\u043e.\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "change_bet",
+      "class_name": null,
+      "qualified_name": "change_bet",
+      "line": 133,
+      "end_line": 145
+    }
+  },
+  {
+    "document": "def show_balance():\n    print(f\"\ud83d\udcb0 \u0422\u0435\u043a\u0443\u0449 \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "show_balance",
+      "class_name": null,
+      "qualified_name": "show_balance",
+      "line": 147,
+      "end_line": 148
+    }
+  },
+  {
+    "document": "def show_history():\n    if not game_history:\n        print(\"\ud83d\udced \u0412\u0441\u0435 \u043e\u0449\u0435 \u043d\u044f\u043c\u0430 \u0438\u0437\u0438\u0433\u0440\u0430\u043d\u0438 \u0438\u0433\u0440\u0438.\")\n    else:\n        print(\"\\n--- \u0418\u0421\u0422\u041e\u0420\u0418\u042f \u041d\u0410 \u0418\u0413\u0420\u0410\u0422\u0410 ---\")\n        for entry in game_history:\n            print(entry)\n        print(\"-------------------------\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "show_history",
+      "class_name": null,
+      "qualified_name": "show_history",
+      "line": 150,
+      "end_line": 157
+    }
+  },
+  {
+    "document": "def exit_game():\n    print(\"\\n\ud83c\udfb2 \u0411\u043b\u0430\u0433\u043e\u0434\u0430\u0440\u0438\u043c \u0442\u0438, \u0447\u0435 \u0438\u0433\u0440\u0430 \u043d\u0430\u0448\u0430\u0442\u0430 \u0440\u043e\u0442\u0430\u0442\u0438\u0432\u043a\u0430!\")\n    print(f\"\ud83c\udfc1 \u0424\u0438\u043d\u0430\u043b\u0435\u043d \u0431\u0430\u043b\u0430\u043d\u0441: {balance} \u043b\u0432\")\n    sys.exit()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "slot_machine.py",
+      "language": "python",
+      "type": "function",
+      "name": "exit_game",
+      "class_name": null,
+      "qualified_name": "exit_game",
+      "line": 159,
+      "end_line": 162
+    }
+  },
+  {
+    "document": "from bs4 import BeautifulSoup\nimport requests\nimport csv\nimport json\n\n\ndef main():\n    url = 'http://yahoo.com'\n    req_data = requests.get(url)\n    content = req_data.text\n    soup = BeautifulSoup(content, \"html.parser\")\n\n    headlines = []\n    for headline in soup.find_all(\"h3\"):\n        raw_headline = headline.get_text()\n        headline = raw_headline.strip()\n        if len(headline) < 10:\n            continue\n        headlines.append(headline)\n\n    print(json.dumps(headlines))\n\n    with open(\"news_data.csv\", 'w') as output_file:\n        writer = csv.writer(output_file, delimiter=',')\n        writer.writerow(['headline'])\n        for headline in headlines:\n            writer.writerow([headline])\n\nif __name__ == '__main__':\n    main()",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "web_scraping.py",
+      "language": "python",
+      "type": "file",
+      "name": "web_scraping.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def main():\n    url = 'http://yahoo.com'\n    req_data = requests.get(url)\n    content = req_data.text\n    soup = BeautifulSoup(content, \"html.parser\")\n\n    headlines = []\n    for headline in soup.find_all(\"h3\"):\n        raw_headline = headline.get_text()\n        headline = raw_headline.strip()\n        if len(headline) < 10:\n            continue\n        headlines.append(headline)\n\n    print(json.dumps(headlines))\n\n    with open(\"news_data.csv\", 'w') as output_file:\n        writer = csv.writer(output_file, delimiter=',')\n        writer.writerow(['headline'])\n        for headline in headlines:\n            writer.writerow([headline])",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "web_scraping.py",
+      "language": "python",
+      "type": "function",
+      "name": "main",
+      "class_name": null,
+      "qualified_name": "main",
+      "line": 7,
+      "end_line": 27
+    }
+  },
+  {
+    "document": "from openpyxl import Workbook\n\nworkbook = Workbook()\ncurrent_sheet = workbook.active\n\ncurrent_sheet[\"A1\"] = \"1\"\ncurrent_sheet[\"A2\"] = \"Python\"\ncurrent_sheet[\"B1\"] = \"2\"\ncurrent_sheet[\"B2\"] = \"Dev!\"\ncurrent_sheet[\"C1\"] = \"3\"\ncurrent_sheet[\"C2\"] = \"Society!\"\n\n\nworkbook.save(filename=\"example.xlsx\")",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "excel_in_python.py",
+      "language": "python",
+      "type": "file",
+      "name": "excel_in_python.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def speak(str):\n    from win32com.client import Dispatch\n    speak = Dispatch(\"SAPI.SpVoice\")\n    speak.Speak(str)\n\nif __name__ == '__main__':\n    import requests\n    import json\n\n    query_params = {\n        \"source\": \"bbc-news\",\n        \"sortBy\": \"top\",\n        \"apiKey\": \"4dbc17e007ab436fb66416009dfb59a8\"\n    }\n    main_url = \" https://newsapi.org/v1/articles\"\n    res = requests.get(main_url, params=query_params)\n    load = json.loads(res.text)\n    speak('Here you listen top BBC news from SoftUni Fundamentals Team. Lets began')\n    speak('first news')\n\n    for i in range(4):\n        print(load['articles'][i]['title'])\n        speak(load['articles'][i]['title'])\n        if i < 3:\n            speak('next news')\n        else:\n            speak('This was top 4 BBC news from SoftUni Fundamentals Team.See you Soon')",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "speaking_news_bot.py",
+      "language": "python",
+      "type": "file",
+      "name": "speaking_news_bot.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "def speak(str):\n    from win32com.client import Dispatch\n    speak = Dispatch(\"SAPI.SpVoice\")\n    speak.Speak(str)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "speaking_news_bot.py",
+      "language": "python",
+      "type": "function",
+      "name": "speak",
+      "class_name": null,
+      "qualified_name": "speak",
+      "line": 1,
+      "end_line": 4
+    }
+  },
+  {
+    "document": "import numpy as np\nfrom keras.models import Sequential\nfrom keras.layers import Dense, Conv2D, MaxPooling2D, Flatten\n\n# Initializing the CNN\nclassifier = Sequential()\n\n# Step 1 - Convolution\nclassifier.add(Conv2D(32, (3, 3), input_shape = (64, 64, 3), activation = 'relu'))\n\n# Step 2 - Pooling\nclassifier.add(MaxPooling2D(pool_size = (2, 2)))\n\n# Adding a second convolutional layer\nclassifier.add(Conv2D(32, (3, 3), activation = 'relu'))\nclassifier.add(MaxPooling2D(pool_size = (2, 2)))\n\n# Step 3 - Flattening\nclassifier.add(Flatten())\n\n# Step 4 - Full connection\nclassifier.add(Dense(units = 128, activation = 'relu'))\nclassifier.add(Dense(units = 1, activation = 'sigmoid'))\n\n# Compiling the CNN\nclassifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])\n\n# Fitting the CNN to the images\n\nfrom keras.preprocessing.image import ImageDataGenerator\n\ntrain_datagen = ImageDataGenerator(rescale = 1./255,\n                                   shear_range = 0.2,\n                                   zoom_range = 0.2,\n                                   horizontal_flip = True)\n\ntest_datagen = ImageDataGenerator(rescale = 1./255)\n\ntraining_set = train_datagen.flow_from_directory('dataset/training_set',\n                                                 target_size = (64, 64),\n                                                 batch_size = 32,\n                                                 class_mode = 'binary')\n\ntest_set = test_datagen.flow_from_directory('dataset/test_set',\n                                            target_size = (64, 64),\n                                            batch_size = 32,\n                                            class_mode = 'binary')\n\nclassifier.fit_generator(training_set,\n                         steps_per_epoch = 8000,\n                         epochs = 25,\n                         validation_data = test_set,\n                         validation_steps = 2000)\n",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "convolutional_neural_network_CNN_algorithm_exampe.py",
+      "language": "python",
+      "type": "file",
+      "name": "convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "from cryptography.fernet import Fernet\n# Put this somewhere safe!\nkey = Fernet.generate_key()\nf = Fernet(key)\nencrypt_token = f.encrypt(b\"A really secret message. Not for prying eyes.\")\nprint(encrypt_token)\n\ndecrypt_token = f.decrypt(encrypt_token)\nprint(decrypt_token)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "cryptography.py",
+      "language": "python",
+      "type": "file",
+      "name": "cryptography.py",
+      "line": 1
+    }
+  },
+  {
+    "document": "import pyshorteners\n\nlink_address = input(\"enter the link: \")\nshortener_class_obj = pyshorteners.Shortener()\n\n# the shortened link\nresult = shortener_class_obj.tinyurl.short(link_address)\n\nprint(result)",
+    "metadata": {
+      "repository": "gh_zahariev-webbersof_python-mini-projects",
+      "file": "shorten_the_link.py",
+      "language": "python",
+      "type": "file",
+      "name": "shorten_the_link.py",
+      "line": 1
+    }
+  }
+]

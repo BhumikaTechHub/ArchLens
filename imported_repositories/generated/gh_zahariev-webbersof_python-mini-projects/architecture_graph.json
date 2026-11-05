@@ -1,0 +1,3033 @@
+{
+  "nodes": [
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "type": "file",
+      "language": "python",
+      "label": "bitcoin_price.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "type": "file",
+      "language": "python",
+      "label": "class_example.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "type": "file",
+      "language": "python",
+      "label": "take_a_screenshot.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "type": "file",
+      "language": "python",
+      "label": "color_text.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "type": "file",
+      "language": "python",
+      "label": "text_to_speech.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "type": "file",
+      "language": "python",
+      "label": "bitcoin_price_with_api_key.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "type": "file",
+      "language": "python",
+      "label": "softuni_chedule.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "type": "file",
+      "language": "python",
+      "label": "WiFi_Scanning.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+      "type": "file",
+      "language": "python",
+      "label": "bitcoin_address.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "type": "file",
+      "language": "python",
+      "label": "web_automation.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "type": "file",
+      "language": "python",
+      "label": "morse_code_script.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "type": "file",
+      "language": "python",
+      "label": "validator_credit_cards.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "type": "file",
+      "language": "python",
+      "label": "pong_game.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "type": "file",
+      "language": "python",
+      "label": "slot_machine.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "type": "file",
+      "language": "python",
+      "label": "web_scraping.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+      "type": "file",
+      "language": "python",
+      "label": "excel_in_python.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "type": "file",
+      "language": "python",
+      "label": "speaking_news_bot.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "type": "file",
+      "language": "python",
+      "label": "convolutional_neural_network_CNN_algorithm_exampe.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "type": "file",
+      "language": "python",
+      "label": "cryptography.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "file_category": "other"
+    },
+    {
+      "id": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "type": "file",
+      "language": "python",
+      "label": "shorten_the_link.py",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "file_category": "other"
+    },
+    {
+      "id": "module:requests",
+      "type": "module",
+      "label": "requests",
+      "file": ""
+    },
+    {
+      "id": "module:bs4",
+      "type": "module",
+      "label": "bs4",
+      "file": ""
+    },
+    {
+      "id": "module:tkinter",
+      "type": "module",
+      "label": "tkinter",
+      "file": ""
+    },
+    {
+      "id": "module:tkinter.filedialog",
+      "type": "module",
+      "label": "tkinter.filedialog",
+      "file": ""
+    },
+    {
+      "id": "module:pyautogui",
+      "type": "module",
+      "label": "pyautogui",
+      "file": ""
+    },
+    {
+      "id": "module:colorama",
+      "type": "module",
+      "label": "colorama",
+      "file": ""
+    },
+    {
+      "id": "module:pyttsx3",
+      "type": "module",
+      "label": "pyttsx3",
+      "file": ""
+    },
+    {
+      "id": "module:json",
+      "type": "module",
+      "label": "json",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.app",
+      "type": "module",
+      "label": "kivy.app",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.uix.screenmanager",
+      "type": "module",
+      "label": "kivy.uix.screenmanager",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.uix.gridlayout",
+      "type": "module",
+      "label": "kivy.uix.gridlayout",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.uix.popup",
+      "type": "module",
+      "label": "kivy.uix.popup",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.lang",
+      "type": "module",
+      "label": "kivy.lang",
+      "file": ""
+    },
+    {
+      "id": "module:kivy.uix.label",
+      "type": "module",
+      "label": "kivy.uix.label",
+      "file": ""
+    },
+    {
+      "id": "module:subprocess",
+      "type": "module",
+      "label": "subprocess",
+      "file": ""
+    },
+    {
+      "id": "module:bitcoinaddress",
+      "type": "module",
+      "label": "bitcoinaddress",
+      "file": ""
+    },
+    {
+      "id": "module:webbrowser",
+      "type": "module",
+      "label": "webbrowser",
+      "file": ""
+    },
+    {
+      "id": "module:pygame",
+      "type": "module",
+      "label": "pygame",
+      "file": ""
+    },
+    {
+      "id": "module:sys",
+      "type": "module",
+      "label": "sys",
+      "file": ""
+    },
+    {
+      "id": "module:random",
+      "type": "module",
+      "label": "random",
+      "file": ""
+    },
+    {
+      "id": "module:time",
+      "type": "module",
+      "label": "time",
+      "file": ""
+    },
+    {
+      "id": "module:csv",
+      "type": "module",
+      "label": "csv",
+      "file": ""
+    },
+    {
+      "id": "module:openpyxl",
+      "type": "module",
+      "label": "openpyxl",
+      "file": ""
+    },
+    {
+      "id": "module:win32com.client",
+      "type": "module",
+      "label": "win32com.client",
+      "file": ""
+    },
+    {
+      "id": "module:numpy",
+      "type": "module",
+      "label": "numpy",
+      "file": ""
+    },
+    {
+      "id": "module:keras.models",
+      "type": "module",
+      "label": "keras.models",
+      "file": ""
+    },
+    {
+      "id": "module:keras.layers",
+      "type": "module",
+      "label": "keras.layers",
+      "file": ""
+    },
+    {
+      "id": "module:keras.preprocessing.image",
+      "type": "module",
+      "label": "keras.preprocessing.image",
+      "file": ""
+    },
+    {
+      "id": "module:cryptography.fernet",
+      "type": "module",
+      "label": "cryptography.fernet",
+      "file": ""
+    },
+    {
+      "id": "module:pyshorteners",
+      "type": "module",
+      "label": "pyshorteners",
+      "file": ""
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "type": "class",
+      "language": "python",
+      "label": "Car",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 1,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:HomeScreen:239",
+      "type": "class",
+      "language": "python",
+      "label": "HomeScreen",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 239,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:MainScreen:248",
+      "type": "class",
+      "language": "python",
+      "label": "MainScreen",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 248,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Monday:252",
+      "type": "class",
+      "language": "python",
+      "label": "Monday",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 252,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Tuesday:256",
+      "type": "class",
+      "language": "python",
+      "label": "Tuesday",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 256,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Wednesday:260",
+      "type": "class",
+      "language": "python",
+      "label": "Wednesday",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 260,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Thursday:264",
+      "type": "class",
+      "language": "python",
+      "label": "Thursday",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 264,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Friday:268",
+      "type": "class",
+      "language": "python",
+      "label": "Friday",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 268,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:TimeTableApp:282",
+      "type": "class",
+      "language": "python",
+      "label": "TimeTableApp",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 282,
+      "file_category": "other"
+    },
+    {
+      "id": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "type": "class",
+      "language": "python",
+      "label": "CreditCard",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 1,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:__init__:2",
+      "type": "function",
+      "language": "python",
+      "label": "__init__",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 2,
+      "class": "Car",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:honk:8",
+      "type": "function",
+      "language": "python",
+      "label": "honk",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 8,
+      "class": "Car",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:accelerate:11",
+      "type": "function",
+      "language": "python",
+      "label": "accelerate",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 11,
+      "class": "Car",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:get_speed:14",
+      "type": "function",
+      "language": "python",
+      "label": "get_speed",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 14,
+      "class": "Car",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py:take_screenshot:11",
+      "type": "function",
+      "language": "python",
+      "label": "take_screenshot",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 11,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py:text_to_speech_function:3",
+      "type": "function",
+      "language": "python",
+      "label": "text_to_speech_function",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 3,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:welcome:240",
+      "type": "function",
+      "language": "python",
+      "label": "welcome",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 240,
+      "class": "HomeScreen",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:build:283",
+      "type": "function",
+      "language": "python",
+      "label": "build",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 283,
+      "class": "TimeTableApp",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py:web_automation:3",
+      "type": "function",
+      "language": "python",
+      "label": "web_automation",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "line": 3,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:__init__:2",
+      "type": "function",
+      "language": "python",
+      "label": "__init__",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 2,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:company:6",
+      "type": "function",
+      "language": "python",
+      "label": "company",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 6,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:first_check:17",
+      "type": "function",
+      "language": "python",
+      "label": "first_check",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 17,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:validate_card_information:25",
+      "type": "function",
+      "language": "python",
+      "label": "validate_card_information",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 25,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:checksum:50",
+      "type": "function",
+      "language": "python",
+      "label": "checksum",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 50,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:set_card:54",
+      "type": "function",
+      "language": "python",
+      "label": "set_card",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 54,
+      "class": "CreditCard",
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:print_welcome:27",
+      "type": "function",
+      "language": "python",
+      "label": "print_welcome",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 27,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:deposit_money:37",
+      "type": "function",
+      "language": "python",
+      "label": "deposit_money",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 37,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_menu:51",
+      "type": "function",
+      "language": "python",
+      "label": "show_menu",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 51,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:apply_hidden_bonus:59",
+      "type": "function",
+      "language": "python",
+      "label": "apply_hidden_bonus",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 59,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:spin_slot:79",
+      "type": "function",
+      "language": "python",
+      "label": "spin_slot",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 79,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:change_bet:133",
+      "type": "function",
+      "language": "python",
+      "label": "change_bet",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 133,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_balance:147",
+      "type": "function",
+      "language": "python",
+      "label": "show_balance",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 147,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_history:150",
+      "type": "function",
+      "language": "python",
+      "label": "show_history",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 150,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:exit_game:159",
+      "type": "function",
+      "language": "python",
+      "label": "exit_game",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 159,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py:main:7",
+      "type": "function",
+      "language": "python",
+      "label": "main",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 7,
+      "class": null,
+      "file_category": "other"
+    },
+    {
+      "id": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py:speak:1",
+      "type": "function",
+      "language": "python",
+      "label": "speak",
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 1,
+      "class": null,
+      "file_category": "other"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "target": "module:requests",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "target": "module:bs4",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "target": "module:tkinter",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "target": "module:tkinter.filedialog",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "target": "module:pyautogui",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "target": "module:colorama",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "target": "module:pyttsx3",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "target": "module:json",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "target": "module:requests",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.app",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.uix.screenmanager",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.uix.gridlayout",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.uix.popup",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.lang",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "module:kivy.uix.label",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "target": "module:subprocess",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+      "target": "module:bitcoinaddress",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "target": "module:webbrowser",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "target": "module:pygame",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "target": "module:sys",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "module:random",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "module:time",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "module:sys",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "target": "module:bs4",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "target": "module:requests",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "target": "module:csv",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "target": "module:json",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+      "target": "module:openpyxl",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "target": "module:win32com.client",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "target": "module:requests",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "target": "module:json",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "target": "module:numpy",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "target": "module:keras.models",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "target": "module:keras.layers",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "target": "module:keras.preprocessing.image",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "target": "module:cryptography.fernet",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "target": "module:pyshorteners",
+      "relationship": "imports"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:HomeScreen:239",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:MainScreen:248",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Monday:252",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Tuesday:256",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Wednesday:260",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Thursday:264",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:Friday:268",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:TimeTableApp:282",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "target": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:__init__:2",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:honk:8",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:accelerate:11",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:Car:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py:get_speed:14",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py:take_screenshot:11",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py:text_to_speech_function:3",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:HomeScreen:239",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:welcome:240",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:TimeTableApp:282",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py:build:283",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py:web_automation:3",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:__init__:2",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:company:6",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:first_check:17",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:validate_card_information:25",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:checksum:50",
+      "relationship": "contains"
+    },
+    {
+      "source": "class:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:CreditCard:1",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py:set_card:54",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:print_welcome:27",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:deposit_money:37",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_menu:51",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:apply_hidden_bonus:59",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:spin_slot:79",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:change_bet:133",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_balance:147",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:show_history:150",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:exit_game:159",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py:main:7",
+      "relationship": "contains"
+    },
+    {
+      "source": "file:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py:speak:1",
+      "relationship": "contains"
+    },
+    {
+      "source": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:spin_slot:79",
+      "target": "function:/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py:apply_hidden_bonus:59",
+      "relationship": "calls",
+      "call_expression": "apply_hidden_bonus",
+      "call_line": 121,
+      "resolution": "unique_name_and_scope"
+    }
+  ],
+  "unresolved_relationships": [],
+  "unresolved_call_details": [
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "line": 5,
+      "caller": null,
+      "expression": "requests.get",
+      "target": "get",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "line": 7,
+      "caller": null,
+      "expression": "bs",
+      "target": "bs",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "line": 9,
+      "caller": null,
+      "expression": "soup.find",
+      "target": "find",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "line": 10,
+      "caller": null,
+      "expression": "price.select_one",
+      "target": "select_one",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+      "line": 12,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 9,
+      "caller": "honk",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 18,
+      "caller": null,
+      "expression": "Car",
+      "target": "Car",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 19,
+      "caller": null,
+      "expression": "my_car.honk",
+      "target": "honk",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 20,
+      "caller": null,
+      "expression": "my_car.accelerate",
+      "target": "accelerate",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 21,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+      "line": 21,
+      "caller": null,
+      "expression": "my_car.get_speed",
+      "target": "get_speed",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 5,
+      "caller": null,
+      "expression": "tk.Tk",
+      "target": "Tk",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 7,
+      "caller": null,
+      "expression": "tk.Canvas",
+      "target": "Canvas",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 8,
+      "caller": null,
+      "expression": "canvas.pack",
+      "target": "pack",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 12,
+      "caller": "take_screenshot",
+      "expression": "pyautogui.screenshot",
+      "target": "screenshot",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 13,
+      "caller": "take_screenshot",
+      "expression": "asksaveasfilename",
+      "target": "asksaveasfilename",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 14,
+      "caller": "take_screenshot",
+      "expression": "my_screenshot.save",
+      "target": "save",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 17,
+      "caller": null,
+      "expression": "tk.Button",
+      "target": "Button",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 18,
+      "caller": null,
+      "expression": "canvas.create_window",
+      "target": "create_window",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+      "line": 20,
+      "caller": null,
+      "expression": "root.mainloop",
+      "target": "mainloop",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "line": 4,
+      "caller": null,
+      "expression": "init",
+      "target": "init",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "line": 6,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+      "line": 8,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 4,
+      "caller": "text_to_speech_function",
+      "expression": "pyttsx3.init",
+      "target": "init",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 5,
+      "caller": "text_to_speech_function",
+      "expression": "engine.getProperty",
+      "target": "getProperty",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 6,
+      "caller": "text_to_speech_function",
+      "expression": "engine.setProperty",
+      "target": "setProperty",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 7,
+      "caller": "text_to_speech_function",
+      "expression": "engine.setProperty",
+      "target": "setProperty",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 8,
+      "caller": "text_to_speech_function",
+      "expression": "engine.say",
+      "target": "say",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 9,
+      "caller": "text_to_speech_function",
+      "expression": "engine.runAndWait",
+      "target": "runAndWait",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+      "line": 12,
+      "caller": null,
+      "expression": "text_to_speech_function",
+      "target": "text_to_speech_function",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "line": 8,
+      "caller": null,
+      "expression": "requests.get",
+      "target": "get",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "line": 9,
+      "caller": null,
+      "expression": "data.json",
+      "target": "json",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+      "line": 10,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 8,
+      "caller": null,
+      "expression": "Builder.load_string",
+      "target": "load_string",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 241,
+      "caller": "welcome",
+      "expression": "Popup",
+      "target": "Popup",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 241,
+      "caller": "welcome",
+      "expression": "Label",
+      "target": "Label",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 245,
+      "caller": "welcome",
+      "expression": "popup.open",
+      "target": "open",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 272,
+      "caller": null,
+      "expression": "ScreenManager",
+      "target": "ScreenManager",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 273,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 273,
+      "caller": null,
+      "expression": "HomeScreen",
+      "target": "HomeScreen",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 274,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 274,
+      "caller": null,
+      "expression": "MainScreen",
+      "target": "MainScreen",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 275,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 275,
+      "caller": null,
+      "expression": "Monday",
+      "target": "Monday",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 276,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 276,
+      "caller": null,
+      "expression": "Tuesday",
+      "target": "Tuesday",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 277,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 277,
+      "caller": null,
+      "expression": "Wednesday",
+      "target": "Wednesday",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 278,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 278,
+      "caller": null,
+      "expression": "Thursday",
+      "target": "Thursday",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 279,
+      "caller": null,
+      "expression": "sm.add_widget",
+      "target": "add_widget",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 279,
+      "caller": null,
+      "expression": "Friday",
+      "target": "Friday",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 287,
+      "caller": null,
+      "expression": "TimeTableApp().run",
+      "target": "run",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+      "line": 287,
+      "caller": null,
+      "expression": "TimeTableApp",
+      "target": "TimeTableApp",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 4,
+      "caller": null,
+      "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split",
+      "target": "split",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 4,
+      "caller": null,
+      "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode",
+      "target": "decode",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 4,
+      "caller": null,
+      "expression": "subprocess.check_output",
+      "target": "check_output",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 8,
+      "caller": null,
+      "expression": "i.split",
+      "target": "split",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 12,
+      "caller": null,
+      "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8').split",
+      "target": "split",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 12,
+      "caller": null,
+      "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode",
+      "target": "decode",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 12,
+      "caller": null,
+      "expression": "subprocess.check_output",
+      "target": "check_output",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 17,
+      "caller": null,
+      "expression": "b.split",
+      "target": "split",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 19,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 19,
+      "caller": null,
+      "expression": "'{:<30}|  {:<}'.format",
+      "target": "format",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 21,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+      "line": 21,
+      "caller": null,
+      "expression": "'{:<30}|  {:<}'.format",
+      "target": "format",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+      "line": 3,
+      "caller": null,
+      "expression": "Wallet",
+      "target": "Wallet",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+      "line": 4,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "line": 8,
+      "caller": "web_automation",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "line": 9,
+      "caller": "web_automation",
+      "expression": "wbb.get(chrome_path).open",
+      "target": "open",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "line": 9,
+      "caller": "web_automation",
+      "expression": "wbb.get",
+      "target": "get",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+      "line": 11,
+      "caller": null,
+      "expression": "web_automation",
+      "target": "web_automation",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 8,
+      "caller": null,
+      "expression": "input",
+      "target": "input",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 10,
+      "caller": null,
+      "expression": "len",
+      "target": "len",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 13,
+      "caller": null,
+      "expression": "symbols.get",
+      "target": "get",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 13,
+      "caller": null,
+      "expression": "range",
+      "target": "range",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 13,
+      "caller": null,
+      "expression": "symbols.keys",
+      "target": "keys",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 15,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+      "line": 15,
+      "caller": null,
+      "expression": "' '.join",
+      "target": "join",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 8,
+      "caller": "company",
+      "expression": "str(self.card_no).startswith",
+      "target": "startswith",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 8,
+      "caller": "company",
+      "expression": "str",
+      "target": "str",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 10,
+      "caller": "company",
+      "expression": "str(self.card_no).startswith",
+      "target": "startswith",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 10,
+      "caller": "company",
+      "expression": "str",
+      "target": "str",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 12,
+      "caller": "company",
+      "expression": "str(self.card_no).startswith",
+      "target": "startswith",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 12,
+      "caller": "company",
+      "expression": "str",
+      "target": "str",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 18,
+      "caller": "first_check",
+      "expression": "len",
+      "target": "len",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 29,
+      "caller": "validate_card_information",
+      "expression": "range",
+      "target": "range",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 29,
+      "caller": "validate_card_information",
+      "expression": "len",
+      "target": "len",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 31,
+      "caller": "validate_card_information",
+      "expression": "int",
+      "target": "int",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 33,
+      "caller": "validate_card_information",
+      "expression": "len",
+      "target": "len",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 33,
+      "caller": "validate_card_information",
+      "expression": "str",
+      "target": "str",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 34,
+      "caller": "validate_card_information",
+      "expression": "sum",
+      "target": "sum",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 34,
+      "caller": "validate_card_information",
+      "expression": "eval",
+      "target": "eval",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 34,
+      "caller": "validate_card_information",
+      "expression": "str",
+      "target": "str",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 40,
+      "caller": "validate_card_information",
+      "expression": "int",
+      "target": "int",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 55,
+      "caller": "set_card",
+      "expression": "cls",
+      "target": "cls",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 58,
+      "caller": null,
+      "expression": "input",
+      "target": "input",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 59,
+      "caller": null,
+      "expression": "CreditCard.set_card",
+      "target": "set_card",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 60,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 61,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 62,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 62,
+      "caller": null,
+      "expression": "card.first_check",
+      "target": "first_check",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 63,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 64,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+      "line": 64,
+      "caller": null,
+      "expression": "card.validate_card_information",
+      "target": "validate_card_information",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 4,
+      "caller": null,
+      "expression": "pygame.init",
+      "target": "init",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 8,
+      "caller": null,
+      "expression": "pygame.display.set_mode",
+      "target": "set_mode",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 9,
+      "caller": null,
+      "expression": "pygame.display.set_caption",
+      "target": "set_caption",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 30,
+      "caller": null,
+      "expression": "pygame.time.Clock",
+      "target": "Clock",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 33,
+      "caller": null,
+      "expression": "pygame.event.get",
+      "target": "get",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 35,
+      "caller": null,
+      "expression": "pygame.quit",
+      "target": "quit",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 36,
+      "caller": null,
+      "expression": "sys.exit",
+      "target": "exit",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 38,
+      "caller": null,
+      "expression": "pygame.key.get_pressed",
+      "target": "get_pressed",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 65,
+      "caller": null,
+      "expression": "window.fill",
+      "target": "fill",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 68,
+      "caller": null,
+      "expression": "pygame.draw.rect",
+      "target": "rect",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 69,
+      "caller": null,
+      "expression": "pygame.draw.rect",
+      "target": "rect",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 70,
+      "caller": null,
+      "expression": "pygame.draw.circle",
+      "target": "circle",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 73,
+      "caller": null,
+      "expression": "pygame.display.flip",
+      "target": "flip",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+      "line": 76,
+      "caller": null,
+      "expression": "clock.tick",
+      "target": "tick",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 28,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 29,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 30,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 31,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 32,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 33,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 34,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 35,
+      "caller": "print_welcome",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 41,
+      "caller": "deposit_money",
+      "expression": "int",
+      "target": "int",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 41,
+      "caller": "deposit_money",
+      "expression": "input",
+      "target": "input",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 43,
+      "caller": "deposit_money",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 46,
+      "caller": "deposit_money",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 49,
+      "caller": "deposit_money",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 52,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 53,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 54,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 55,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 56,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 57,
+      "caller": "show_menu",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 71,
+      "caller": "apply_hidden_bonus",
+      "expression": "random.random",
+      "target": "random",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 72,
+      "caller": "apply_hidden_bonus",
+      "expression": "int",
+      "target": "int",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 83,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 91,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 92,
+      "caller": "spin_slot",
+      "expression": "time.sleep",
+      "target": "sleep",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 94,
+      "caller": "spin_slot",
+      "expression": "random.choice",
+      "target": "choice",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 94,
+      "caller": "spin_slot",
+      "expression": "list",
+      "target": "list",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 94,
+      "caller": "spin_slot",
+      "expression": "symbols.keys",
+      "target": "keys",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 94,
+      "caller": "spin_slot",
+      "expression": "range",
+      "target": "range",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 95,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 95,
+      "caller": "spin_slot",
+      "expression": "' | '.join",
+      "target": "join",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 103,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 105,
+      "caller": "spin_slot",
+      "expression": "game_history.append",
+      "target": "append",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 110,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 111,
+      "caller": "spin_slot",
+      "expression": "game_history.append",
+      "target": "append",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 114,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 115,
+      "caller": "spin_slot",
+      "expression": "game_history.append",
+      "target": "append",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 125,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 126,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 127,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 128,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 129,
+      "caller": "spin_slot",
+      "expression": "game_history.append",
+      "target": "append",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 131,
+      "caller": "spin_slot",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 137,
+      "caller": "change_bet",
+      "expression": "int",
+      "target": "int",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 137,
+      "caller": "change_bet",
+      "expression": "input",
+      "target": "input",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 139,
+      "caller": "change_bet",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 142,
+      "caller": "change_bet",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 145,
+      "caller": "change_bet",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 148,
+      "caller": "show_balance",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 152,
+      "caller": "show_history",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 154,
+      "caller": "show_history",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 156,
+      "caller": "show_history",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 157,
+      "caller": "show_history",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 160,
+      "caller": "exit_game",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 161,
+      "caller": "exit_game",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 162,
+      "caller": "exit_game",
+      "expression": "sys.exit",
+      "target": "exit",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 165,
+      "caller": null,
+      "expression": "print_welcome",
+      "target": "print_welcome",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 166,
+      "caller": null,
+      "expression": "deposit_money",
+      "target": "deposit_money",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 170,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 171,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 174,
+      "caller": null,
+      "expression": "show_menu",
+      "target": "show_menu",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 175,
+      "caller": null,
+      "expression": "input",
+      "target": "input",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 178,
+      "caller": null,
+      "expression": "spin_slot",
+      "target": "spin_slot",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 180,
+      "caller": null,
+      "expression": "change_bet",
+      "target": "change_bet",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 182,
+      "caller": null,
+      "expression": "show_balance",
+      "target": "show_balance",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 184,
+      "caller": null,
+      "expression": "show_history",
+      "target": "show_history",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 186,
+      "caller": null,
+      "expression": "exit_game",
+      "target": "exit_game",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+      "line": 188,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 9,
+      "caller": "main",
+      "expression": "requests.get",
+      "target": "get",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 11,
+      "caller": "main",
+      "expression": "BeautifulSoup",
+      "target": "BeautifulSoup",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 14,
+      "caller": "main",
+      "expression": "soup.find_all",
+      "target": "find_all",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 15,
+      "caller": "main",
+      "expression": "headline.get_text",
+      "target": "get_text",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 16,
+      "caller": "main",
+      "expression": "raw_headline.strip",
+      "target": "strip",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 17,
+      "caller": "main",
+      "expression": "len",
+      "target": "len",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 19,
+      "caller": "main",
+      "expression": "headlines.append",
+      "target": "append",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 21,
+      "caller": "main",
+      "expression": "print",
+      "target": "print",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 21,
+      "caller": "main",
+      "expression": "json.dumps",
+      "target": "dumps",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 23,
+      "caller": "main",
+      "expression": "open",
+      "target": "open",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 24,
+      "caller": "main",
+      "expression": "csv.writer",
+      "target": "writer",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 25,
+      "caller": "main",
+      "expression": "writer.writerow",
+      "target": "writerow",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 27,
+      "caller": "main",
+      "expression": "writer.writerow",
+      "target": "writerow",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+      "line": 30,
+      "caller": null,
+      "expression": "main",
+      "target": "main",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+      "line": 3,
+      "caller": null,
+      "expression": "Workbook",
+      "target": "Workbook",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+      "line": 14,
+      "caller": null,
+      "expression": "workbook.save",
+      "target": "save",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 3,
+      "caller": "speak",
+      "expression": "Dispatch",
+      "target": "Dispatch",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 4,
+      "caller": "speak",
+      "expression": "speak.Speak",
+      "target": "Speak",
+      "reason": "target_not_found"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 16,
+      "caller": null,
+      "expression": "requests.get",
+      "target": "get",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 17,
+      "caller": null,
+      "expression": "json.loads",
+      "target": "loads",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 18,
+      "caller": null,
+      "expression": "speak",
+      "target": "speak",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 19,
+      "caller": null,
+      "expression": "speak",
+      "target": "speak",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 21,
+      "caller": null,
+      "expression": "range",
+      "target": "range",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 22,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 23,
+      "caller": null,
+      "expression": "speak",
+      "target": "speak",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 25,
+      "caller": null,
+      "expression": "speak",
+      "target": "speak",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+      "line": 27,
+      "caller": null,
+      "expression": "speak",
+      "target": "speak",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 6,
+      "caller": null,
+      "expression": "Sequential",
+      "target": "Sequential",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 9,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 9,
+      "caller": null,
+      "expression": "Conv2D",
+      "target": "Conv2D",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 12,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 12,
+      "caller": null,
+      "expression": "MaxPooling2D",
+      "target": "MaxPooling2D",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 15,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 15,
+      "caller": null,
+      "expression": "Conv2D",
+      "target": "Conv2D",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 16,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 16,
+      "caller": null,
+      "expression": "MaxPooling2D",
+      "target": "MaxPooling2D",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 19,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 19,
+      "caller": null,
+      "expression": "Flatten",
+      "target": "Flatten",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 22,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 22,
+      "caller": null,
+      "expression": "Dense",
+      "target": "Dense",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 23,
+      "caller": null,
+      "expression": "classifier.add",
+      "target": "add",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 23,
+      "caller": null,
+      "expression": "Dense",
+      "target": "Dense",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 26,
+      "caller": null,
+      "expression": "classifier.compile",
+      "target": "compile",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 32,
+      "caller": null,
+      "expression": "ImageDataGenerator",
+      "target": "ImageDataGenerator",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 37,
+      "caller": null,
+      "expression": "ImageDataGenerator",
+      "target": "ImageDataGenerator",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 39,
+      "caller": null,
+      "expression": "train_datagen.flow_from_directory",
+      "target": "flow_from_directory",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 44,
+      "caller": null,
+      "expression": "test_datagen.flow_from_directory",
+      "target": "flow_from_directory",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+      "line": 49,
+      "caller": null,
+      "expression": "classifier.fit_generator",
+      "target": "fit_generator",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 3,
+      "caller": null,
+      "expression": "Fernet.generate_key",
+      "target": "generate_key",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 4,
+      "caller": null,
+      "expression": "Fernet",
+      "target": "Fernet",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 5,
+      "caller": null,
+      "expression": "f.encrypt",
+      "target": "encrypt",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 6,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 8,
+      "caller": null,
+      "expression": "f.decrypt",
+      "target": "decrypt",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+      "line": 9,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "line": 3,
+      "caller": null,
+      "expression": "input",
+      "target": "input",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "line": 4,
+      "caller": null,
+      "expression": "pyshorteners.Shortener",
+      "target": "Shortener",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "line": 7,
+      "caller": null,
+      "expression": "shortener_class_obj.tinyurl.short",
+      "target": "short",
+      "reason": "missing_caller"
+    },
+    {
+      "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+      "line": 9,
+      "caller": null,
+      "expression": "print",
+      "target": "print",
+      "reason": "missing_caller"
+    }
+  ],
+  "call_resolution": {
+    "resolved_calls": 1,
+    "unresolved_calls": 244,
+    "unresolved_reasons": {
+      "missing_caller": 141,
+      "target_not_found": 103
+    },
+    "method": "Conservative same-file, class-scope, and imported-symbol resolution"
+  }
+}

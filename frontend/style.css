@@ -1016,3 +1016,238 @@ border: 1px solid #cbd5e1 !important;
     color: #ffffff !important;
     border-color: #2563eb !important;
 }
+
+
+/* Architecture graph explorer controls and canvas polish */
+.graph-toolbar {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 18px 0 12px;
+    padding: 14px;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    background: #f8fafc;
+}
+.graph-toolbar label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+}
+.graph-toolbar select,
+.graph-toolbar input[type="search"] {
+    min-width: 170px;
+    padding: 9px 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #172033;
+    font: inherit;
+}
+.graph-toolbar .graph-search-label {
+    flex: 1 1 230px;
+}
+.graph-toolbar input[type="search"] {
+    width: 100%;
+}
+.graph-toolbar .graph-toggle {
+    flex-direction: row;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 5px;
+}
+.graph-hint {
+    flex: 1 0 100%;
+    color: #64748b;
+    font-size: 12px;
+}
+#cy {
+    min-height: 620px;
+    border: 1px solid #dbe3ee !important;
+    border-radius: 12px !important;
+    background-color: #fbfdff !important;
+    background-image: radial-gradient(#dbe4ef 0.8px, transparent 0.8px);
+    background-size: 20px 20px;
+}
+@media (max-width: 700px) {
+    .graph-toolbar { align-items: stretch; }
+    .graph-toolbar label,
+    .graph-toolbar select { width: 100%; }
+    #cy { min-height: 500px; }
+}
+
+
+/* Persistent, collapsible ArchLens AI assistant */
+.assistant-toggle{position:fixed;right:24px;bottom:24px;z-index:1200;display:inline-flex;align-items:center;gap:9px;min-height:52px;padding:0 19px;border:1px solid #1d4ed8;border-radius:999px;background:#1d4ed8;color:#fff;box-shadow:0 12px 30px rgba(15,23,42,.24);font-weight:700;cursor:pointer}
+.assistant-toggle:hover{background:#1e40af}.assistant-toggle-icon{font-size:19px;line-height:1}
+.assistant-panel{position:fixed;top:0;right:0;z-index:1199;display:flex;flex-direction:column;width:min(430px,100vw);height:100dvh;padding:22px;overflow-y:auto;border-left:1px solid #dbe3ee;background:#fff;box-shadow:-18px 0 48px rgba(15,23,42,.18);transform:translateX(105%);visibility:hidden;transition:transform .24s ease,visibility .24s ease}
+.assistant-panel.is-open{transform:translateX(0);visibility:visible}
+.assistant-header{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding-bottom:17px;border-bottom:1px solid #e2e8f0}
+.assistant-eyebrow{color:#2563eb;font-size:10px;font-weight:800;letter-spacing:1.5px}
+.assistant-header h2{margin:7px 0 5px;color:#172033;font-size:22px}.assistant-header p{margin:0;color:#64748b;font-size:13px}
+.assistant-close{width:36px;height:36px;padding:0;border-radius:8px;background:#f1f5f9;color:#334155;font-size:25px;line-height:1}
+.assistant-context{margin:16px 0;padding:10px 12px;border:1px solid #bfdbfe;border-radius:8px;background:#eff6ff;color:#1e40af;font-size:12px;overflow-wrap:anywhere}
+.assistant-input-label{margin-bottom:7px;color:#334155;font-size:13px;font-weight:700}.assistant-question{min-height:105px;max-height:190px;resize:vertical;font-family:inherit}
+.assistant-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px}.assistant-shortcut{color:#64748b;font-size:11px}.assistant-send{flex-shrink:0}
+.assistant-response{margin-top:22px}.assistant-response h3{margin:18px 0 9px;color:#172033;font-size:14px}
+#answer{margin-top:0;padding:14px;border:1px solid #e2e8f0;border-radius:9px;background:#f8fafc;color:#1e293b;font-size:13px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+#sources{display:flex;flex-wrap:wrap;gap:6px}#sources .source{margin:0;overflow-wrap:anywhere}
+@media(max-width:520px){.assistant-toggle{right:14px;bottom:14px}.assistant-panel{padding:17px}}
+@media(prefers-reduced-motion:reduce){.assistant-panel{transition:none}}
+
+
+/* Collapsible architecture risk register */
+.risk-register-disclosure { width: 100%; }
+.risk-register-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    list-style: none;
+    padding: 2px 0;
+}
+.risk-register-summary::-webkit-details-marker { display: none; }
+.risk-register-summary::after {
+    content: "＋";
+    margin-left: auto;
+    color: #93c5fd;
+    font-size: 20px;
+    font-weight: 700;
+}
+.risk-register-disclosure[open] .risk-register-summary::after { content: "−"; }
+.risk-register-title { color: #f1f5f9; font-size: 17px; font-weight: 700; }
+.risk-register-count {
+    padding: 6px 10px;
+    border: 1px solid #334155;
+    border-radius: 999px;
+    background: #17263b;
+    color: #bfdbfe;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.risk-register-content {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #293548;
+}
+.risk-register-description {
+    margin: 0 0 16px;
+    color: #98a6bc;
+    font-size: 13px;
+    line-height: 1.6;
+}
+@media(max-width:520px) {
+    .risk-register-summary { flex-wrap: wrap; }
+    .risk-register-count { margin-left: 0; }
+}
+
+
+/* =========================================
+   GITHUB REPOSITORY IMPORT
+========================================= */
+
+.github-import-panel {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #dbe3ef;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8fbff, #ffffff);
+}
+
+.github-import-copy h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.github-import-copy p,
+.github-import-help {
+    margin: 0 0 14px;
+    color: #64748b;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.github-import-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.github-import-controls {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.github-import-controls input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fff;
+    color: #172033;
+    font-size: 15px;
+}
+
+.github-import-controls input:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+.github-import-controls button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.github-import-help {
+    margin: 9px 0 0;
+    font-size: 12px;
+}
+
+.github-import-status {
+    display: none;
+    margin-top: 12px;
+    padding: 11px 13px;
+    border-radius: 8px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.github-import-status:not(:empty) {
+    display: block;
+}
+
+.github-import-status.is-loading {
+    color: #1e40af;
+    background: #eff6ff;
+}
+
+.github-import-status.success {
+    color: #166534;
+    background: #f0fdf4;
+}
+
+.github-import-status.error {
+    color: #991b1b;
+    background: #fef2f2;
+}
+
+@media (max-width: 700px) {
+    .github-import-controls {
+        flex-direction: column;
+    }
+
+    .github-import-controls button {
+        width: 100%;
+    }
+}

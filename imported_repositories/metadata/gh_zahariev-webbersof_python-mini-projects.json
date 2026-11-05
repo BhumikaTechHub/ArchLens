@@ -1,0 +1,18 @@
+{
+  "repository_id": "gh_zahariev-webbersof_python-mini-projects",
+  "owner": "zahariev-webbersof",
+  "repository_name": "python-mini-projects",
+  "source_url": "https://github.com/zahariev-webbersof/python-mini-projects.git",
+  "local_path": "imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects",
+  "status": "ready",
+  "commit": "47f07807f8689426c713ff87e573a9fc8a24ce3b",
+  "imported_at": "2026-11-05T09:52:36.527028+00:00",
+  "analyzed_files": 20,
+  "language_counts": {
+    "python": 20
+  },
+  "parse_errors": 0,
+  "chunks": 56,
+  "graph_nodes": 86,
+  "graph_edges": 74
+}

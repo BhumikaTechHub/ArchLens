@@ -322,6 +322,29 @@
         </div>
 
 
+        <div class="github-import-panel" aria-labelledby="githubImportTitle">
+            <div class="github-import-copy">
+                <h3 id="githubImportTitle">Import GitHub Repository</h3>
+                <p>Paste a public GitHub repository URL. ArchLens will clone it, analyze supported source files, build the architecture graph, and index code for AI questions.</p>
+            </div>
+            <form id="githubImportForm" class="github-import-form">
+                <label for="githubRepositoryUrl">GitHub repository URL</label>
+                <div class="github-import-controls">
+                    <input
+                        id="githubRepositoryUrl"
+                        name="url"
+                        type="url"
+                        placeholder="https://github.com/owner/repository"
+                        autocomplete="url"
+                        required
+                    >
+                    <button type="submit" id="githubImportButton">Import Repository</button>
+                </div>
+                <p class="github-import-help">Start with a public repository. Large repositories may take several minutes to analyze.</p>
+            </form>
+            <div id="githubImportStatus" class="github-import-status" role="status" aria-live="polite"></div>
+        </div>
+
         <div id="status">
             Connecting to backend...
         </div>
@@ -496,28 +519,6 @@
 
     </div>
 
-    <!-- Architecture findings -->
-
-    <article class="dashboard-panel findings-panel">
-
-        <div class="dashboard-panel-header">
-            <div>
-                <h3>Architecture Risk Register</h3>
-                <p>
-                    Detected structural patterns, affected components,
-                    and suggested actions.
-                </p>
-            </div>
-        </div>
-
-        <div id="architectureFindings">
-            <p class="dashboard-empty">
-                Load a repository to inspect architecture findings.
-            </p>
-        </div>
-
-    </article>
-
     <!-- Most connected components -->
 
     <article class="dashboard-panel">
@@ -555,6 +556,27 @@
 
         </div>
 
+    </article>
+
+    <!-- Architecture findings -->
+
+    <article class="dashboard-panel findings-panel">
+        <details class="risk-register-disclosure">
+            <summary class="risk-register-summary">
+                <span class="risk-register-title">Architecture Risk Register</span>
+                <span id="riskCount" class="risk-register-count">Awaiting analysis</span>
+            </summary>
+            <div class="risk-register-content">
+                <p class="risk-register-description">
+                    Detected structural patterns, affected components, and suggested actions.
+                </p>
+                <div id="architectureFindings">
+                    <p class="dashboard-empty">
+                        Load a repository to inspect architecture findings.
+                    </p>
+                </div>
+            </div>
+        </details>
     </article>
 
     <p class="dashboard-disclaimer">
@@ -619,9 +641,31 @@
         </div>
 
 
+        <div class="graph-toolbar" aria-label="Architecture graph controls">
+            <label for="graphNodeLevel">View
+                <select id="graphNodeLevel">
+                    <option value="overview">Overview</option>
+                    <option value="detail">Detailed view</option>
+                </select>
+            </label>
+            <label for="graphRelationshipFilter">Relationship
+                <select id="graphRelationshipFilter">
+                    <option value="all">All relationships</option>
+                </select>
+            </label>
+            <label class="graph-search-label" for="graphSearch">Find component
+                <input id="graphSearch" type="search" placeholder="Search class, file, or module">
+            </label>
+            <label class="graph-toggle" for="graphEdgeLabels">
+                <input id="graphEdgeLabels" type="checkbox">
+                Show edge labels
+            </label>
+            <span class="graph-hint">Overview hides function-level detail to reduce clutter.</span>
+        </div>
+
         <!-- REAL GRAPH -->
 
-        <div id="cy"></div>
+        <div id="cy" role="img" aria-label="Interactive software architecture graph"></div>
 
 
         <!-- NODE DETAILS -->
@@ -656,60 +700,29 @@
 
 
 
-    <!-- ========================= -->
-    <!-- AI Q&A -->
-    <!-- ========================= -->
-
-    <div class="card">
-
-        <h2>
-            Ask ArchLens
-        </h2>
-
-        <p>
-            Ask questions about the selected repository.
-        </p>
-
-
-        <textarea
-            id="question"
-            placeholder="Example: What functions are called when an order is created?">
-        </textarea>
-
-
-        <button
-            type="button"
-            id="askButton">
-
-            Ask ArchLens
-
-        </button>
-
-
-        <h3>
-            AI Answer
-        </h3>
-
-
-        <div id="answer">
-
-            Ask a question to analyze the repository.
-
+    <!-- Persistent AI assistant launcher and side drawer -->
+    <button type="button" id="assistantToggle" class="assistant-toggle"
+        aria-controls="assistantPanel" aria-expanded="false" aria-label="Open ArchLens AI assistant">
+        <span class="assistant-toggle-icon" aria-hidden="true">✦</span><span>Ask AI</span>
+    </button>
+    <aside id="assistantPanel" class="assistant-panel" role="dialog" aria-modal="false"
+        aria-labelledby="assistantTitle" aria-hidden="true">
+        <div class="assistant-header">
+            <div><span class="assistant-eyebrow">REPOSITORY-AWARE AI</span>
+                <h2 id="assistantTitle">ArchLens Assistant</h2>
+                <p>Ask about the currently selected repository.</p></div>
+            <button type="button" id="assistantClose" class="assistant-close" aria-label="Close assistant">×</button>
         </div>
-
-
-        <h3>
-            Sources
-        </h3>
-
-
-        <div id="sources">
-
-            No sources yet.
-
-        </div>
-
-    </div>
+        <div class="assistant-context" id="assistantContext">Select and load a repository to start asking questions.</div>
+        <label class="assistant-input-label" for="question">Your question</label>
+        <textarea id="question" class="assistant-question" placeholder="e.g. How does a request flow through this application?"></textarea>
+        <div class="assistant-actions">
+            <button type="button" id="askButton" class="assistant-send">Ask ArchLens</button></div>
+        <section class="assistant-response" aria-live="polite">
+            <h3>AI Answer</h3><div id="answer">Ask a question to analyze the repository.</div>
+            <h3>Sources</h3><div id="sources">No sources yet.</div>
+        </section>
+    </aside>
 
 
 </div>

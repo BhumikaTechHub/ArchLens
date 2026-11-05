@@ -9,10 +9,15 @@ import chromadb
 # CONFIGURATION
 # ============================================================
 
-OLLAMA_URL = "http://localhost:11434"
+OLLAMA_URL = os.getenv(
+    "OLLAMA_URL",
+    "http://localhost:11434"
+)
 EMBEDDING_MODEL = "nomic-embed-text"
 COLLECTION_NAME = "archlens_code"
-
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
 
 # ============================================================
 # GET EMBEDDING FROM OLLAMA
@@ -44,15 +49,44 @@ def get_embedding(text):
 # LOAD CODE CHUNKS
 # ============================================================
 
+def get_repository_paths(repo_name):
+
+    imported_dir = os.path.join(
+        BASE_DIR,
+        "imported_repositories",
+        "generated",
+        repo_name
+    )
+
+    imported_chunks = os.path.join(
+        imported_dir,
+        "code_chunks.json"
+    )
+
+    if os.path.isfile(imported_chunks):
+        return (
+            imported_chunks,
+            os.path.join(imported_dir, "vector_db")
+        )
+
+    sample_chunks = os.path.join(
+        BASE_DIR,
+        f"code_chunks_{repo_name}.json"
+    )
+
+    if os.path.isfile(sample_chunks):
+        return (
+            sample_chunks,
+            os.path.join(BASE_DIR, "vector_db", repo_name)
+        )
+
+    raise FileNotFoundError(
+        f"No generated chunks found for repository: {repo_name}"
+    )
+
 def load_chunks(repo_name):
 
-    chunks_file = f"code_chunks_{repo_name}.json"
-
-    if not os.path.exists(chunks_file):
-        raise FileNotFoundError(
-            f"Chunk file not found: {chunks_file}\n"
-            f"Run create_code_chunks.py first."
-        )
+    chunks_file, _ = get_repository_paths(repo_name)
 
     with open(
         chunks_file,
@@ -64,17 +98,13 @@ def load_chunks(repo_name):
 
     return chunks
 
-
 # ============================================================
 # CREATE / OPEN REPOSITORY-SPECIFIC CHROMA DATABASE
 # ============================================================
 
 def get_collection(repo_name):
 
-    vector_db_path = os.path.join(
-        "vector_db",
-        repo_name
-    )
+    _, vector_db_path = get_repository_paths(repo_name)
 
     os.makedirs(
         vector_db_path,
@@ -94,7 +124,6 @@ def get_collection(repo_name):
     )
 
     return collection
-
 
 # ============================================================
 # INDEX REPOSITORY
@@ -184,7 +213,11 @@ def index_repository(repo_name):
             # ------------------------------------------------
 
             metadata["repository"] = repo_name
-
+            metadata = {
+                key: value
+                for key, value in metadata.items()
+                if value is not None
+            }
             # ------------------------------------------------
             # CREATE UNIQUE ID
             # ------------------------------------------------
@@ -257,8 +290,9 @@ def index_repository(repo_name):
         f"Total chunks indexed: {collection.count()}"
     )
 
+    _, vector_db_path = get_repository_paths(repo_name)
     print(
-        f"Vector DB: vector_db/{repo_name}"
+        f"Vector DB: {vector_db_path}"
     )
 
 

@@ -1,0 +1,3775 @@
+[
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price.py",
+    "imports": [
+      "requests",
+      "bs4"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "get",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 5,
+        "call_type": "attribute",
+        "expression": "requests.get",
+        "receiver": "requests"
+      },
+      {
+        "name": "bs",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 7,
+        "call_type": "direct",
+        "expression": "bs",
+        "receiver": null
+      },
+      {
+        "name": "find",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "soup.find",
+        "receiver": "soup"
+      },
+      {
+        "name": "select_one",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 10,
+        "call_type": "attribute",
+        "expression": "price.select_one",
+        "receiver": "price"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "requests",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "bs4",
+        "name": "BeautifulSoup",
+        "alias": "bs",
+        "line": 2,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "req",
+        "class_name": "requests.get",
+        "line": 5,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "soup",
+        "class_name": "bs",
+        "line": 7,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "price",
+        "class_name": "soup.find",
+        "line": 9,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "extract",
+        "class_name": "price.select_one",
+        "line": 10,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/class_example.py",
+    "imports": [],
+    "classes": [
+      {
+        "name": "Car",
+        "line": 1
+      }
+    ],
+    "functions": [
+      {
+        "name": "__init__",
+        "line": 2,
+        "arguments": [
+          "self",
+          "make",
+          "model",
+          "year",
+          "speed"
+        ],
+        "class": "Car"
+      },
+      {
+        "name": "honk",
+        "line": 8,
+        "arguments": [
+          "self"
+        ],
+        "class": "Car"
+      },
+      {
+        "name": "accelerate",
+        "line": 11,
+        "arguments": [
+          "self",
+          "rate"
+        ],
+        "class": "Car"
+      },
+      {
+        "name": "get_speed",
+        "line": 14,
+        "arguments": [
+          "self"
+        ],
+        "class": "Car"
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "honk",
+        "called_from_line": 8,
+        "called_from_class": "Car",
+        "line": 9,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "Car",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 18,
+        "call_type": "direct",
+        "expression": "Car",
+        "receiver": null
+      },
+      {
+        "name": "honk",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "attribute",
+        "expression": "my_car.honk",
+        "receiver": "my_car"
+      },
+      {
+        "name": "accelerate",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 20,
+        "call_type": "attribute",
+        "expression": "my_car.accelerate",
+        "receiver": "my_car"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "get_speed",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "attribute",
+        "expression": "my_car.get_speed",
+        "receiver": "my_car"
+      }
+    ],
+    "import_details": [],
+    "instantiations": [
+      {
+        "variable": "my_car",
+        "class_name": "Car",
+        "line": 18,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/take_a_screenshot.py",
+    "imports": [
+      "tkinter",
+      "tkinter.filedialog",
+      "pyautogui"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "take_screenshot",
+        "line": 11,
+        "arguments": [],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "Tk",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 5,
+        "call_type": "attribute",
+        "expression": "tk.Tk",
+        "receiver": "tk"
+      },
+      {
+        "name": "Canvas",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 7,
+        "call_type": "attribute",
+        "expression": "tk.Canvas",
+        "receiver": "tk"
+      },
+      {
+        "name": "pack",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "canvas.pack",
+        "receiver": "canvas"
+      },
+      {
+        "name": "screenshot",
+        "called_from": "take_screenshot",
+        "called_from_line": 11,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "pyautogui.screenshot",
+        "receiver": "pyautogui"
+      },
+      {
+        "name": "asksaveasfilename",
+        "called_from": "take_screenshot",
+        "called_from_line": 11,
+        "called_from_class": null,
+        "line": 13,
+        "call_type": "direct",
+        "expression": "asksaveasfilename",
+        "receiver": null
+      },
+      {
+        "name": "save",
+        "called_from": "take_screenshot",
+        "called_from_line": 11,
+        "called_from_class": null,
+        "line": 14,
+        "call_type": "attribute",
+        "expression": "my_screenshot.save",
+        "receiver": "my_screenshot"
+      },
+      {
+        "name": "Button",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 17,
+        "call_type": "attribute",
+        "expression": "tk.Button",
+        "receiver": "tk"
+      },
+      {
+        "name": "create_window",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 18,
+        "call_type": "attribute",
+        "expression": "canvas.create_window",
+        "receiver": "canvas"
+      },
+      {
+        "name": "mainloop",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 20,
+        "call_type": "attribute",
+        "expression": "root.mainloop",
+        "receiver": "root"
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "tkinter",
+        "name": null,
+        "alias": "tk",
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "tkinter.filedialog",
+        "name": "*",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "pyautogui",
+        "name": null,
+        "alias": null,
+        "line": 3,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "root",
+        "class_name": "tk.Tk",
+        "line": 5,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "canvas",
+        "class_name": "tk.Canvas",
+        "line": 7,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "my_screenshot",
+        "class_name": "pyautogui.screenshot",
+        "line": 12,
+        "scope_function": "take_screenshot",
+        "scope_class": null
+      },
+      {
+        "variable": "save_path",
+        "class_name": "asksaveasfilename",
+        "line": 13,
+        "scope_function": "take_screenshot",
+        "scope_class": null
+      },
+      {
+        "variable": "button_pattern",
+        "class_name": "tk.Button",
+        "line": 17,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/color_text.py",
+    "imports": [
+      "colorama",
+      "colorama"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "init",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "direct",
+        "expression": "init",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 6,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "colorama",
+        "name": "init",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "colorama",
+        "name": "Fore",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "colorama",
+        "name": "Back",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "colorama",
+        "name": "Style",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      }
+    ],
+    "instantiations": [],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/text_to_speech.py",
+    "imports": [
+      "pyttsx3"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "text_to_speech_function",
+        "line": 3,
+        "arguments": [
+          "text",
+          "lang"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "init",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "pyttsx3.init",
+        "receiver": "pyttsx3"
+      },
+      {
+        "name": "getProperty",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 5,
+        "call_type": "attribute",
+        "expression": "engine.getProperty",
+        "receiver": "engine"
+      },
+      {
+        "name": "setProperty",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 6,
+        "call_type": "attribute",
+        "expression": "engine.setProperty",
+        "receiver": "engine"
+      },
+      {
+        "name": "setProperty",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 7,
+        "call_type": "attribute",
+        "expression": "engine.setProperty",
+        "receiver": "engine"
+      },
+      {
+        "name": "say",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "engine.say",
+        "receiver": "engine"
+      },
+      {
+        "name": "runAndWait",
+        "called_from": "text_to_speech_function",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "engine.runAndWait",
+        "receiver": "engine"
+      },
+      {
+        "name": "text_to_speech_function",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "direct",
+        "expression": "text_to_speech_function",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "pyttsx3",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "engine",
+        "class_name": "pyttsx3.init",
+        "line": 4,
+        "scope_function": "text_to_speech_function",
+        "scope_class": null
+      },
+      {
+        "variable": "rate",
+        "class_name": "engine.getProperty",
+        "line": 5,
+        "scope_function": "text_to_speech_function",
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_price_with_api_key.py",
+    "imports": [
+      "json",
+      "requests"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "get",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "requests.get",
+        "receiver": "requests"
+      },
+      {
+        "name": "json",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "data.json",
+        "receiver": "data"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 10,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "json",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "requests",
+        "name": null,
+        "alias": null,
+        "line": 2,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "data",
+        "class_name": "requests.get",
+        "line": 8,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "data",
+        "class_name": "data.json",
+        "line": 9,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/softuni_chedule.py",
+    "imports": [
+      "kivy.app",
+      "kivy.uix.screenmanager",
+      "kivy.uix.gridlayout",
+      "kivy.uix.popup",
+      "kivy.lang",
+      "kivy.uix.label"
+    ],
+    "classes": [
+      {
+        "name": "HomeScreen",
+        "line": 239
+      },
+      {
+        "name": "MainScreen",
+        "line": 248
+      },
+      {
+        "name": "Monday",
+        "line": 252
+      },
+      {
+        "name": "Tuesday",
+        "line": 256
+      },
+      {
+        "name": "Wednesday",
+        "line": 260
+      },
+      {
+        "name": "Thursday",
+        "line": 264
+      },
+      {
+        "name": "Friday",
+        "line": 268
+      },
+      {
+        "name": "TimeTableApp",
+        "line": 282
+      }
+    ],
+    "functions": [
+      {
+        "name": "welcome",
+        "line": 240,
+        "arguments": [
+          "self"
+        ],
+        "class": "HomeScreen"
+      },
+      {
+        "name": "build",
+        "line": 283,
+        "arguments": [
+          "self"
+        ],
+        "class": "TimeTableApp"
+      }
+    ],
+    "calls": [
+      {
+        "name": "load_string",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "Builder.load_string",
+        "receiver": "Builder"
+      },
+      {
+        "name": "Popup",
+        "called_from": "welcome",
+        "called_from_line": 240,
+        "called_from_class": "HomeScreen",
+        "line": 241,
+        "call_type": "direct",
+        "expression": "Popup",
+        "receiver": null
+      },
+      {
+        "name": "Label",
+        "called_from": "welcome",
+        "called_from_line": 240,
+        "called_from_class": "HomeScreen",
+        "line": 241,
+        "call_type": "direct",
+        "expression": "Label",
+        "receiver": null
+      },
+      {
+        "name": "open",
+        "called_from": "welcome",
+        "called_from_line": 240,
+        "called_from_class": "HomeScreen",
+        "line": 245,
+        "call_type": "attribute",
+        "expression": "popup.open",
+        "receiver": "popup"
+      },
+      {
+        "name": "ScreenManager",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 272,
+        "call_type": "direct",
+        "expression": "ScreenManager",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 273,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "HomeScreen",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 273,
+        "call_type": "direct",
+        "expression": "HomeScreen",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 274,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "MainScreen",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 274,
+        "call_type": "direct",
+        "expression": "MainScreen",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 275,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "Monday",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 275,
+        "call_type": "direct",
+        "expression": "Monday",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 276,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "Tuesday",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 276,
+        "call_type": "direct",
+        "expression": "Tuesday",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 277,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "Wednesday",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 277,
+        "call_type": "direct",
+        "expression": "Wednesday",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 278,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "Thursday",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 278,
+        "call_type": "direct",
+        "expression": "Thursday",
+        "receiver": null
+      },
+      {
+        "name": "add_widget",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 279,
+        "call_type": "attribute",
+        "expression": "sm.add_widget",
+        "receiver": "sm"
+      },
+      {
+        "name": "Friday",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 279,
+        "call_type": "direct",
+        "expression": "Friday",
+        "receiver": null
+      },
+      {
+        "name": "run",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 287,
+        "call_type": "attribute",
+        "expression": "TimeTableApp().run",
+        "receiver": "TimeTableApp()"
+      },
+      {
+        "name": "TimeTableApp",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 287,
+        "call_type": "direct",
+        "expression": "TimeTableApp",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "kivy.app",
+        "name": "App",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.uix.screenmanager",
+        "name": "Screen",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.uix.screenmanager",
+        "name": "ScreenManager",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.uix.gridlayout",
+        "name": "GridLayout",
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.uix.popup",
+        "name": "Popup",
+        "alias": null,
+        "line": 4,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.lang",
+        "name": "Builder",
+        "alias": null,
+        "line": 5,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "kivy.uix.label",
+        "name": "Label",
+        "alias": null,
+        "line": 6,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "popup",
+        "class_name": "Popup",
+        "line": 241,
+        "scope_function": "welcome",
+        "scope_class": "HomeScreen"
+      },
+      {
+        "variable": "sm",
+        "class_name": "ScreenManager",
+        "line": 272,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/WiFi_Scanning.py",
+    "imports": [
+      "subprocess"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "split",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split",
+        "receiver": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8')"
+      },
+      {
+        "name": "decode",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode",
+        "receiver": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles'])"
+      },
+      {
+        "name": "check_output",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output",
+        "receiver": "subprocess"
+      },
+      {
+        "name": "split",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "i.split",
+        "receiver": "i"
+      },
+      {
+        "name": "split",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8').split",
+        "receiver": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8')"
+      },
+      {
+        "name": "decode",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode",
+        "receiver": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear'])"
+      },
+      {
+        "name": "check_output",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "subprocess.check_output",
+        "receiver": "subprocess"
+      },
+      {
+        "name": "split",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 17,
+        "call_type": "attribute",
+        "expression": "b.split",
+        "receiver": "b"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "format",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "attribute",
+        "expression": "'{:<30}|  {:<}'.format",
+        "receiver": "'{:<30}|  {:<}'"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "format",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "attribute",
+        "expression": "'{:<30}|  {:<}'.format",
+        "receiver": "'{:<30}|  {:<}'"
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "subprocess",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "data",
+        "class_name": "subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8').split",
+        "line": 3,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "results",
+        "class_name": "subprocess.check_output(['netsh', 'wlan', 'show', 'profile', i, 'key=clear']).decode('utf-8').split",
+        "line": 11,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/bitcoin_address.py",
+    "imports": [
+      "bitcoinaddress"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "Wallet",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 3,
+        "call_type": "direct",
+        "expression": "Wallet",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "bitcoinaddress",
+        "name": "Wallet",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "wallet",
+        "class_name": "Wallet",
+        "line": 3,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_automation.py",
+    "imports": [
+      "webbrowser"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "web_automation",
+        "line": 3,
+        "arguments": [],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "web_automation",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "open",
+        "called_from": "web_automation",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "wbb.get(chrome_path).open",
+        "receiver": "wbb.get(chrome_path)"
+      },
+      {
+        "name": "get",
+        "called_from": "web_automation",
+        "called_from_line": 3,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "wbb.get",
+        "receiver": "wbb"
+      },
+      {
+        "name": "web_automation",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 11,
+        "call_type": "direct",
+        "expression": "web_automation",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "webbrowser",
+        "name": null,
+        "alias": "wbb",
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/morse_code_script.py",
+    "imports": [],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "input",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "len",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 10,
+        "call_type": "direct",
+        "expression": "len",
+        "receiver": null
+      },
+      {
+        "name": "get",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 13,
+        "call_type": "attribute",
+        "expression": "symbols.get",
+        "receiver": "symbols"
+      },
+      {
+        "name": "range",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 13,
+        "call_type": "direct",
+        "expression": "range",
+        "receiver": null
+      },
+      {
+        "name": "keys",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 13,
+        "call_type": "attribute",
+        "expression": "symbols.keys",
+        "receiver": "symbols"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 15,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "join",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 15,
+        "call_type": "attribute",
+        "expression": "' '.join",
+        "receiver": "' '"
+      }
+    ],
+    "import_details": [],
+    "instantiations": [
+      {
+        "variable": "data",
+        "class_name": "input",
+        "line": 8,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "length",
+        "class_name": "len",
+        "line": 10,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/validator_credit_cards.py",
+    "imports": [],
+    "classes": [
+      {
+        "name": "CreditCard",
+        "line": 1
+      }
+    ],
+    "functions": [
+      {
+        "name": "__init__",
+        "line": 2,
+        "arguments": [
+          "self",
+          "card_no"
+        ],
+        "class": "CreditCard"
+      },
+      {
+        "name": "company",
+        "line": 6,
+        "arguments": [
+          "self"
+        ],
+        "class": "CreditCard"
+      },
+      {
+        "name": "first_check",
+        "line": 17,
+        "arguments": [
+          "self"
+        ],
+        "class": "CreditCard"
+      },
+      {
+        "name": "validate_card_information",
+        "line": 25,
+        "arguments": [
+          "self"
+        ],
+        "class": "CreditCard"
+      },
+      {
+        "name": "checksum",
+        "line": 50,
+        "arguments": [
+          "self"
+        ],
+        "class": "CreditCard"
+      },
+      {
+        "name": "set_card",
+        "line": 54,
+        "arguments": [
+          "cls",
+          "card_to_check"
+        ],
+        "class": "CreditCard"
+      }
+    ],
+    "calls": [
+      {
+        "name": "startswith",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "str(self.card_no).startswith",
+        "receiver": "str(self.card_no)"
+      },
+      {
+        "name": "str",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 8,
+        "call_type": "direct",
+        "expression": "str",
+        "receiver": null
+      },
+      {
+        "name": "startswith",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 10,
+        "call_type": "attribute",
+        "expression": "str(self.card_no).startswith",
+        "receiver": "str(self.card_no)"
+      },
+      {
+        "name": "str",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 10,
+        "call_type": "direct",
+        "expression": "str",
+        "receiver": null
+      },
+      {
+        "name": "startswith",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "str(self.card_no).startswith",
+        "receiver": "str(self.card_no)"
+      },
+      {
+        "name": "str",
+        "called_from": "company",
+        "called_from_line": 6,
+        "called_from_class": "CreditCard",
+        "line": 12,
+        "call_type": "direct",
+        "expression": "str",
+        "receiver": null
+      },
+      {
+        "name": "len",
+        "called_from": "first_check",
+        "called_from_line": 17,
+        "called_from_class": "CreditCard",
+        "line": 18,
+        "call_type": "direct",
+        "expression": "len",
+        "receiver": null
+      },
+      {
+        "name": "range",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 29,
+        "call_type": "direct",
+        "expression": "range",
+        "receiver": null
+      },
+      {
+        "name": "len",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 29,
+        "call_type": "direct",
+        "expression": "len",
+        "receiver": null
+      },
+      {
+        "name": "int",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 31,
+        "call_type": "direct",
+        "expression": "int",
+        "receiver": null
+      },
+      {
+        "name": "len",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 33,
+        "call_type": "direct",
+        "expression": "len",
+        "receiver": null
+      },
+      {
+        "name": "str",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 33,
+        "call_type": "direct",
+        "expression": "str",
+        "receiver": null
+      },
+      {
+        "name": "sum",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 34,
+        "call_type": "direct",
+        "expression": "sum",
+        "receiver": null
+      },
+      {
+        "name": "eval",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 34,
+        "call_type": "direct",
+        "expression": "eval",
+        "receiver": null
+      },
+      {
+        "name": "str",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 34,
+        "call_type": "direct",
+        "expression": "str",
+        "receiver": null
+      },
+      {
+        "name": "int",
+        "called_from": "validate_card_information",
+        "called_from_line": 25,
+        "called_from_class": "CreditCard",
+        "line": 40,
+        "call_type": "direct",
+        "expression": "int",
+        "receiver": null
+      },
+      {
+        "name": "cls",
+        "called_from": "set_card",
+        "called_from_line": 54,
+        "called_from_class": "CreditCard",
+        "line": 55,
+        "call_type": "direct",
+        "expression": "cls",
+        "receiver": null
+      },
+      {
+        "name": "input",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 58,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "set_card",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 59,
+        "call_type": "attribute",
+        "expression": "CreditCard.set_card",
+        "receiver": "CreditCard"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 60,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 61,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 62,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "first_check",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 62,
+        "call_type": "attribute",
+        "expression": "card.first_check",
+        "receiver": "card"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 63,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 64,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "validate_card_information",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 64,
+        "call_type": "attribute",
+        "expression": "card.validate_card_information",
+        "receiver": "card"
+      }
+    ],
+    "import_details": [],
+    "instantiations": [
+      {
+        "variable": "card_number",
+        "class_name": "input",
+        "line": 58,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "card",
+        "class_name": "CreditCard.set_card",
+        "line": 59,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/pong_game.py",
+    "imports": [
+      "pygame",
+      "sys"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "init",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "pygame.init",
+        "receiver": "pygame"
+      },
+      {
+        "name": "set_mode",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "pygame.display.set_mode",
+        "receiver": "pygame.display"
+      },
+      {
+        "name": "set_caption",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "pygame.display.set_caption",
+        "receiver": "pygame.display"
+      },
+      {
+        "name": "Clock",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 30,
+        "call_type": "attribute",
+        "expression": "pygame.time.Clock",
+        "receiver": "pygame.time"
+      },
+      {
+        "name": "get",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 33,
+        "call_type": "attribute",
+        "expression": "pygame.event.get",
+        "receiver": "pygame.event"
+      },
+      {
+        "name": "quit",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 35,
+        "call_type": "attribute",
+        "expression": "pygame.quit",
+        "receiver": "pygame"
+      },
+      {
+        "name": "exit",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 36,
+        "call_type": "attribute",
+        "expression": "sys.exit",
+        "receiver": "sys"
+      },
+      {
+        "name": "get_pressed",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 38,
+        "call_type": "attribute",
+        "expression": "pygame.key.get_pressed",
+        "receiver": "pygame.key"
+      },
+      {
+        "name": "fill",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 65,
+        "call_type": "attribute",
+        "expression": "window.fill",
+        "receiver": "window"
+      },
+      {
+        "name": "rect",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 68,
+        "call_type": "attribute",
+        "expression": "pygame.draw.rect",
+        "receiver": "pygame.draw"
+      },
+      {
+        "name": "rect",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 69,
+        "call_type": "attribute",
+        "expression": "pygame.draw.rect",
+        "receiver": "pygame.draw"
+      },
+      {
+        "name": "circle",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 70,
+        "call_type": "attribute",
+        "expression": "pygame.draw.circle",
+        "receiver": "pygame.draw"
+      },
+      {
+        "name": "flip",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 73,
+        "call_type": "attribute",
+        "expression": "pygame.display.flip",
+        "receiver": "pygame.display"
+      },
+      {
+        "name": "tick",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 76,
+        "call_type": "attribute",
+        "expression": "clock.tick",
+        "receiver": "clock"
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "pygame",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "sys",
+        "name": null,
+        "alias": null,
+        "line": 2,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "window",
+        "class_name": "pygame.display.set_mode",
+        "line": 8,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "clock",
+        "class_name": "pygame.time.Clock",
+        "line": 30,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "keys",
+        "class_name": "pygame.key.get_pressed",
+        "line": 38,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/slot_machine.py",
+    "imports": [
+      "random",
+      "time",
+      "sys"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "print_welcome",
+        "line": 27,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "deposit_money",
+        "line": 37,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "show_menu",
+        "line": 51,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "apply_hidden_bonus",
+        "line": 59,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "spin_slot",
+        "line": 79,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "change_bet",
+        "line": 133,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "show_balance",
+        "line": 147,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "show_history",
+        "line": 150,
+        "arguments": [],
+        "class": null
+      },
+      {
+        "name": "exit_game",
+        "line": 159,
+        "arguments": [],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 28,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 29,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 30,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 31,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 32,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 33,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 34,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "print_welcome",
+        "called_from_line": 27,
+        "called_from_class": null,
+        "line": 35,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "int",
+        "called_from": "deposit_money",
+        "called_from_line": 37,
+        "called_from_class": null,
+        "line": 41,
+        "call_type": "direct",
+        "expression": "int",
+        "receiver": null
+      },
+      {
+        "name": "input",
+        "called_from": "deposit_money",
+        "called_from_line": 37,
+        "called_from_class": null,
+        "line": 41,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "deposit_money",
+        "called_from_line": 37,
+        "called_from_class": null,
+        "line": 43,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "deposit_money",
+        "called_from_line": 37,
+        "called_from_class": null,
+        "line": 46,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "deposit_money",
+        "called_from_line": 37,
+        "called_from_class": null,
+        "line": 49,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 52,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 53,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 54,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 55,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 56,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_menu",
+        "called_from_line": 51,
+        "called_from_class": null,
+        "line": 57,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "random",
+        "called_from": "apply_hidden_bonus",
+        "called_from_line": 59,
+        "called_from_class": null,
+        "line": 71,
+        "call_type": "attribute",
+        "expression": "random.random",
+        "receiver": "random"
+      },
+      {
+        "name": "int",
+        "called_from": "apply_hidden_bonus",
+        "called_from_line": 59,
+        "called_from_class": null,
+        "line": 72,
+        "call_type": "direct",
+        "expression": "int",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 83,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 91,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "sleep",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 92,
+        "call_type": "attribute",
+        "expression": "time.sleep",
+        "receiver": "time"
+      },
+      {
+        "name": "choice",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 94,
+        "call_type": "attribute",
+        "expression": "random.choice",
+        "receiver": "random"
+      },
+      {
+        "name": "list",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 94,
+        "call_type": "direct",
+        "expression": "list",
+        "receiver": null
+      },
+      {
+        "name": "keys",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 94,
+        "call_type": "attribute",
+        "expression": "symbols.keys",
+        "receiver": "symbols"
+      },
+      {
+        "name": "range",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 94,
+        "call_type": "direct",
+        "expression": "range",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 95,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "join",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 95,
+        "call_type": "attribute",
+        "expression": "' | '.join",
+        "receiver": "' | '"
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 103,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "append",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 105,
+        "call_type": "attribute",
+        "expression": "game_history.append",
+        "receiver": "game_history"
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 110,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "append",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 111,
+        "call_type": "attribute",
+        "expression": "game_history.append",
+        "receiver": "game_history"
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 114,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "append",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 115,
+        "call_type": "attribute",
+        "expression": "game_history.append",
+        "receiver": "game_history"
+      },
+      {
+        "name": "apply_hidden_bonus",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 121,
+        "call_type": "direct",
+        "expression": "apply_hidden_bonus",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 125,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 126,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 127,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 128,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "append",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 129,
+        "call_type": "attribute",
+        "expression": "game_history.append",
+        "receiver": "game_history"
+      },
+      {
+        "name": "print",
+        "called_from": "spin_slot",
+        "called_from_line": 79,
+        "called_from_class": null,
+        "line": 131,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "int",
+        "called_from": "change_bet",
+        "called_from_line": 133,
+        "called_from_class": null,
+        "line": 137,
+        "call_type": "direct",
+        "expression": "int",
+        "receiver": null
+      },
+      {
+        "name": "input",
+        "called_from": "change_bet",
+        "called_from_line": 133,
+        "called_from_class": null,
+        "line": 137,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "change_bet",
+        "called_from_line": 133,
+        "called_from_class": null,
+        "line": 139,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "change_bet",
+        "called_from_line": 133,
+        "called_from_class": null,
+        "line": 142,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "change_bet",
+        "called_from_line": 133,
+        "called_from_class": null,
+        "line": 145,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_balance",
+        "called_from_line": 147,
+        "called_from_class": null,
+        "line": 148,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_history",
+        "called_from_line": 150,
+        "called_from_class": null,
+        "line": 152,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_history",
+        "called_from_line": 150,
+        "called_from_class": null,
+        "line": 154,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_history",
+        "called_from_line": 150,
+        "called_from_class": null,
+        "line": 156,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "show_history",
+        "called_from_line": 150,
+        "called_from_class": null,
+        "line": 157,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "exit_game",
+        "called_from_line": 159,
+        "called_from_class": null,
+        "line": 160,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": "exit_game",
+        "called_from_line": 159,
+        "called_from_class": null,
+        "line": 161,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "exit",
+        "called_from": "exit_game",
+        "called_from_line": 159,
+        "called_from_class": null,
+        "line": 162,
+        "call_type": "attribute",
+        "expression": "sys.exit",
+        "receiver": "sys"
+      },
+      {
+        "name": "print_welcome",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 165,
+        "call_type": "direct",
+        "expression": "print_welcome",
+        "receiver": null
+      },
+      {
+        "name": "deposit_money",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 166,
+        "call_type": "direct",
+        "expression": "deposit_money",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 170,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 171,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "show_menu",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 174,
+        "call_type": "direct",
+        "expression": "show_menu",
+        "receiver": null
+      },
+      {
+        "name": "input",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 175,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "spin_slot",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 178,
+        "call_type": "direct",
+        "expression": "spin_slot",
+        "receiver": null
+      },
+      {
+        "name": "change_bet",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 180,
+        "call_type": "direct",
+        "expression": "change_bet",
+        "receiver": null
+      },
+      {
+        "name": "show_balance",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 182,
+        "call_type": "direct",
+        "expression": "show_balance",
+        "receiver": null
+      },
+      {
+        "name": "show_history",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 184,
+        "call_type": "direct",
+        "expression": "show_history",
+        "receiver": null
+      },
+      {
+        "name": "exit_game",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 186,
+        "call_type": "direct",
+        "expression": "exit_game",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 188,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "random",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "time",
+        "name": null,
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "sys",
+        "name": null,
+        "alias": null,
+        "line": 3,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "amount",
+        "class_name": "int",
+        "line": 41,
+        "scope_function": "deposit_money",
+        "scope_class": null
+      },
+      {
+        "variable": "bonus",
+        "class_name": "int",
+        "line": 72,
+        "scope_function": "apply_hidden_bonus",
+        "scope_class": null
+      },
+      {
+        "variable": "new_bet",
+        "class_name": "int",
+        "line": 137,
+        "scope_function": "change_bet",
+        "scope_class": null
+      },
+      {
+        "variable": "choice",
+        "class_name": "input",
+        "line": 175,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/web_scraping.py",
+    "imports": [
+      "bs4",
+      "requests",
+      "csv",
+      "json"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "main",
+        "line": 7,
+        "arguments": [],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "get",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "requests.get",
+        "receiver": "requests"
+      },
+      {
+        "name": "BeautifulSoup",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 11,
+        "call_type": "direct",
+        "expression": "BeautifulSoup",
+        "receiver": null
+      },
+      {
+        "name": "find_all",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 14,
+        "call_type": "attribute",
+        "expression": "soup.find_all",
+        "receiver": "soup"
+      },
+      {
+        "name": "get_text",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 15,
+        "call_type": "attribute",
+        "expression": "headline.get_text",
+        "receiver": "headline"
+      },
+      {
+        "name": "strip",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 16,
+        "call_type": "attribute",
+        "expression": "raw_headline.strip",
+        "receiver": "raw_headline"
+      },
+      {
+        "name": "len",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 17,
+        "call_type": "direct",
+        "expression": "len",
+        "receiver": null
+      },
+      {
+        "name": "append",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "attribute",
+        "expression": "headlines.append",
+        "receiver": "headlines"
+      },
+      {
+        "name": "print",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "dumps",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "attribute",
+        "expression": "json.dumps",
+        "receiver": "json"
+      },
+      {
+        "name": "open",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 23,
+        "call_type": "direct",
+        "expression": "open",
+        "receiver": null
+      },
+      {
+        "name": "writer",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 24,
+        "call_type": "attribute",
+        "expression": "csv.writer",
+        "receiver": "csv"
+      },
+      {
+        "name": "writerow",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 25,
+        "call_type": "attribute",
+        "expression": "writer.writerow",
+        "receiver": "writer"
+      },
+      {
+        "name": "writerow",
+        "called_from": "main",
+        "called_from_line": 7,
+        "called_from_class": null,
+        "line": 27,
+        "call_type": "attribute",
+        "expression": "writer.writerow",
+        "receiver": "writer"
+      },
+      {
+        "name": "main",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 30,
+        "call_type": "direct",
+        "expression": "main",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "bs4",
+        "name": "BeautifulSoup",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "requests",
+        "name": null,
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "csv",
+        "name": null,
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "json",
+        "name": null,
+        "alias": null,
+        "line": 4,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "req_data",
+        "class_name": "requests.get",
+        "line": 9,
+        "scope_function": "main",
+        "scope_class": null
+      },
+      {
+        "variable": "soup",
+        "class_name": "BeautifulSoup",
+        "line": 11,
+        "scope_function": "main",
+        "scope_class": null
+      },
+      {
+        "variable": "raw_headline",
+        "class_name": "headline.get_text",
+        "line": 15,
+        "scope_function": "main",
+        "scope_class": null
+      },
+      {
+        "variable": "headline",
+        "class_name": "raw_headline.strip",
+        "line": 16,
+        "scope_function": "main",
+        "scope_class": null
+      },
+      {
+        "variable": "writer",
+        "class_name": "csv.writer",
+        "line": 24,
+        "scope_function": "main",
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/excel_in_python.py",
+    "imports": [
+      "openpyxl"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "Workbook",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 3,
+        "call_type": "direct",
+        "expression": "Workbook",
+        "receiver": null
+      },
+      {
+        "name": "save",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 14,
+        "call_type": "attribute",
+        "expression": "workbook.save",
+        "receiver": "workbook"
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "openpyxl",
+        "name": "Workbook",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "workbook",
+        "class_name": "Workbook",
+        "line": 3,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/speaking_news_bot.py",
+    "imports": [
+      "win32com.client",
+      "requests",
+      "json"
+    ],
+    "classes": [],
+    "functions": [
+      {
+        "name": "speak",
+        "line": 1,
+        "arguments": [
+          "str"
+        ],
+        "class": null
+      }
+    ],
+    "calls": [
+      {
+        "name": "Dispatch",
+        "called_from": "speak",
+        "called_from_line": 1,
+        "called_from_class": null,
+        "line": 3,
+        "call_type": "direct",
+        "expression": "Dispatch",
+        "receiver": null
+      },
+      {
+        "name": "Speak",
+        "called_from": "speak",
+        "called_from_line": 1,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "speak.Speak",
+        "receiver": "speak"
+      },
+      {
+        "name": "get",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 16,
+        "call_type": "attribute",
+        "expression": "requests.get",
+        "receiver": "requests"
+      },
+      {
+        "name": "loads",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 17,
+        "call_type": "attribute",
+        "expression": "json.loads",
+        "receiver": "json"
+      },
+      {
+        "name": "speak",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 18,
+        "call_type": "direct",
+        "expression": "speak",
+        "receiver": null
+      },
+      {
+        "name": "speak",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "direct",
+        "expression": "speak",
+        "receiver": null
+      },
+      {
+        "name": "range",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 21,
+        "call_type": "direct",
+        "expression": "range",
+        "receiver": null
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 22,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "speak",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 23,
+        "call_type": "direct",
+        "expression": "speak",
+        "receiver": null
+      },
+      {
+        "name": "speak",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 25,
+        "call_type": "direct",
+        "expression": "speak",
+        "receiver": null
+      },
+      {
+        "name": "speak",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 27,
+        "call_type": "direct",
+        "expression": "speak",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "win32com.client",
+        "name": "Dispatch",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "requests",
+        "name": null,
+        "alias": null,
+        "line": 7,
+        "level": 0
+      },
+      {
+        "type": "import",
+        "module": "json",
+        "name": null,
+        "alias": null,
+        "line": 8,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "speak",
+        "class_name": "Dispatch",
+        "line": 3,
+        "scope_function": "speak",
+        "scope_class": null
+      },
+      {
+        "variable": "res",
+        "class_name": "requests.get",
+        "line": 16,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "load",
+        "class_name": "json.loads",
+        "line": 17,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/convolutional_neural_network_CNN_algorithm_exampe.py",
+    "imports": [
+      "numpy",
+      "keras.models",
+      "keras.layers",
+      "keras.preprocessing.image"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "Sequential",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 6,
+        "call_type": "direct",
+        "expression": "Sequential",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "Conv2D",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "direct",
+        "expression": "Conv2D",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "MaxPooling2D",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 12,
+        "call_type": "direct",
+        "expression": "MaxPooling2D",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 15,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "Conv2D",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 15,
+        "call_type": "direct",
+        "expression": "Conv2D",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 16,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "MaxPooling2D",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 16,
+        "call_type": "direct",
+        "expression": "MaxPooling2D",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "Flatten",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 19,
+        "call_type": "direct",
+        "expression": "Flatten",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 22,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "Dense",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 22,
+        "call_type": "direct",
+        "expression": "Dense",
+        "receiver": null
+      },
+      {
+        "name": "add",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 23,
+        "call_type": "attribute",
+        "expression": "classifier.add",
+        "receiver": "classifier"
+      },
+      {
+        "name": "Dense",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 23,
+        "call_type": "direct",
+        "expression": "Dense",
+        "receiver": null
+      },
+      {
+        "name": "compile",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 26,
+        "call_type": "attribute",
+        "expression": "classifier.compile",
+        "receiver": "classifier"
+      },
+      {
+        "name": "ImageDataGenerator",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 32,
+        "call_type": "direct",
+        "expression": "ImageDataGenerator",
+        "receiver": null
+      },
+      {
+        "name": "ImageDataGenerator",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 37,
+        "call_type": "direct",
+        "expression": "ImageDataGenerator",
+        "receiver": null
+      },
+      {
+        "name": "flow_from_directory",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 39,
+        "call_type": "attribute",
+        "expression": "train_datagen.flow_from_directory",
+        "receiver": "train_datagen"
+      },
+      {
+        "name": "flow_from_directory",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 44,
+        "call_type": "attribute",
+        "expression": "test_datagen.flow_from_directory",
+        "receiver": "test_datagen"
+      },
+      {
+        "name": "fit_generator",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 49,
+        "call_type": "attribute",
+        "expression": "classifier.fit_generator",
+        "receiver": "classifier"
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "numpy",
+        "name": null,
+        "alias": "np",
+        "line": 1,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.models",
+        "name": "Sequential",
+        "alias": null,
+        "line": 2,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.layers",
+        "name": "Dense",
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.layers",
+        "name": "Conv2D",
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.layers",
+        "name": "MaxPooling2D",
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.layers",
+        "name": "Flatten",
+        "alias": null,
+        "line": 3,
+        "level": 0
+      },
+      {
+        "type": "from_import",
+        "module": "keras.preprocessing.image",
+        "name": "ImageDataGenerator",
+        "alias": null,
+        "line": 30,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "classifier",
+        "class_name": "Sequential",
+        "line": 6,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "train_datagen",
+        "class_name": "ImageDataGenerator",
+        "line": 32,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "test_datagen",
+        "class_name": "ImageDataGenerator",
+        "line": 37,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "training_set",
+        "class_name": "train_datagen.flow_from_directory",
+        "line": 39,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "test_set",
+        "class_name": "test_datagen.flow_from_directory",
+        "line": 44,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/cryptography.py",
+    "imports": [
+      "cryptography.fernet"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "generate_key",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 3,
+        "call_type": "attribute",
+        "expression": "Fernet.generate_key",
+        "receiver": "Fernet"
+      },
+      {
+        "name": "Fernet",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "direct",
+        "expression": "Fernet",
+        "receiver": null
+      },
+      {
+        "name": "encrypt",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 5,
+        "call_type": "attribute",
+        "expression": "f.encrypt",
+        "receiver": "f"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 6,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      },
+      {
+        "name": "decrypt",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 8,
+        "call_type": "attribute",
+        "expression": "f.decrypt",
+        "receiver": "f"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "from_import",
+        "module": "cryptography.fernet",
+        "name": "Fernet",
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "key",
+        "class_name": "Fernet.generate_key",
+        "line": 3,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "f",
+        "class_name": "Fernet",
+        "line": 4,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "encrypt_token",
+        "class_name": "f.encrypt",
+        "line": 5,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "decrypt_token",
+        "class_name": "f.decrypt",
+        "line": 8,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  },
+  {
+    "file": "/home/vboxuser/Downloads/ArchLens-feat-clean-architecture-graph/imported_repositories/repositories/gh_zahariev-webbersof_python-mini-projects/shorten_the_link.py",
+    "imports": [
+      "pyshorteners"
+    ],
+    "classes": [],
+    "functions": [],
+    "calls": [
+      {
+        "name": "input",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 3,
+        "call_type": "direct",
+        "expression": "input",
+        "receiver": null
+      },
+      {
+        "name": "Shortener",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 4,
+        "call_type": "attribute",
+        "expression": "pyshorteners.Shortener",
+        "receiver": "pyshorteners"
+      },
+      {
+        "name": "short",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 7,
+        "call_type": "attribute",
+        "expression": "shortener_class_obj.tinyurl.short",
+        "receiver": "shortener_class_obj.tinyurl"
+      },
+      {
+        "name": "print",
+        "called_from": null,
+        "called_from_line": null,
+        "called_from_class": null,
+        "line": 9,
+        "call_type": "direct",
+        "expression": "print",
+        "receiver": null
+      }
+    ],
+    "import_details": [
+      {
+        "type": "import",
+        "module": "pyshorteners",
+        "name": null,
+        "alias": null,
+        "line": 1,
+        "level": 0
+      }
+    ],
+    "instantiations": [
+      {
+        "variable": "link_address",
+        "class_name": "input",
+        "line": 3,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "shortener_class_obj",
+        "class_name": "pyshorteners.Shortener",
+        "line": 4,
+        "scope_function": null,
+        "scope_class": null
+      },
+      {
+        "variable": "result",
+        "class_name": "shortener_class_obj.tinyurl.short",
+        "line": 7,
+        "scope_function": null,
+        "scope_class": null
+      }
+    ],
+    "language": "python",
+    "inheritance": [],
+    "implementations": [],
+    "interfaces": []
+  }
+]

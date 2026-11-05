@@ -192,6 +192,83 @@ async function loadRepositories() {
 
 
 /* =========================================================
+   IMPORT GITHUB REPOSITORY
+========================================================= */
+
+async function importGitHubRepository(event) {
+    event.preventDefault();
+
+    const input = getElement("githubRepositoryUrl");
+    const button = getElement("githubImportButton");
+    const status = getElement("githubImportStatus");
+    const form = getElement("githubImportForm");
+    const url = input?.value.trim();
+
+    if (!url || !/^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/?$/.test(url)) {
+        if (status) {
+            status.className = "github-import-status error";
+            status.textContent = "Enter a valid public GitHub URL, such as https://github.com/owner/repository.";
+        }
+        input?.focus();
+        return;
+    }
+
+    if (button) {
+        button.disabled = true;
+        button.textContent = "Importing...";
+    }
+    if (status) {
+        status.className = "github-import-status is-loading";
+        status.textContent = "Cloning repository and analyzing source files. This can take several minutes; keep this page open.";
+    }
+
+    try {
+        const result = await apiRequest("/import-repository", {
+            method: "POST",
+            body: JSON.stringify({ url })
+        });
+
+        const repository = result.repository;
+        if (!repository) {
+            throw new Error("Import completed but the API did not return a repository identifier.");
+        }
+
+        await loadRepositories();
+
+        const repositorySelect = getElement("repository");
+        if (repositorySelect) {
+            repositorySelect.value = repository;
+        }
+
+        await loadArchitecture();
+
+        if (status) {
+            const languages = Object.entries(result.language_counts || {})
+                .map(([language, count]) => `${language}: ${count}`)
+                .join(", ");
+            status.className = "github-import-status success";
+            status.textContent =
+                `Imported ${repository} successfully. ${result.analyzed_files ?? 0} files, ${result.graph_nodes ?? 0} graph nodes, ${result.graph_edges ?? 0} relationships, and ${result.chunks ?? 0} code chunks.` +
+                (languages ? ` Languages: ${languages}.` : "");
+        }
+
+        if (form) form.reset();
+    } catch (error) {
+        console.error("GitHub repository import failed:", error);
+        if (status) {
+            status.className = "github-import-status error";
+            status.textContent = `Import failed: ${error.message}. Check the backend logs for details.`;
+        }
+    } finally {
+        if (button) {
+            button.disabled = false;
+            button.textContent = "Import Repository";
+        }
+    }
+}
+
+
+/* =========================================================
    LOAD ARCHITECTURE
 ========================================================= */
 
@@ -332,264 +409,220 @@ function displaySummary(graph) {
 ========================================================= */
 
 function displayArchitecture(graph) {
-    /*
-     * Your existing HTML uses the Cytoscape container #cy.
-     * architectureGraph is retained as a fallback for older HTML.
-     */
-
     const container = getElement("cy", "architectureGraph");
-
-    if (!container) {
-        console.error(
-            "Graph container not found. Expected id='cy' or id='architectureGraph'."
-        );
-        return;
-    }
+    if (!container) return;
 
     const nodes = graph.nodes || [];
     const edges = graph.edges || [];
-    // Update architecture statistics.
-    const nodeCountElement = document.getElementById("nodeCount");
-    const edgeCountElement = document.getElementById("edgeCount");
-    if (nodeCountElement) {
-        nodeCountElement.textContent = nodes.length;
-    }
+    setText(["nodeCount"], nodes.length);
+    setText(["edgeCount"], edges.length);
 
-    if (edgeCountElement) {
-       edgeCountElement.textContent = edges.length;
-    }
-
-
-    if (nodes.length === 0) {
+    if (!nodes.length) {
         container.textContent = "No architecture data found.";
         return;
     }
-
-    // If Cytoscape is unavailable, use a simple component list.
     if (typeof window.cytoscape !== "function") {
-        console.error("Cytoscape library is not loaded.");
-
         renderFallbackComponentList(container, nodes);
         return;
     }
 
-    const elements = [];
-
-    nodes.forEach((node) => {
-        if (node.id === undefined || node.id === null) {
-            return;
-        }
-
-        elements.push({
+    const validIds = new Set(nodes.filter(n => n.id != null).map(n => String(n.id)));
+    const elements = [
+        ...nodes.filter(n => n.id != null).map(node => ({
             group: "nodes",
             data: {
                 id: String(node.id),
                 label: String(node.label || node.name || node.id),
-                type: String(node.type || "unknown"),
-                file: String(
-                    node.file ||
-                    node.path ||
-                    node.file_path ||
-                    ""
-                ),
+                type: String(node.type || "unknown").toLowerCase(),
+                file: String(node.file || node.path || node.file_path || ""),
                 original: node
             }
-        });
-    });
+        })),
+        ...edges.map((edge, index) => {
+            const source = String(edge.source ?? edge.from ?? "");
+            const target = String(edge.target ?? edge.to ?? "");
+            if (!validIds.has(source) || !validIds.has(target)) return null;
+            return {
+                group: "edges",
+                data: {
+                    id: `edge-${index}-${source}-${target}`,
+                    source,
+                    target,
+                    relationship: String(edge.relationship || edge.type || "related").toLowerCase(),
+                    label: String(edge.relationship || edge.type || "related").replaceAll("_", " ")
+                }
+            };
+        }).filter(Boolean)
+    ];
 
-    const validIds = new Set(
-        elements
-            .filter((element) => element.group === "nodes")
-            .map((element) => element.data.id)
-    );
-
-    edges.forEach((edge, index) => {
-        const source = String(edge.source ?? edge.from ?? "");
-        const target = String(edge.target ?? edge.to ?? "");
-
-        if (!validIds.has(source) || !validIds.has(target)) {
-            return;
-        }
-
-        elements.push({
-            group: "edges",
-            data: {
-                id: `edge-${index}-${source}-${target}`,
-                source,
-                target,
-                label: String(
-                    edge.relationship ||
-                    edge.type ||
-                    edge.label ||
-                    "depends on"
-                )
-            }
-        });
-    });
-
-    // Destroy only the previous Cytoscape instance.
-    if (cy) {
-        cy.destroy();
-        cy = null;
-    }
-
+    if (cy) cy.destroy();
     container.replaceChildren();
 
     cy = window.cytoscape({
         container,
-
         elements,
-                   style: [
+        style: [
             {
                 selector: "node",
                 style: {
-                    "background-color": function (element) {
-                        const type = element.data("type");
-
-                        if (type === "file") return "#2563eb";
-                        if (type === "module") return "#7c3aed";
-                        if (type === "class") return "#059669";
-                        if (type === "function") return "#ea580c";
-                        if (type === "function_reference") return "#64748b";
-
-                        return "#475569";
-                    },
-
+                    "background-color": ele => ({
+                        file: "#2563eb",
+                        module: "#7c3aed",
+                        class: "#059669",
+                        interface: "#0f766e",
+                        function: "#d97706"
+                    }[ele.data("type")] || "#64748b"),
                     "label": "data(label)",
-                    "color": "#111827",
-                    "font-size": 12,
-                    "font-weight": "bold",
-
+                    "color": "#172033",
+                    "font-size": 11,
+                    "font-weight": 600,
+                    "text-wrap": "ellipsis",
+                    "text-max-width": 130,
                     "text-valign": "bottom",
                     "text-halign": "center",
-                    "text-margin-y": 8,
-
-                    "width": 45,
-                    "height": 45,
-
+                    "text-margin-y": 7,
+                    "width": ele => ele.data("type") === "file" ? 34 : 28,
+                    "height": ele => ele.data("type") === "file" ? 34 : 28,
                     "border-width": 2,
-                    "border-color": "#ffffff"
+                    "border-color": "#ffffff",
+                    "overlay-opacity": 0
                 }
             },
-
             {
                 selector: "edge",
                 style: {
-                    "width": 2,
-                    "line-color": "#94a3b8",
-                    "target-arrow-color": "#64748b",
+                    "width": 1.5,
+                    "line-color": "#a8b4c4",
+                    "target-arrow-color": "#a8b4c4",
                     "target-arrow-shape": "triangle",
+                    "arrow-scale": 0.8,
                     "curve-style": "bezier",
-
-                    "label": "data(label)",
-                    "font-size": 10,
-                    "color": "#334155",
-
-                    "text-background-color": "#ffffff",
-                    "text-background-opacity": 1,
-                    "text-background-padding": 3
+                    "opacity": 0.62,
+                    "label": "",
+                    "font-size": 9
                 }
             },
-
             {
                 selector: "node:selected",
                 style: {
-                    "background-color": "#facc15",
                     "border-color": "#f59e0b",
-                    "border-width": 4
+                    "border-width": 4,
+                    "background-color": "#fbbf24"
                 }
             },
-
+            {
+                selector: ".search-match",
+                style: { "border-color": "#f59e0b", "border-width": 4 }
+            },
+            {
+                selector: ".search-dim",
+                style: { "opacity": 0.16 }
+            },
             {
                 selector: ".impact-selected",
-                style: {
-                    "border-color": "#facc15",
-                    "border-width": 6
-                }
+                style: { "border-color": "#facc15", "border-width": 6 }
             },
-
             {
                 selector: ".impact-affected",
-                style: {
-                    "border-color": "#ef4444",
-                    "border-width": 5
-                }
-            },
-
-            {
-                selector: "edge:selected",
-                style: {
-                    "line-color": "#2563eb",
-                    "target-arrow-color": "#2563eb",
-                    "width": 4
-                }
+                style: { "border-color": "#ef4444", "border-width": 5 }
             }
         ],
-
         layout: {
-            name: "breadthfirst",
-            directed: true,
-            animate: true,
+            name: "cose",
+            animate: false,
             fit: true,
-            spacingFactor: 1.5,
-            padding: 80,
-            nodeRepulsion: 8000,
-            idealEdgeLength: 150
-
-
-
+            padding: 55,
+            nodeRepulsion: 9000,
+            idealEdgeLength: 115,
+            edgeElasticity: 100,
+            gravity: 0.22,
+            numIter: 1000,
+            randomize: true
         },
-
-        minZoom: 0.1,
+        minZoom: 0.08,
         maxZoom: 3,
-        wheelSensitivity: 0.2
+        wheelSensitivity: 0.18
     });
 
-    cy.on("tap", "node", (event) => {
-        const data = event.target.data();
+    const levelControl = getElement("graphNodeLevel");
+    const relationControl = getElement("graphRelationshipFilter");
+    const searchControl = getElement("graphSearch");
+    const labelControl = getElement("graphEdgeLabels");
+    const fitButton = getElement("fitGraph");
 
-        const original = data.original || {};
+    const relationTypes = [...new Set(edges.map(e =>
+        String(e.relationship || e.type || "related").toLowerCase()
+    ))].sort();
+    if (relationControl) {
+        relationControl.replaceChildren(new Option("All relationships", "all"));
+        relationTypes.forEach(type => relationControl.add(new Option(type.replaceAll("_", " "), type)));
+    }
 
-        selectedComponent = {
-            id: String(data.id),
-            label: data.label,
-            type: data.type,
-            file: data.file,
-            original
-        };
+    const applyGraphFilters = () => {
+        if (!cy) return;
+        const detailMode = levelControl?.value === "detail";
+        const selectedRelation = relationControl?.value || "all";
+        const query = (searchControl?.value || "").trim().toLowerCase();
+        const showLabels = Boolean(labelControl?.checked);
 
-        showComponentDetails(original.id !== undefined
-            ? original
-            : {
-                id: data.id,
-                label: data.label,
-                type: data.type,
-                file: data.file
-            }
-        );
+        cy.nodes().forEach(node => {
+            const type = node.data("type");
+            const visibleInOverview = ["file", "module", "class", "interface"].includes(type);
+            const matchesQuery = !query ||
+                node.data("label").toLowerCase().includes(query) ||
+                node.data("file").toLowerCase().includes(query);
+            node.style("display", (detailMode || visibleInOverview || (query && matchesQuery)) ? "element" : "none");
+            node.toggleClass("search-match", Boolean(query && matchesQuery));
+            node.toggleClass("search-dim", Boolean(query && !matchesQuery));
+        });
 
-        const impactButton = getElement("impactButton");
-
-        if (impactButton) {
-            impactButton.disabled = false;
+        cy.edges().forEach(edge => {
+            const relation = edge.data("relationship");
+            const relationAllowed = selectedRelation === "all" || relation === selectedRelation;
+            const endpointsVisible = edge.source().style("display") !== "none" &&
+                edge.target().style("display") !== "none";
+            edge.style("display", relationAllowed && endpointsVisible ? "element" : "none");
+            edge.style("label", showLabels ? "data(label)" : "");
+        });
+        if (query) {
+            const matches = cy.nodes(".search-match:visible");
+            if (matches.length) cy.animate({ fit: { eles: matches, padding: 70 }, duration: 250 });
         }
+    };
+
+    if (levelControl) levelControl.onchange = applyGraphFilters;
+    if (relationControl) relationControl.onchange = applyGraphFilters;
+    if (searchControl) searchControl.oninput = applyGraphFilters;
+    if (labelControl) labelControl.onchange = applyGraphFilters;
+    if (fitButton) fitButton.onclick = () => cy && cy.fit(undefined, 55);
+
+    cy.on("tap", "node", event => {
+        const data = event.target.data();
+        const original = data.original || {};
+        selectedComponent = {
+            id: String(data.id), label: data.label, type: data.type,
+            file: data.file, original
+        };
+        showComponentDetails(original.id !== undefined ? original : {
+            id: data.id, label: data.label, type: data.type, file: data.file
+        });
+        const impactButton = getElement("impactButton");
+        if (impactButton) impactButton.disabled = false;
     });
 
-    cy.on("tap", (event) => {
+    cy.on("tap", event => {
         if (event.target === cy) {
             selectedComponent = null;
+            const impactButton = getElement("impactButton");
+            if (impactButton) impactButton.disabled = true;
         }
     });
 
-    // Allow Cytoscape to size itself correctly.
+    applyGraphFilters();
     requestAnimationFrame(() => {
-        if (cy) {
-            cy.resize();
-            cy.fit(undefined, 40);
-        }
+        if (cy) { cy.resize(); cy.fit(undefined, 55); }
     });
 }
-
 
 function renderFallbackComponentList(container, nodes) {
     container.replaceChildren();
@@ -716,6 +749,10 @@ async function askArchLens() {
 
     const question = questionInput.value.trim();
     const repository = repositorySelect?.value || currentRepository;
+    const assistantContext = getElement("assistantContext");
+    if (assistantContext) assistantContext.textContent = repository
+        ? `Active repository: ${repository}`
+        : "Select and load a repository to start asking questions.";
 
     if (!question) {
         alert("Please enter a question.");
@@ -1164,6 +1201,11 @@ function renderArchitectureFindings(findings) {
 
     container.replaceChildren();
 
+    const riskCount = getElement("riskCount");
+    if (riskCount) {
+        riskCount.textContent = `${findings.length} ${findings.length === 1 ? "risk" : "risks"} detected`;
+    }
+
     if (findings.length === 0) {
         const empty = document.createElement("p");
         empty.className = "dashboard-empty";
@@ -1299,14 +1341,51 @@ function renderConnectedComponents(components) {
 function initializeArchLens() {
     const askButton = getElement("askButton");
     const loadButton = getElement("loadArchitecture");
+    const githubImportForm = getElement("githubImportForm");
     const fitButton = getElement("fitGraph");
     const impactButton = getElement("impactButton");
     const refreshDashboardButton = getElement("refreshDashboard");
     const repositorySelect = getElement("repository");
+    const assistantToggle = getElement("assistantToggle");
+    const assistantPanel = getElement("assistantPanel");
+    const assistantClose = getElement("assistantClose");
+    const questionInput = getElement("question");
 
     if (askButton && !askButton.dataset.listenerAttached) {
         askButton.dataset.listenerAttached = "true";
         askButton.addEventListener("click", askArchLens);
+    }
+
+    const setAssistantOpen = (open) => {
+        if (!assistantPanel || !assistantToggle) return;
+        assistantPanel.classList.toggle("is-open", open);
+        assistantPanel.setAttribute("aria-hidden", String(!open));
+        assistantToggle.setAttribute("aria-expanded", String(open));
+        if (open) window.setTimeout(() => questionInput?.focus(), 180);
+    };
+    if (assistantToggle && !assistantToggle.dataset.listenerAttached) {
+        assistantToggle.dataset.listenerAttached = "true";
+        assistantToggle.addEventListener("click", () => setAssistantOpen(!assistantPanel?.classList.contains("is-open")));
+    }
+    if (assistantClose && !assistantClose.dataset.listenerAttached) {
+        assistantClose.dataset.listenerAttached = "true";
+        assistantClose.addEventListener("click", () => setAssistantOpen(false));
+    }
+    if (questionInput && !questionInput.dataset.shortcutAttached) {
+        questionInput.dataset.shortcutAttached = "true";
+        questionInput.addEventListener("keydown", event => {
+            if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+                event.preventDefault(); askArchLens();
+            }
+        });
+    }
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && assistantPanel?.classList.contains("is-open")) setAssistantOpen(false);
+    });
+
+    if (githubImportForm && !githubImportForm.dataset.listenerAttached) {
+        githubImportForm.dataset.listenerAttached = "true";
+        githubImportForm.addEventListener("submit", importGitHubRepository);
     }
 
     if (loadButton && !loadButton.dataset.listenerAttached) {
